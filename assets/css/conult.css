@@ -4110,7 +4110,7 @@ ul {
 .feature-two__top {
   position: relative;
   display: block;
-  background-color: var(--conult-black);
+  background-color: #25ae88;
   padding: 90px 0 156px;
 }
 
@@ -4121,7 +4121,7 @@ ul {
 }
 
 .feature-two__top-text {
-  color: #9aadbd;
+  color: #fff;
   margin: 0;
 }
 
@@ -5934,7 +5934,7 @@ ul {
   right: 0;
   bottom: 0;
   content: '';
-  background-color: var(--conult-black);
+  background-color: #25ae88;
   transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;
@@ -6014,7 +6014,7 @@ ul {
 }
 
 .feature-three__single:hover .feature-three__text {
-  color: #9aadbd;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
