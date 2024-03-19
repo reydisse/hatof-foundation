@@ -3082,7 +3082,7 @@ ul {
 .cta-one {
   position: relative;
   display: block;
-  background-color: var(--conult-base);
+  background-color: #25ae88;
   overflow: hidden;
 }
 
@@ -6039,7 +6039,7 @@ ul {
   left: 0;
   right: 0;
   height: 637px;
-  background-color: var(--conult-base);
+  background-color: #25ae88;
   z-index: -1;
 }
 
@@ -7941,4 +7941,32 @@ input[type='checkbox']:checked ~ .grid {
   max-width: 100%;
   max-height: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.profile-img {
+  display: inline-block;
+  padding: 0px; /* Adjust padding as needed */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), 
+              4px 4px 4px rgba(0, 0, 0, 0.25); /* Adjust box-shadow values */
+              4px 4px 4px rgba(0, 0, 0, 0.25);
+              4px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+
+.profile-img img {
+  display: block;
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.hh{
+  /* Rectangle 6 */
+
+position: absolute;
+width: 324px;
+height: 255px;
+left: 106px;
+top: 1067px;
+
+background: #F9F9F9;
+
+
 }
