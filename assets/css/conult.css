@@ -155,7 +155,7 @@ ul {
   vertical-align: middle;
   -webkit-appearance: none;
   outline: none !important;
-  background-color: var(--conult-base);
+  background-color: #25ae88;
   color: var(--conult-white);
   font-size: 14px;
   font-weight: 500;
@@ -1730,7 +1730,7 @@ ul {
   background-position: center;
   transform: scale(1);
   opacity: 0.3;
-  background-color: #002442;
+  /* background-color: #002442; */
   background-blend-mode: luminosity;
   transition: transform 7000ms ease, opacity 1500ms ease-in;
   z-index: 1;
@@ -2085,7 +2085,7 @@ ul {
 }
 
 .main-slider-three__btn {
-  background-color: var(--conult-black);
+  background-color: #25ae88;
 }
 
 .main-slider-three__btn:hover {
@@ -2551,6 +2551,10 @@ ul {
   color: var(--conult-base);
 }
 
+.ds-top {
+  background-color: red;
+}
+
 /*--------------------------------------------------------------
 # Our Mission
 --------------------------------------------------------------*/
@@ -2580,8 +2584,8 @@ ul {
   background-size: cover;
   background-position: center;
   z-index: 1;
-  mix-blend-mode: luminosity;
-  opacity: 0.2;
+  /* mix-blend-mode: luminosity; */
+  /* opacity: 0.2; */
 }
 
 .our-mission__inner {
