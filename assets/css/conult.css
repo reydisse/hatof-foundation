@@ -218,7 +218,7 @@ ul {
 .section-title__tagline {
   position: relative;
   display: inline-block;
-  color: var(--conult-gray);
+  color: #25ae88;
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
@@ -2117,7 +2117,7 @@ ul {
 }
 
 .main-slider-three__video-icon:hover {
-  background-color: var(--conult-black);
+  background-color: #25ae88;
   color: var(--conult-white);
 }
 
