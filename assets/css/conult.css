@@ -3884,6 +3884,7 @@ ul {
   color: var(--conult-white);
   line-height: 30px;
   margin-bottom: 15px;
+  margin-left: 30px;
 }
 
 .footer-widget__explore-list {
@@ -4003,14 +4004,25 @@ ul {
 
 .site-footer__top-right-social {
   display: flex;
+  
   -webkit-box-align: center;
   align-items: center;
 }
 
+.icon-space{
+  display:flex;
+
+}
+.icon-space i{
+ margin-right: 10px;
+}
+
 .site-footer__top-right-social a {
   position: relative;
-  height: 47px;
-  width: 47px;
+  /* height: 60px;
+  width: 60px; */
+  padding: 20px;
+  border-radius: 50%;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -5266,7 +5278,8 @@ ul {
   font-weight: 700;
   color: var(--conult-base);
   margin: 0;
-  text-transform: uppercase;
+  text-transform: none;
+  text-align: justify;
 }
 
 .real-world__points {
