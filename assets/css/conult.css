@@ -1826,6 +1826,7 @@ ul {
   color: var(--conult-white);
   margin: 0;
   line-height: 40px;
+  font-style: italic;
   margin-bottom: 37px;
   opacity: 0;
   transform: translateY(-120px);
