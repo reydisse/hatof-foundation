@@ -244,14 +244,15 @@ html .njs-sticky-side.image_button_cover.placement-right a {
 html .njs-sticky-side.image_button_cover a {
   padding: 6px 15px 12px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
+  text-transform: uppercase;
   display: inline-block;
   position: relative;
   transition: transform .3s;
   -webkit-transition: -webkit-transform .3s;
 background-color: #25ae88; 
 color: white;	
-font-weight: 400; 
+font-weight: 900; 
 top: -106.5px; 
 }
 
