@@ -321,6 +321,50 @@ html .njs-sticky-side.image_button_cover::after {
   font-weight: 800;
 }
 
+.contact__image{
+  /* background-color: red; */
+  width: 100%; /* Set the width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.tab {
+  overflow: hidden;
+}
+
+.tab button {
+  background-color: #f2f2f2;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.category-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start; /* Align images to the start of the container */
+}
+
+.partner-image {
+  width: calc(25% - 10px); /* Adjust the width as needed */
+  max-width: 200px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Adjust spacing between images */
+  box-sizing: border-box; /* Ensure padding and border don't increase the width */
+}
+
+
 .bootstrap-select .btn-light:not(:disabled):not(.disabled).active,
 .bootstrap-select .btn-light:not(:disabled):not(.disabled):active,
 .bootstrap-select .show > .btn-light.dropdown-toggle {
