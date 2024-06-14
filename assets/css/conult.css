@@ -6390,7 +6390,7 @@ html .njs-sticky-side.image_button_cover::after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: var(--conult-black);
+  /* background-color: var(--conult-black); */
   background-blend-mode: luminosity;
   opacity: 0.2;
   z-index: -1;
