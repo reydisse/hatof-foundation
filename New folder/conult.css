@@ -3855,7 +3855,7 @@ html .njs-sticky-side.image_button_cover::after {
 .brand-one .swiper-slide img {
   -webkit-transition: 500ms;
   transition: 500ms;
-  /* opacity: 0.2; */
+  opacity: 0.2;
   max-width: 100%;
 }
 
@@ -4544,23 +4544,7 @@ html .njs-sticky-side.image_button_cover::after {
   color: var(--conult-base);
   margin-left: 22px;
 }
-.conventions{
-  margin-top: -30px !important;
-}
-.conventions-header{
-  color: #fff;
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px; 
-}
-.partners{
-  text-align: center;
-  font-size: 30px !important;
-  margin-bottom: 20px;
-}
-.spacing{
-  padding: 30px;
-}
+
 /*--------------------------------------------------------------
 # Services One
 --------------------------------------------------------------*/
@@ -5390,7 +5374,6 @@ html .njs-sticky-side.image_button_cover::after {
   position: relative;
   display: block;
   margin-right: 50px;
-  
 }
 .real-world__right {
   position: relative;
@@ -5408,14 +5391,11 @@ html .njs-sticky-side.image_button_cover::after {
 }
 
 .real-world__left-text {
-  font-weight: 300;
+  font-weight: 500;
   color: var(--conult-base);
   margin: 0;
-  padding: 0;
   text-transform: none;
-  /* text-align: justify;
-  letter-spacing: unset; */
-
+  /* text-align: left; */
   
 }
 
@@ -5560,7 +5540,7 @@ html .njs-sticky-side.image_button_cover::after {
 .real-world__counter-box {
   position: relative;
   display: block;
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .real-world__counter {
@@ -6410,9 +6390,9 @@ html .njs-sticky-side.image_button_cover::after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-color: var(--conult-black); */
+  background-color: var(--conult-black);
   background-blend-mode: luminosity;
-  opacity: 0.8;
+  opacity: 0.2;
   z-index: -1;
 }
 
