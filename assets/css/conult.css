@@ -4172,6 +4172,15 @@ html .njs-sticky-side.image_button_cover::after {
 .site-footer__top-right-social a:nth-child(3){
   background-color: #E1306C;
 }
+.site-footer__top-right-social a:nth-child(4){
+  background-color: #fff;
+  color: #FF0000;
+}
+.site-footer__top-right-social a:nth-child(4):hover{
+  background-color: #fff;
+  color: #e10a0a;
+}
+
 
 .site-footer__top-right-social a:hover {
   color: var(--conult-white);
@@ -5436,8 +5445,8 @@ html .njs-sticky-side.image_button_cover::after {
   margin: 0;
   padding: 0;
   text-transform: none;
-  /* text-align: justify;
-  letter-spacing: unset; */
+  text-align: justify;
+  /*letter-spacing: unset; */
 
   
   /* text-align: left; */
@@ -5668,7 +5677,9 @@ html .njs-sticky-side.image_button_cover::after {
   transform: scale(0.9);
   color: var(--conult-white);
 }
-
+.close-spacing{
+  margin-top: -150px !important;
+}
 /*--------------------------------------------------------------
 # Services Two
 --------------------------------------------------------------*/
