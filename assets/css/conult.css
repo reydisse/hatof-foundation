@@ -314,6 +314,9 @@ html .njs-sticky-side.image_button_cover::after {
   line-height: 60px;
   font-weight: 500;
 }
+.head-volunteer{
+  color: #001323 !important;
+}
 .section-title__title-about {
   margin: 0;
   font-size: 20px;
@@ -3550,6 +3553,16 @@ html .njs-sticky-side.image_button_cover::after {
   color: #9aadbd;
   margin: 0;
 }
+.vision-mission{
+ background-image:  url('../images/backgrounds/mission.JPG');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ opacity: 0.9;
+}
+.vision-mission p, .vision-mission span{
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
 # News One
@@ -4154,12 +4167,12 @@ html .njs-sticky-side.image_button_cover::after {
   background-color: #E1306C;
 }
 .site-footer__top-right-social a:nth-child(4){
-  background-color: #fff;
-  color: #FF0000;
+  background-color: #ffffff80;
+  color: #e10a0a ;
 }
 .site-footer__top-right-social a:nth-child(4):hover{
   background-color: #fff;
-  color: #e10a0a;
+  color: #FF0000;
 }
 
 
