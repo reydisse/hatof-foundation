@@ -44,6 +44,7 @@ body {
   font-size: 18px;
   line-height: 34px;
   font-weight: 400;
+  background-color: #F0E7D8;
 }
 
 body.locked {
@@ -4173,7 +4174,7 @@ html .njs-sticky-side.image_button_cover::after {
   background-color: #E1306C;
 }
 .site-footer__top-right-social a:nth-child(4){
-  background-color: #fff;
+  background-color: #c5c0c0;
   color: #FF0000;
 }
 .site-footer__top-right-social a:nth-child(4):hover{
@@ -5446,6 +5447,9 @@ html .njs-sticky-side.image_button_cover::after {
   padding: 0;
   text-transform: none;
   text-align: justify;
+  hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
   /*letter-spacing: unset; */
 
   
@@ -6278,6 +6282,12 @@ html .njs-sticky-side.image_button_cover::after {
   z-index: 3;
 }
 
+.annual-reports {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
 /*--------------------------------------------------------------
 # Contact One
 --------------------------------------------------------------*/
@@ -6298,6 +6308,7 @@ html .njs-sticky-side.image_button_cover::after {
 
 .contact-one__text {
   margin: 0;
+  color: rgb(62, 58, 58);
 }
 
 .contact-one__founder {
@@ -6393,6 +6404,7 @@ html .njs-sticky-side.image_button_cover::after {
   position: relative;
   display: block;
 }
+
 
 .contact-one__form .row {
   --bs-gutter-x: 10px;
