@@ -416,6 +416,23 @@ html .njs-sticky-side.image_button_cover::after {
   cursor: pointer;
 }
 
+/* Add these new styles for nested dropdowns */
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+}
+
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .dropdown > a:after {
+  /* content: "\f105"; */
+  /* font-family: "FontAwesome"; */
+  float: right;
+}
+
+
 .preloader {
   position: fixed;
   background-color: #fff;
@@ -3219,6 +3236,14 @@ html .njs-sticky-side.image_button_cover::after {
   line-height: 48px;
   z-index: 2;
 }
+.cta-one__title-c {
+  position: relative;
+  font-size: 25px;
+  color: var(--conult-white);
+  font-weight: 700;
+  line-height: 48px;
+  z-index: 2;
+}
 
 .cta-one__btn {
   background-color: var(--conult-white);
@@ -3876,8 +3901,13 @@ html .njs-sticky-side.image_button_cover::after {
 .site-footer {
   position: relative;
   display: block;
-  background-color: var(--conult-black);
+  background: url('/assets/images/footerthing.jpg') no-repeat center center fixed; 
+    background-size: cover;
+  /* background-color: var(--conult-black); */
 }
+
+
+
 
 .site-footer__top {
   position: relative;
@@ -3905,7 +3935,7 @@ html .njs-sticky-side.image_button_cover::after {
 .site-footer__top-text {
   font-size: 16px;
   font-weight: 500;
-  color: #9aadbd;
+  color: #ffffff;
   margin: 0;
   line-height: 30px;
   margin-left: 55px;
@@ -4010,7 +4040,7 @@ html .njs-sticky-side.image_button_cover::after {
   position: relative;
   display: inline-block;
   font-size: 16px;
-  color: #9aadbd;
+  color: #ffffff;
   font-weight: 500;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -4090,7 +4120,7 @@ html .njs-sticky-side.image_button_cover::after {
 
 .footer-widget__contact > a {
   font-size: 16px;
-  color: #9aadbd;
+  color: #ffffff;
   font-weight: 500;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -4102,7 +4132,7 @@ html .njs-sticky-side.image_button_cover::after {
 
 .footer-widget__contact-text {
   font-size: 16px;
-  color: #9aadbd;
+  color: #ffffff;
   font-weight: 500;
   margin: 0;
 }
@@ -4218,7 +4248,7 @@ html .njs-sticky-side.image_button_cover::after {
 
 .site-footer__top-right-phone-tagline {
   margin: 0;
-  color: #9aadbd;
+  color: #ffffff;
   font-weight: 500;
   line-height: 31px;
 }
@@ -4246,14 +4276,14 @@ html .njs-sticky-side.image_button_cover::after {
 
 .site-footer__bottom-text {
   font-size: 16px;
-  color: #9baebd;
+  color: #ffffff;
   font-weight: 500;
   line-height: 30px;
   margin: 0;
 }
 
 .site-footer__bottom-text a {
-  color: #9baebd;
+  color: #ffffff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
