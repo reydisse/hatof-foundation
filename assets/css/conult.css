@@ -20,7 +20,7 @@
 :root {
   --conult-font: 'DM Sans', sans-serif;
   --conult-reey-font: 'reeyregular';
-  --conult-gray: #7a838b;
+  --conult-gray: #424445;
   --conult-gray-rgb: 122, 131, 139;
   --conult-white: #ffffff;
   --conult-white-rgb: 255, 255, 255;
@@ -52,7 +52,7 @@ body.locked {
 }
 
 a {
-  color: var(--conult-gray);
+  color: #e4dcdc;
 }
 
 a,
@@ -119,6 +119,109 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #00294b;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #00294b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #00294b;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #00294b;
+  background-color: #f7f5ec;
+}
+
 
 #particles-js {
   position: absolute;
@@ -288,6 +391,17 @@ html .njs-sticky-side.image_button_cover::after {
   letter-spacing: 0.1em;
   margin-bottom: 4px;
 }
+.section-title__tagline-mv {
+  position: relative;
+  display: inline-block;
+  color: #e3e2e2;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
 
 .section-title__tagline:before {
   position: absolute;
@@ -315,6 +429,38 @@ html .njs-sticky-side.image_button_cover::after {
   line-height: 60px;
   font-weight: 500;
 }
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.partner-logo {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+  }
+  
+  .partner-logo {
+      max-width: 100px;
+  }
+}
+
 .section-title__title-about {
   margin: 0;
   font-size: 20px;
@@ -3868,7 +4014,7 @@ html .njs-sticky-side.image_button_cover::after {
 .brand-one {
   position: relative;
   display: block;
-  padding: 118px 0 119px;
+  padding: 20px 0 119px;
   border-top: 1px solid #c9d5db;
 }
 
@@ -5411,7 +5557,7 @@ html .njs-sticky-side.image_button_cover::after {
 .brand-three {
   position: relative;
   display: block;
-  padding: 118px 0 119px;
+  padding: 20px 0 119px;
   background-color: var(--conult-black);
 }
 
@@ -5444,16 +5590,28 @@ html .njs-sticky-side.image_button_cover::after {
 .real-world {
   position: relative;
   display: block;
-  padding: 120px 0 107px;
+  padding: 20px 0 107px;
 }
+
 
 .real-world__left {
   position: relative;
   display: block;
   margin-right: 50px;
+  height: 100%; /* Make the div fill the column height */
   
-  margin-right: 50px;
+  /* Background image styling */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../images/scope.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px; /* Add padding for text content */
 }
+
 .real-world__right {
   position: relative;
   display: block;
@@ -5471,8 +5629,8 @@ html .njs-sticky-side.image_button_cover::after {
 }
 
 .real-world__left-text {
-  font-weight: 300;
-  color: var(--conult-base);
+  font-weight: 400;
+  color: #F9F9F9;
   margin: 0;
   padding: 0;
   text-transform: none;
@@ -5714,6 +5872,7 @@ html .njs-sticky-side.image_button_cover::after {
 .close-spacing{
   margin-top: -150px !important;
 }
+
 /*--------------------------------------------------------------
 # Services Two
 --------------------------------------------------------------*/
@@ -6249,7 +6408,7 @@ html .njs-sticky-side.image_button_cover::after {
 .news-three {
   position: relative;
   display: block;
-  padding: 180px 0 90px;
+  padding: 18px 0 90px;
   margin-top: -60px;
 }
 
@@ -7776,7 +7935,7 @@ html .njs-sticky-side.image_button_cover::after {
 .get-to-know {
   position: relative;
   display: block;
-  padding: 120px 0 0;
+  padding: 20px 0 0;
 }
 
 .get-to-know__left {
