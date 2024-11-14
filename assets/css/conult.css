@@ -74,7 +74,7 @@ h4,
 h5,
 h6 {
   color: var(--conult-black);
-  margin: 0;
+  margin: 9px;
 }
 
 dl,
@@ -5593,6 +5593,16 @@ html .njs-sticky-side.image_button_cover::after {
   padding: 20px 0 107px;
 }
 
+.real-world-re {
+  position: relative;
+  display: block;
+  padding: 20px 0 107px;
+  background-image: url('../images/scope.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 .real-world__left {
   position: relative;
@@ -5601,14 +5611,14 @@ html .njs-sticky-side.image_button_cover::after {
   height: 100%; /* Make the div fill the column height */
   
   /* Background image styling */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
               url('../images/scope.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
   padding: 30px; /* Add padding for text content */
 }
 
