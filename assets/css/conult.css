@@ -102,11 +102,11 @@ ul {
   padding-right: 15px;
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
-}
+} */
 
 ::placeholder {
   color: inherit;
@@ -424,7 +424,7 @@ html .njs-sticky-side.image_button_cover::after {
 }
 
 .section-title__title {
-  margin: 0;
+  margin-top: 0;
   font-size: 50px;
   line-height: 60px;
   font-weight: 500;
@@ -939,8 +939,41 @@ html .njs-sticky-side.image_button_cover::after {
   .stricky-header .main-menu__list,
   .stricky-header .main-menu__list ul {
     display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    padding: 0; /* Reset any padding */
+    margin: 0; /* Reset any margin */
+  }
+
+  .main-menu__list > li {
+    margin-right: 30px; /* Space between nav items */
+  }
+
+  .main-menu__list > li:last-child {
+    margin-right: 0; /* No margin for the last item */
+  }
+
+  .main-menu__list > li > a {
+    font-size: 16px; /* Consistent font size */
+    color: var(--conult-white); /* Ensure text color is consistent */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  /* Adjust the dropdown for better visibility */
+  .main-menu__list li ul {
+    position: absolute;
+    display: none; /* Keep dropdown hidden by default */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Hide dropdown */
+    transition: opacity 0.3s ease; /* Smooth hover transitions */
+  }
+
+  .main-menu__list li:hover > ul {
+    display: block; /* Show on hover */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make it visible */
   }
 }
+
 
 .main-menu .main-menu__list > li,
 .stricky-header .main-menu__list > li {
@@ -1369,7 +1402,7 @@ html .njs-sticky-side.image_button_cover::after {
 --------------------------------------------------------------*/
 .main-menu-three__wrapper {
   position: relative;
-  display: f;
+  display: flex;
 }
 
 .main-menu-three__wrapper-logo {
@@ -1384,7 +1417,7 @@ html .njs-sticky-side.image_button_cover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 89%;
+  width: 100%;
   float: left;
 }
 

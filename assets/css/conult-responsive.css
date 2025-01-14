@@ -1,5 +1,5 @@
 /* Medium screen  */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 1371px) {
   .feature-one__icon-box {
     padding: 29px 20px;
   }
@@ -182,6 +182,388 @@
   }
   .counter-one__text {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1370px) {
+  .feature-one__icon-box {
+    padding: 29px 20px;
+  }
+
+  .feature-one__hover {
+    padding: 0 25px;
+  }
+
+  .about-one__left {
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+
+  .about-one__right {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .building-experience__top-left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .building-experience__top-right {
+    margin-top: 0;
+    max-width: 600px;
+    margin: 0 auto 49px;
+  }
+
+  .building-experience .section-title {
+    margin-bottom: 34px;
+  }
+
+  .building-experience__bottom-content {
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+
+  .building-experience__bottom-faq {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .counter-one-img {
+    position: absolute;
+    top: 0;
+    right: -210px;
+  }
+
+  .counter-one-img img {
+    width: 70%;
+  }
+
+  .news-one__content {
+    padding: 29px 20px 27px;
+  }
+
+  .site-footer__top-right {
+    margin-left: 0;
+  }
+
+  .footer-widget__links {
+    margin-right: -40px;
+    margin-left: 0;
+  }
+
+  .footer-widget__contact {
+    margin-left: 45px;
+  }
+
+  .site-footer__top-right-phone {
+    margin-left: 58px;
+  }
+
+  .site-footer__top-text {
+    margin-left: 20px;
+  }
+
+  .feature-two__single {
+    padding: 42px 35px 40px;
+  }
+
+  .work-together__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .work-together__right {
+    max-width: 600px;
+    margin: 177px auto 0;
+  }
+
+  .services-one__content {
+    padding: 32px 30px 17px;
+  }
+
+  .why-choose-one__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .why-choose-one__right {
+    max-width: 600px;
+    margin: 50px auto 0;
+  }
+
+  .why-choose-one {
+    padding: 120px 0 120px;
+  }
+
+  .newsletter__inner-right {
+    padding-left: 0;
+    margin-top: 32px;
+  }
+
+  .real-world__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .real-world__middle {
+    max-width: 600px;
+    margin: 37px auto 50px;
+  }
+
+  .real-world__counter-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .real-world {
+    padding: 120px 0 120px;
+  }
+
+  .contact-one__bottom {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .contact-one__bottom-points {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .we-improve-bg {
+    width: 40%;
+  }
+
+  .service-details__two-icon-single + .service-details__two-icon-single {
+    margin-left: 0;
+    margin-top: 22px;
+  }
+
+  .service-details__how-we-help-img {
+    margin-bottom: 30px;
+  }
+
+  .get-to-know__left {
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .get-to-know__right {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .similar-case .case-one__hover {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .similar-case .case-one__content {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .contact-page-details {
+    padding-bottom: 27px;
+  }
+  .counter-one__text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .about-one__left {
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+
+  .about-one__right {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .our-mission__title br {
+    display: none;
+  }
+
+  .building-experience__top-left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .building-experience__top-right {
+    margin-top: 0;
+    max-width: 600px;
+    margin: 0 auto 49px;
+  }
+
+  .building-experience .section-title {
+    margin-bottom: 34px;
+  }
+
+  .building-experience__bottom-content {
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+
+  .building-experience__bottom-faq {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-one__title {
+    margin-bottom: 30px;
+  }
+
+  .cta-one__title br {
+    display: none;
+  }
+
+  .cta-one__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-one__single {
+    padding: 60px 30px 68px;
+  }
+
+  .counter-one-img {
+    display: none;
+  }
+
+  .counter-one__single {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .site-footer__top-right {
+    margin-left: 0px;
+    margin-top: 42px;
+  }
+
+  .footer-widget__links {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .footer-widget__contact {
+    margin-left: 0;
+  }
+
+  .work-together__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .work-together__right {
+    max-width: 600px;
+    margin: 177px auto 0;
+  }
+
+  .why-choose-one__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .why-choose-one__right {
+    max-width: 600px;
+    margin: 50px auto 0;
+  }
+
+  .why-choose-one {
+    padding: 120px 0 120px;
+  }
+
+  .newsletter__inner-right {
+    padding-left: 0;
+    margin-top: 32px;
+  }
+
+  .newsletter__inner-form {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .newsletter__inner-input-box {
+    margin-right: 0;
+  }
+
+  .newsletter__btn {
+    margin-top: 30px;
+  }
+
+  .real-world__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .real-world__middle {
+    max-width: 600px;
+    margin: 37px auto 50px;
+  }
+
+  .real-world__counter-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .real-world {
+    padding: 120px 120px 120px;
+  }
+
+  .contact-one__left {
+    margin-bottom: 41px;
+  }
+
+  .contact-one {
+    padding: 0 0 120px;
+  }
+
+  .we-improve-bg {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .we-improve__inner {
+    margin-top: 60px;
+  }
+
+  .we-improve {
+    padding: 0px 0 110px;
+  }
+
+  .service-details__sidebar {
+    margin-bottom: 50px;
+  }
+
+  .service-details__two-icon-single + .service-details__two-icon-single {
+    margin-left: 0;
+    margin-top: 22px;
+  }
+
+  .service-details__how-we-help-img {
+    margin-bottom: 30px;
+  }
+
+  .get-to-know__left {
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .get-to-know__right {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .case-single__details li + li {
+    margin-left: 34px;
+  }
+
+  .contact-page-details__right {
+    margin-right: 0;
+    margin-top: 55px;
   }
 }
 
@@ -881,7 +1263,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 1200px) and (max-width: 1369px) {
   .main-slider h2 {
     font-size: 90px;
     line-height: 90px;
@@ -1030,7 +1412,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1897px) {
+@media only screen and (min-width: 1199px) and (max-width: 1897px) {
   .main-menu-three__wrapper-main-menu {
     width: 80%;
   }
