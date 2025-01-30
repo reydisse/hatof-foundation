@@ -95,7 +95,7 @@ body {
 
 body::before {
   content: '';
-  background-image: url('/assets/images/backgrounds/staffback.jpg');
+  background-image: url('/assets/images/backgrounds/staffback2.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -104,7 +104,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.7;
+  opacity: 0.9;
   z-index: -1;
 }
 

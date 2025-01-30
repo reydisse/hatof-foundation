@@ -97,10 +97,10 @@ ul {
   overflow: hidden;
 }
 
-.container {
+/* .container {
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 /* @media (min-width: 1200px) {
   .container {
@@ -394,10 +394,10 @@ html .njs-sticky-side.image_button_cover::after {
 .section-title__tagline-mv {
   position: relative;
   display: inline-block;
-  color: #e3e2e2;
+  color: #25ae88;
   font-size: 14px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 4px;
@@ -4792,6 +4792,7 @@ html .njs-sticky-side.image_button_cover::after {
   text-align: center;
   font-size: 28px;
   margin-bottom: 20px; 
+  margin-top: 30px;
 }
 .partners{
   text-align: center;
@@ -5636,30 +5637,17 @@ html .njs-sticky-side.image_button_cover::after {
   background-repeat: no-repeat;
 }
 
+.real-world-re .container {
+  max-width: 100%;
+  padding: 0;
+}
 
 .real-world__left {
   position: relative;
   display: block;
   margin-right: 50px;
-  height: 100%; /* Make the div fill the column height */
-  
-  /* Background image styling */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../images/scope.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  
-  /* border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
-  padding: 30px; /* Add padding for text content */
-}
-
-.real-world__right {
-  position: relative;
-  display: block;
-  margin-left: 50px;
-  margin-left: 50px;
+  height: 100%;
+  padding: 30px; 
 }
 
 .real-world .section-title {
@@ -5792,8 +5780,34 @@ html .njs-sticky-side.image_button_cover::after {
 .real-world__middle {
   position: relative;
   display: block;
-  margin-right: 30px;
+  width: 400px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
+  margin: 0 auto;
 }
+
+/* .real-world__middle .real-world__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+} */
+
+.real-world__middle .real-world__img::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 100px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 
 .real-world__img {
   position: relative;

@@ -1,0 +1,202 @@
+.nav-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+/* This style will be applied when scrolling */
+.nav-main.scrolled {
+  background-color: #00294b;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav-logo {
+  padding: 15px 0;
+  margin-right: 30px;
+}
+
+.nav-logo img {
+  height: 50px;
+}
+
+.nav-menu {
+  flex: 1;
+}
+
+.mobile-toggle {
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 15px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.nav-list > li {
+  position: relative;
+  margin: 0 5px;
+}
+
+.nav-list > li > a {
+  display: block;
+  color: #ffffff;
+  padding: 25px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-list > li > a:hover {
+  color: #25ae88;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #00294b;
+  min-width: 220px;
+  padding: 10px 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.dropdown ul li a:hover {
+  color: #25ae88;
+}
+
+/* Nested Dropdowns */
+.dropdown ul .dropdown > ul {
+  top: 0;
+  left: 100%;
+}
+
+/* Special Buttons */
+.gield-link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.gield-link i {
+  margin-left: 5px;
+}
+
+.cso-btn {
+  background: #25ae88;
+  color: #ffffff;
+  padding: 8px 20px !important;
+  border-radius: 4px;
+  margin: 17px 0;
+  font-weight: 600;
+  transition: background-color 0.3s ease !important;
+}
+
+.cso-btn:hover {
+  background: #1e8c6d; /* Darker shade of the button color */
+  color: #ffffff !important;
+}
+
+/* Active/Current Page */
+.nav-list > li.active > a {
+  color: #25ae88;
+  font-weight: 700;
+}
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #00294b;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .nav-list.active {
+    display: block;
+  }
+
+  .nav-list > li > a {
+    padding: 12px 20px;
+  }
+
+  .nav-list > li {
+    margin: 0;
+  }
+
+  .dropdown > ul {
+    position: static;
+    display: none;
+    background: #ffffff;
+    padding-left: 20px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .dropdown.active > ul {
+    display: block;
+  }
+
+  .cso-btn {
+    display: inline-block;
+    margin: 10px 20px;
+  }
+
+  .nav-logo img {
+    height: 40px; /* Slightly smaller logo on mobile */
+  }
+}

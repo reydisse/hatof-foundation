@@ -44,6 +44,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/conult.css" />
     <link rel="stylesheet" href="assets/css/conult-responsive.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
 </head>
 
 <body>
@@ -56,116 +57,97 @@
     </div>
     <div class="page-wrapper">
         <header class="main-header main-header-three clearfix">
-            <nav class="main-menu main-menu-three clearfix">
-                <div class="main-menu-three__wrapper clearfix">
-                    <div class="main-menu-three__wrapper-logo">
-                        <a href="index.html"><img src="assets/images/logo-light-hatof.png" alt="HATOF Foundation"></a>
+            <nav class="nav-main">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo-light-hatof.png" alt="HATOF Foundation">
+                        </a>
                     </div>
-                    <div class="main-menu-three__wrapper-main-menu">
-                        <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                        <ul class="main-menu__list">
-                            <li class="dropdown">
+
+                    <div class="nav-menu">
+                        <!-- Mobile Menu Button -->
+                        <a href="#" class="mobile-toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <ul class="nav-list">
+                            <li>
                                 <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="dropdown active">
+                                <a href="about.html">About</a>
                                 <ul>
-                                    <!-- <li>
-                                        <a href="index.html">Home</a>
-                                    </li> -->
-                                    <!-- <li><a href="index2.html">Home Two</a></li>
-                                    <li><a href="index.html">Home Three</a></li>
+                                    <li><a href="staff.html">Our Staff</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Our Work</a>
+                                <ul>
                                     <li class="dropdown">
-                                        <a href="#">Header Styles</a>
+                                        <a href="#">Themes</a>
                                         <ul>
-                                            <li><a href="index.html">Header One</a></li>
-                                            <li><a href="index2.html">Header Two</a></li>
-                                            <li><a href="index.html">Header Three</a></li>
-                                        </ul> -->
+                                            <li><a href="climate-change.html">Climate Change</a></li>
+                                            <li><a href="climate-change.html">Biodiversity</a></li>
+                                            <li><a href="biodiversity.html">Energy</a></li>
+                                            <li><a href="energy.html">Food & Agriculture</a></li>
+                                            <li><a href="food-agriculture.html">Global Policy</a></li>
+                                            <li><a href="finance.html">Climate Finance</a></li>
+                                            <li><a href="blue-economy.html">Blue Economy</a></li>
+                                            <li><a href="blue-economy.html">Chemicals & Waste</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="projects.html">Projects</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Regions</a>
+                                        <ul>
+                                            <li><a href="#">Africa</a></li>
+                                            <li><a href="#">North America</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="consultancy-services.html">Consultancies</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <li><a href="#">Policies</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Reports</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">Annual Reports</a>
+                                                <ul>
+                                                    <li><a href="assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf"
+                                                            target="_blank">2016</a></li>
+                                                    <li><a href="assets/reports/2017-ANNUAL-REPORT_HATOF.pdf"
+                                                            target="_blank">2017</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Financial Reports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="news.html">News & Updates</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="#" class="gield-link">
+                                    GIELD <i class="fas fa-graduation-cap"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projects.html" class="cso-btn">GCF CSO</a>
                             </li>
                         </ul>
-                        </li>
-                        <li class="dropdown current"><a href="about.html">About</a>
-                            <ul>
-                                <li><a href="staff.html">Our Staff</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Our Work</a>
-                            <ul>
-                                <li class="dropdown"><a href="#">Themes</a>
-                                    <ul>
-                                        <li><a href="climate-change.html">Climate Change</a></li>
-                                        <li><a href="climate-change.html">Biodiversity</a></li>
-                                        <li><a href="biodiversity.html">Energy</a></li>
-                                        <li><a href="energy.html">Food & Agriculture</a></li>
-                                        <li><a href="food-agriculture.html">Global Policy</a></li>
-                                        <li><a href="finance.html">Climate Finance</a></li>
-                                        <li><a href="blue-economy.html">Blue Economy</a></li>
-                                        <li><a href="blue-economy.html">Chemicals & Waste</a></li>
-
-                                    </ul>
-                                </li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li class="dropdown"><a href="#">Regions</a>
-                                    <ul>
-                                        <li><a href="#">Africa</a></li>
-                                        <li><a href="#">North America</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="consultancy-services.html">Consultancies</a></li>
-                                <!-- <li class="dropdown">
-                                    <a href="#">Projects</a>
-                                    <ul>
-                                        <li><a href="projects.html">Projects</a></li>
-                                        <li><a href="case-single.html">Case Single</a></li>
-                                    </ul>
-                                </li> -->
-
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Resources</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Policies</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Reports</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown">
-                                            <a href="#">Annual Reports</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf"
-                                                        target="_blank">2016</a></li>
-                                                <li><a href="assets/reports/2017-ANNUAL-REPORT_HATOF.pdf"
-                                                        target="_blank">2017</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Financial Reports</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="news.html">News & Updates</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="main-menu-three__wrapper-right">
-                            <a href="projects.html" target="_blank" class="thm-btn-btn contact-one__btn">GCF CSO
-                                Readiness</a>
-                        </div>
-                        <div class="main-menu-three__wrapper-right">
-                            <a href="#" target="_blank" class="thm-btn-btn contact-one__btn">GIELD <i
-                                    class="fas fa-graduation-cap"></i></a>
-                        </div>
                     </div>
-
-                    <!-- IMPLEMENT SEARCH HERE IF YOU FIND IT NECESSARY -->
-                    <div class="main-menu-three__wrapper-right">
-                        <div class="main-menu-three__wrapper-search-cat">
-                            <a href="#"
-                                class="main-menu-three__wrapper-search search-toggler icon-magnifying-glass"></a>
-                        </div>
-                    </div>
-
                 </div>
             </nav>
         </header>
@@ -833,22 +815,31 @@
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
                                         <div class="footer-widget__column footer-widget__explore clearfix">
-                                            <h3 class="footer-widget__title">Address 🇬🇭 </h3>
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/flag.png" alt="Ghana Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
                                             <p class="footer-widget__contact-text">P.O. Box 'SKM' DTD 6038,<br>
                                                 Sakumono, Tema.<br>F-54 Service Plot DTD(801)
-                                                C.19<br>Klagon-Lashibi, Tema <br><a href=" mailto:ghanainfo@hatof.org">
+                                                C.19<br>Klagon-Lashibi, Tema <br><a href="mailto:ghanainfo@hatof.org">
                                                     ghanainfo@hatof.org</a> <br>+233-207 360 517 <br>+233-246 346 698
                                             </p>
                                         </div>
                                     </div>
+
+
                                     <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
                                         <div class="footer-widget__column footer-widget__explore clearfix">
-                                            <h3 class="footer-widget__title">Address 🇨🇦 </h3>
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/canada.png" alt="Canada Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
                                             <p class="footer-widget__contact-text">139 Millwick Drive<br>
                                                 C/O Living Word Assembly of God<br>Toronto ON M9L 1Y7<br><a
                                                     href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
                                         </div>
                                     </div>
+
 
                                     <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
                                         <div class="footer-widget__column footer-widget__contact clearfix">

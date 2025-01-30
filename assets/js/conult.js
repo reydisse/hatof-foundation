@@ -878,3 +878,35 @@ function openCategory(evt, categoryName) {
   document.getElementById(categoryName).style.display = "block";
   evt.currentTarget.classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Mobile menu toggle
+  const mobileToggle = document.querySelector(".mobile-toggle");
+  const navList = document.querySelector(".nav-list");
+  const dropdowns = document.querySelectorAll(".dropdown > a");
+  const navbar = document.querySelector(".nav-main");
+
+  mobileToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    navList.classList.toggle("active");
+  });
+
+  // Mobile dropdown toggle
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("active");
+      }
+    });
+  });
+
+  // Scroll effect
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      navbar.style.backgroundColor = "#00294b";
+    } else {
+      navbar.style.backgroundColor = "transparent";
+    }
+  });
+});
