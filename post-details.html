@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News || HATOF Foundation</title>
+    <title>Post Details || HATOF Foundation</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Conult HTML Template For Business" />
+    <meta name="description" content="HATOF Foundation News and Updates" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +46,132 @@
     <link rel="stylesheet" href="assets/css/conult-responsive.css" />
     <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/wordpress-blog.css" />
+
+    <!-- Additional styles for WordPress content -->
+    <style>
+        .news-details__text img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        .news-details__text p {
+            margin-bottom: 15px;
+        }
+
+        .news-details__text h1,
+        .news-details__text h2,
+        .news-details__text h3,
+        .news-details__text h4,
+        .news-details__text h5,
+        .news-details__text h6 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .news-details__text ul,
+        .news-details__text ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .news-details__text blockquote {
+            border-left: 4px solid #15c8a0;
+            padding-left: 20px;
+            margin-left: 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Make embedded videos responsive */
+        .news-details__text iframe,
+        .news-details__text embed,
+        .news-details__text object {
+            max-width: 100%;
+        }
+
+        /* WordPress alignment classes */
+        .news-details__text .alignleft {
+            float: left;
+            margin: 0.5em 1em 0.5em 0;
+        }
+
+        .news-details__text .alignright {
+            float: right;
+            margin: 0.5em 0 0.5em 1em;
+        }
+
+        .news-details__text .aligncenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Tag styles */
+        .news-details__tags {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .news-details__tags span {
+            font-size: 16px;
+            font-weight: 700;
+            color: #878e9b;
+            margin-right: 10px;
+        }
+
+        .news-details__tag {
+            display: inline-block;
+            font-size: 14px;
+            color: #878e9b;
+            padding: 6px 20px;
+            background-color: #f4f5f8;
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: all 500ms ease;
+        }
+
+        .news-details__tag:hover {
+            background-color: #15c8a0;
+            color: #ffffff;
+        }
+
+        /* Author box */
+        .news-details__author {
+            display: flex;
+            align-items: center;
+            background-color: #f4f5f8;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .news-details__author-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .news-details__author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-details__author-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .news-details__author-content p {
+            margin: 0;
+            color: #878e9b;
+        }
+    </style>
 </head>
 
 <body>
@@ -163,28 +289,52 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>NEWS & UPDATES</h2>
+                    <h2>Loading Post...</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <li class="active">News</li>
+                        <li><a href="news.html">News</a></li>
+                        <li class="active">Post Details</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--News Page Start-->
-        <!--News Page Start-->
-        <section class="news-page">
+        <!--News Details Start-->
+        <section class="news-details">
             <div class="container">
                 <div class="row">
-                    <!-- WordPress posts will be loaded here -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="news-details__left">
+                            <!-- Post content will be loaded here dynamically -->
+                            <div class="text-center">
+                                <p>Loading post content...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="sidebar">
+                            <div class="sidebar__single sidebar__search">
+                                <form action="news.html" class="sidebar__search-form">
+                                    <input type="search" placeholder="Search News" name="search">
+                                    <button type="submit"><i class="icon-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                            <div class="sidebar__single sidebar__post">
+                                <h3 class="sidebar__title">Recent Posts</h3>
+                                <ul class="sidebar__post-list list-unstyled">
+                                    <!-- Recent posts will be loaded here dynamically -->
+                                    <li class="text-center">
+                                        <p>Loading recent posts...</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!--News Page End-->
-
-        <!--News Page End-->
+        <!--News Details End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -283,12 +433,8 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </div>
-    </footer>
-    <!--Site Footer End-->
-
-
+        </footer>
+        <!--Site Footer End-->
     </div><!-- /.page-wrapper -->
 
 
@@ -309,24 +455,21 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@conult.com</a>
+                    <a href="mailto:ghanainfo@hatof.org">ghanainfo@hatof.org</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+233207360517">+233 207 360 517</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/HatofFoundation/" class="fab fa-facebook"></a>
+                    <a href="https://www.linkedin.com/company/hatof-foundation/" class="fab fa-linkedin-in"></a>
+                    <a href="https://www.instagram.com/hatoffoundation" class="fab fa-instagram"></a>
+                    <a href="https://www.youtube.com/@HATOFFoundation" class="fab fa-youtube"></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
-
-
-
         </div>
         <!-- /.mobile-nav__content -->
     </div>
@@ -336,9 +479,9 @@
         <div class="search-popup__overlay search-toggler"></div>
         <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
+            <form action="news.html">
+                <label for="search" class="sr-only">News & Updates</label><!-- /.sr-only -->
+                <input type="text" id="search" name="search" placeholder="News & Updates" />
                 <button type="submit" aria-label="search submit" class="thm-btn">
                     <i class="icon-magnifying-glass"></i>
                 </button>
@@ -374,30 +517,24 @@
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
-
-
-
-    <!-- template js -->
-    <script src="assets/js/conult.js"></script>
-
-    <!-- Add this before the closing body tag -->
-    <script src="assets/js/wordpress-integration.js"></script>
+    <!-- WordPress Post Detail Script -->
+    <script src="assets/js/wordpress-post-detail.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const wpIntegration = new WordPressIntegration({
-                baseUrl: 'https://hatof.org/wp-json/wp/v2', // Replace with your WordPress site URL
-                postsPerPage: 9, // Set to 9 posts (3 rows of 3)
-                container: '.news-page .row',
-                debug: true // Can turn off after everything is working
+            const wpPostDetail = new WordPressPostDetail({
+                baseUrl: 'https:/hatof.org/wp-json/wp/v2', // Replace with your WordPress site URL
+                postContainer: '.news-details__left',
+                relatedPostsContainer: '.sidebar__post-list',
+                titleContainer: '.page-header__inner h2',
+                debug: true // Can set to false in production
             });
 
-            // Initialize posts and pagination
-            wpIntegration.renderPosts().then(() => {
-                wpIntegration.setupPagination();
-            });
+            wpPostDetail.loadPost();
         });
     </script>
 
+    <!-- template js -->
+    <script src="assets/js/conult.js"></script>
 </body>
 
 </html>

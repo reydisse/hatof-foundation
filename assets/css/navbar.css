@@ -200,3 +200,221 @@
     height: 40px; /* Slightly smaller logo on mobile */
   }
 }
+
+/* Add to your CSS file */
+.post-pagination {
+  margin-top: 50px;
+}
+
+.post-pagination .pagination-box {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.post-pagination .pagination-box li {
+  display: inline-block;
+}
+
+.post-pagination .pagination-box li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #f4f5f8;
+  border-radius: 50%;
+  color: #878e9b;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 500ms ease;
+}
+
+.post-pagination .pagination-box li.active a,
+.post-pagination .pagination-box li a:hover {
+  background-color: #15c8a0;
+  color: #ffffff;
+}
+
+/* Vision Mission Section Styling */
+.vision-mission-section {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/scope.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.vision-mission-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Content Boxes */
+.content-box {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #15c8a0; /* Your theme color */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #15c8a0;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Center Image Styling */
+.center-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.magnify-effect {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.magnify-glass {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 80px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .vision-mission-wrapper {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+  }
+
+  .center-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 991px) {
+  .vision-mission-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .center-image {
+    margin: 30px auto;
+  }
+
+  .content-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-mission-section {
+    padding: 40px 0;
+  }
+
+  .center-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+/* Animation for hover effects */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    rgba(21, 200, 160, 0.2) 70%
+  );
+  animation: pulse 3s infinite;
+  pointer-events: none;
+}

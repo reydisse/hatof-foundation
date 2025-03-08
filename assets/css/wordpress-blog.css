@@ -1,0 +1,274 @@
+.home-latest-news {
+  position: relative;
+  display: block;
+  padding: 60px 0;
+}
+
+.home-latest-news__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f5f5f5;
+}
+
+.home-latest-news__header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.home-latest-news__tagline {
+  display: block;
+  color: var(--thm-base);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+.home-latest-news__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Update your JavaScript class names accordingly */
+@media (max-width: 991px) {
+  .home-latest-news {
+    padding: 40px 0;
+  }
+
+  .home-latest-news__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-latest-news {
+    padding: 30px 0;
+  }
+
+  .home-latest-news__title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+/* Latest Articles Styling */
+.latest-articles {
+  position: relative;
+  padding: 20px 0 90px;
+  background-color: #15c8a0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.latest-articles__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #15c8a0;
+  z-index: -1;
+}
+
+/* Keep your existing section-title styles for consistency */
+.latest-articles .section-title {
+  position: relative;
+  display: block;
+  margin-bottom: 53px;
+}
+
+.latest-articles .section-title__title {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Card Styling with Exact Dimensions */
+.article-card {
+  position: relative;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  transition: all 500ms ease;
+}
+
+.article-card__image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 238px; /* Exact height to match your design */
+}
+
+.article-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.article-card:hover .article-card__image img {
+  transform: scale(1.1);
+}
+
+.article-card__plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 65px;
+  width: 65px;
+  background-color: var(--thm-base, #15c8a0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--thm-base, #15c8a0);
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 500ms ease;
+}
+
+.article-card:hover .article-card__plus {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.article-card__date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--thm-base, #15c8a0);
+  padding: 6px 20px;
+  z-index: 1;
+}
+
+.article-card__date p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}
+
+.article-card__content {
+  position: relative;
+  display: block;
+  padding: 24px 30px 30px;
+  background-color: #ffffff;
+}
+
+.section_color {
+  color: #ffffff;
+}
+
+.article-card__title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.article-card__title a {
+  color: var(--thm-black, #1e1e1e);
+  transition: all 500ms ease;
+}
+
+.article-card__title a:hover {
+  color: var(--thm-base, #15c8a0);
+}
+
+.article-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e7e7e8;
+  padding-top: 15px;
+}
+
+.article-card__btn {
+  color: var(--thm-gray, #878e9b);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 500ms ease;
+}
+
+.article-card__btn:hover {
+  color: var(--thm-base, #15c8a0);
+}
+
+.article-card__arrow {
+  height: 30px;
+  width: 30px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+
+.article-card__arrow:hover {
+  background-color: var(--thm-base, #15c8a0);
+  color: #ffffff;
+}
+
+/* Ensure uniform card heights */
+.article-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card__title {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 90px; /* Fixed height for title area */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .latest-articles {
+    padding: 80px 0 60px;
+  }
+
+  .latest-articles .section-title__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .latest-articles {
+    padding: 60px 0 40px;
+  }
+
+  .latest-articles .section-title__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

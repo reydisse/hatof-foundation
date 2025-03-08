@@ -8438,3 +8438,41 @@ background: #F9F9F9;
 
 
 }
+
+.news-one__single {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-one__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-one__img {
+  position: relative;
+  height: 240px; /* Fixed height for all images */
+  overflow: hidden;
+}
+
+.news-one__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures images maintain aspect ratio while filling the container */
+}
+
+.news-one__title {
+  min-height: 80px; /* Minimum height for the title area */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 15px;
+}
+
+.news-one__bottom {
+  margin-top: auto; /* Pushes the bottom section to the bottom of the container */
+}
