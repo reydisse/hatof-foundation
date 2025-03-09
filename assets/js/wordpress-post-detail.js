@@ -1,5 +1,3 @@
-// assets/js/wordpress-post-detail.js
-
 class WordPressPostDetail {
   constructor(options = {}) {
     this.baseUrl = options.baseUrl || "https://yourdomain.com/wp-json/wp/v2";
@@ -15,7 +13,6 @@ class WordPressPostDetail {
   }
 
   extractPostIdFromPath(path) {
-    // This regex looks for a number at the end of the URL path before the trailing slash
     const match = path.match(/[^\/]+-(\d+)\/?$/);
     if (match && match[1]) {
       return match[1];
@@ -24,7 +21,6 @@ class WordPressPostDetail {
   }
 
   getPostIdFromUrl() {
-    // First try to get ID from query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const idParam = urlParams.get("id");
 
@@ -32,7 +28,6 @@ class WordPressPostDetail {
       return idParam;
     }
 
-    // If no ID parameter, try to extract from URL path (for WordPress-style permalinks)
     return this.extractPostIdFromPath(window.location.pathname);
   }
 
@@ -43,7 +38,7 @@ class WordPressPostDetail {
 
   async getPostById(id) {
     try {
-      const url = `${this.baseUrl}/posts/${id}?_embed`;
+      const url = `${this.baseUrl}/posts/${id}?_embed&_fields=id,date,title,content,excerpt,author,author_data,author_name,_embedded`;
 
       if (this.debug) {
         console.log("Fetching post by ID from:", url);
@@ -57,7 +52,18 @@ class WordPressPostDetail {
         );
       }
 
-      return await response.json();
+      const post = await response.json();
+
+      if (this.debug) {
+        console.log("Post data received:", post);
+        console.log("Author data:", {
+          author_data: post.author_data,
+          author_name: post.author_name,
+          embedded_author: post._embedded?.author?.[0],
+        });
+      }
+
+      return post;
     } catch (error) {
       console.error("Error fetching post by ID:", error);
       return null;
@@ -120,67 +126,6 @@ class WordPressPostDetail {
     }
   }
 
-  async getRelatedPosts(postId, categoryIds, count = 3) {
-    try {
-      if (!categoryIds || categoryIds.length === 0) {
-        return this.getRecentPosts(count, postId);
-      }
-
-      // Create comma-separated category IDs
-      const categoryParam = categoryIds.join(",");
-
-      // Build URL with category filter and exclude current post
-      const url = `${this.baseUrl}/posts?_embed&per_page=${count}&categories=${categoryParam}&exclude=${postId}`;
-
-      if (this.debug) {
-        console.log("Fetching related posts from:", url);
-      }
-
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(
-          `Network response was not ok: ${response.status} ${response.statusText}`
-        );
-      }
-
-      const posts = await response.json();
-
-      // If we got fewer posts than requested, supplement with recent posts
-      if (posts.length < count) {
-        const existingIds = [postId, ...posts.map((p) => p.id)];
-        const additionalPosts = await this.getAdditionalPosts(
-          count - posts.length,
-          existingIds
-        );
-        return [...posts, ...additionalPosts];
-      }
-
-      return posts;
-    } catch (error) {
-      console.error("Error fetching related posts:", error);
-      return this.getRecentPosts(count, postId);
-    }
-  }
-
-  async getAdditionalPosts(count, excludeIds) {
-    try {
-      const excludeParam = excludeIds.join(",");
-      const url = `${this.baseUrl}/posts?_embed&per_page=${count}&exclude=${excludeParam}`;
-
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        return [];
-      }
-
-      return await response.json();
-    } catch (error) {
-      console.error("Error fetching additional posts:", error);
-      return [];
-    }
-  }
-
   formatDate(dateString) {
     const date = new Date(dateString);
     const day = date.getDate();
@@ -190,22 +135,44 @@ class WordPressPostDetail {
   }
 
   getAuthorName(post) {
-    if (post._embedded && post._embedded.author && post._embedded.author[0]) {
-      return post._embedded.author[0].name;
+    if (this.debug) {
+      console.log("Checking author data:", {
+        author_data: post.author_data,
+        author_name: post.author_name,
+        embedded_author: post._embedded?.author?.[0],
+      });
     }
-    return "HATOF Foundation";
-  }
 
-  getAuthorAvatar(post) {
-    if (
-      post._embedded &&
-      post._embedded.author &&
-      post._embedded.author[0] &&
-      post._embedded.author[0].avatar_urls
-    ) {
-      return post._embedded.author[0].avatar_urls["96"] || "";
+    try {
+      // Try to get author name from our custom field first
+      if (post.author_name) {
+        return post.author_name;
+      }
+
+      // Try author_data from our custom endpoint
+      if (post.author_data?.name) {
+        return post.author_data.name;
+      }
+
+      // Try embedded author data
+      if (post._embedded?.author?.[0]?.name) {
+        return post._embedded.author[0].name;
+      }
+
+      // If we have an author object but no name
+      if (post._embedded?.author?.[0] && !post._embedded.author[0].code) {
+        return post._embedded.author[0].slug
+          .split("-")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+      }
+
+      // Default fallback
+      return "HATOF Foundation";
+    } catch (error) {
+      console.error("Error getting author name:", error);
+      return "HATOF Foundation";
     }
-    return "";
   }
 
   getFeaturedImage(post) {
@@ -221,7 +188,6 @@ class WordPressPostDetail {
 
   getCategories(post) {
     if (post._embedded && post._embedded["wp:term"]) {
-      // Categories are typically the first taxonomy in the terms array
       const categories = post._embedded["wp:term"][0] || [];
       return categories.map((category) => ({
         id: category.id,
@@ -238,7 +204,6 @@ class WordPressPostDetail {
       post._embedded["wp:term"] &&
       post._embedded["wp:term"][1]
     ) {
-      // Tags are typically the second taxonomy in the terms array
       const tags = post._embedded["wp:term"][1] || [];
       return tags.map((tag) => ({
         id: tag.id,
@@ -300,7 +265,6 @@ class WordPressPostDetail {
     const featuredImage = this.getFeaturedImage(post);
     const date = this.formatDate(post.date);
     const author = this.getAuthorName(post);
-    const authorAvatar = this.getAuthorAvatar(post);
     const categories = this.getCategories(post);
     const tags = this.getTags(post);
 
@@ -321,7 +285,9 @@ class WordPressPostDetail {
                     <li><a href="#"><i class="far fa-user-circle"></i> ${author}</a></li>
                     ${
                       categories.length > 0
-                        ? `<li><i class="fas fa-folder"></i> ${categoryLinks}</li>`
+                        ? `<li><i></i>
+                       
+                         </li>`
                         : ""
                     }
                 </ul>
@@ -359,23 +325,9 @@ class WordPressPostDetail {
     )}" target="_blank"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            ${
-              author && authorAvatar
-                ? `
-            <div class="news-details__author">
-                <div class="news-details__author-img">
-                    <img src="${authorAvatar}" alt="${author}">
-                </div>
-                <div class="news-details__author-content">
-                    <h3>${author}</h3>
-                    <p>HATOF Foundation</p>
-                </div>
-            </div>`
-                : ""
-            }
         `;
 
-    // Load related posts based on categories
+    // Load related posts
     this.renderRelatedPosts(post.id, categoryIds);
   }
 
@@ -388,17 +340,9 @@ class WordPressPostDetail {
       return;
     }
 
-    let relatedPosts;
+    const recentPosts = await this.getRecentPosts(3, currentPostId);
 
-    // Get posts related by category if we have categories, otherwise get recent posts
-    if (categoryIds && categoryIds.length > 0) {
-      relatedPosts = await this.getRelatedPosts(currentPostId, categoryIds, 3);
-    } else {
-      relatedPosts = await this.getRecentPosts(3, currentPostId);
-    }
-
-    if (relatedPosts.length === 0) {
-      // If no related posts, keep the container empty or show a message
+    if (recentPosts.length === 0) {
       container.innerHTML =
         '<li class="text-center"><p>No related posts found</p></li>';
       return;
@@ -407,8 +351,8 @@ class WordPressPostDetail {
     // Clear container
     container.innerHTML = "";
 
-    // Render related posts
-    relatedPosts.forEach((post) => {
+    // Render recent posts
+    recentPosts.forEach((post) => {
       const featuredImage = this.getFeaturedImage(post);
       const slug = post.slug || "";
 
@@ -454,50 +398,7 @@ class WordPressPostDetail {
     }
 
     // Still load recent posts in the sidebar
-    this.renderRecentPosts();
-  }
-
-  async renderRecentPosts() {
-    const container = document.querySelector(this.relatedPostsContainer);
-    if (!container) {
-      console.error(
-        `Related posts container ${this.relatedPostsContainer} not found`
-      );
-      return;
-    }
-
-    const recentPosts = await this.getRecentPosts(3);
-
-    if (recentPosts.length === 0) {
-      // If no recent posts, keep the container empty or show a message
-      container.innerHTML =
-        '<li class="text-center"><p>No recent posts found</p></li>';
-      return;
-    }
-
-    // Clear container
-    container.innerHTML = "";
-
-    // Render recent posts
-    recentPosts.forEach((post) => {
-      const featuredImage = this.getFeaturedImage(post);
-      const slug = post.slug || "";
-
-      const postHtml = `
-                <li>
-                    <div class="sidebar__post-image">
-                        <img src="${featuredImage}" alt="${post.title.rendered}">
-                    </div>
-                    <div class="sidebar__post-content">
-                        <h3>
-                            <a href="post-details.html?id=${post.id}&slug=${slug}">${post.title.rendered}</a>
-                        </h3>
-                    </div>
-                </li>
-            `;
-
-      container.innerHTML += postHtml;
-    });
+    this.renderRelatedPosts(null, []);
   }
 
   async loadPost() {

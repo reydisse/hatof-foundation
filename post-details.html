@@ -477,17 +477,15 @@
 
     <div class="search-popup">
         <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form action="news.html">
-                <label for="search" class="sr-only">News & Updates</label><!-- /.sr-only -->
+                <label for="search" class="sr-only">News & Updates</label>
                 <input type="text" id="search" name="search" placeholder="News & Updates" />
                 <button type="submit" aria-label="search submit" class="thm-btn">
                     <i class="icon-magnifying-glass"></i>
                 </button>
             </form>
         </div>
-        <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
 
@@ -522,15 +520,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const wpPostDetail = new WordPressPostDetail({
-                baseUrl: 'https:/hatof.org/wp-json/wp/v2', // Replace with your WordPress site URL
+                baseUrl: 'https://hatof.org/wp-json/wp/v2', // Replace with your WordPress site URL
                 postContainer: '.news-details__left',
                 relatedPostsContainer: '.sidebar__post-list',
                 titleContainer: '.page-header__inner h2',
-                debug: true // Can set to false in production
+                debug: true // Set to false in production
             });
 
             wpPostDetail.loadPost();
         });
+    </script>
     </script>
 
     <!-- template js -->
