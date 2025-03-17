@@ -45,6 +45,355 @@
     <link rel="stylesheet" href="assets/css/conult.css" />
     <link rel="stylesheet" href="assets/css/conult-responsive.css" />
     <link rel="stylesheet" href="assets/css/navbar.css" />
+    <style>
+        /* GCF CSO Page Specific Styles */
+        .gcf-hero {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/images/backgrounds/page-header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .gcf-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+            color: #fff;
+        }
+
+        .gcf-hero .subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -50px auto 0;
+            padding: 0 20px;
+            max-width: 1200px;
+        }
+
+        .detail-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-card h3 {
+            color: #15c8a0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .detail-card p {
+            color: #333;
+            margin: 0;
+        }
+
+        .section-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-content.bg-light {
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #15c8a0;
+            margin: 20px auto 0;
+        }
+
+        .content-box {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .content-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content-list li::before {
+            content: '➢';
+            position: absolute;
+            left: 0;
+            color: #15c8a0;
+        }
+
+        .objectives-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .objectives-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .objectives-list li::before {
+            content: '❖';
+            position: absolute;
+            left: 0;
+            color: #15c8a0;
+        }
+
+        .activities-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .activity-item {
+            position: relative;
+            padding: 20px 0 20px 50px;
+            border-left: 2px solid #15c8a0;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .activity-item::before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background: #15c8a0;
+            border-radius: 50%;
+        }
+
+        .activity-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .impact-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .impact-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .media-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .media-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            background: #ffffff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: #15c8a0;
+            color: #ffffff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Document Item Styles */
+        .document-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .document-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .document-icon {
+            font-size: 40px;
+            color: #15c8a0;
+            margin-bottom: 15px;
+        }
+
+        .document-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .document-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #15c8a0;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .document-btn:hover {
+            background: #0fa689;
+        }
+
+        .media-item__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .media-item:hover .media-item__overlay {
+            opacity: 1;
+        }
+
+        .error {
+            background: #ffe0e0;
+            color: #d8000c;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .no-content {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        @media (max-width: 991px) {
+            .gcf-hero h1 {
+                font-size: 36px;
+            }
+
+            .gcf-hero .subtitle {
+                font-size: 18px;
+            }
+
+            .project-details-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .project-details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gcf-hero {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .media-tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -157,189 +506,33 @@
         </div><!-- /.stricky-header -->
 
         <!--Page Header Start-->
-        <section class="page-header">
+        <!-- <section class="page-header">
             <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>GCF CSO
-                        Readiness</h2>
+                    <h1>GCF CSO
+                        Readiness</h1>
+                    <p class="subtitle">Capacity Building and Knowledge Management on Climate Change for Civil Society
+                        Organizations (CSOs) in Ghana towards the implementation of the Nationally Determined
+                        Contributions.
+                    </p>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li class="active">Projects</li>
                     </ul>
                 </div>
             </div>
+        </section> -->
+        <section class="gcf-hero">
+            <div class="container">
+                <h1>GCF CSO Readiness Project, Ghana</h1>
+                <p class="subtitle">Capacity Building and Knowledge Management on Climate Change for Civil Society
+                    Organizations (CSOs) in Ghana towards the implementation of the Nationally Determined Contributions.
+                </p>
+            </div>
         </section>
         <!--Page Header End-->
-
-        <!--projects Page Start-->
-        <!-- <section class="projects-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-1.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Business Growth</a></h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Business Growth</a>
-                                    </h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-2.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Marketing Advice</a></h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Marketing Advice</a>
-                                    </h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-3.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Finance Consulting</a>
-                                        </h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Finance Consulting</a>
-                                    </h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-4.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Digital Campaigns</a>
-                                        </h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Digital Campaigns</a>
-                                    </h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-5.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Substantial Business</a>
-                                        </h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Substantial
-                                            Business</a></h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="case-one__single">
-                            <div class="case-one__img-box">
-                                <div class="case-one__img">
-                                    <img src="assets/images/case/case-page-img-6.jpg" alt="">
-                                    <div class="case-one__content">
-                                        <p class="case-one__tagline-line">Business, Finance</p>
-                                        <h3 class="case-one__title"><a href="case-single.html">Top Consultation</a></h3>
-                                        <div class="case-one__icon">
-                                            <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="case-one__hover">
-                                    <p class="case-one__hover-tagline-line">Business, Finance</p>
-                                    <h3 class="case-one__hover-title"><a href="case-single.html">Top Consultation</a>
-                                    </h3>
-                                    <p class="case-one__hover-text">Suspendisse finibus urna mauris, <br> vitae quam
-                                        vel. Vestibulum leo <br> ligula, ed luctus.</p>
-                                    <div class="case-one__hover-icon">
-                                        <a href="case-single.html"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!--projects Page End-->
 
         <section class="vid container text-center">
             <div class="row justify-content-center">
@@ -353,98 +546,297 @@
         </section>
 
 
-        <section class="news-page">
-            <input type="checkbox" id="pic-1" />
-            <label for="pic-1" class="lightbox"><img src="http://unsplash.it/800/600?image=1" /></label>
-            <input type="checkbox" id="pic-2" />
-            <label for="pic-2" class="lightbox"><img src="http://unsplash.it/800/600?image=20" /></label>
-            <input type="checkbox" id="pic-3" />
-            <label for="pic-3" class="lightbox"><img src="http://unsplash.it/800/600?image=22" /></label>
-            <input type="checkbox" id="pic-4" />
-            <label for="pic-4" class="lightbox"><img src="http://unsplash.it/800/600?image=42" /></label>
-            <input type="checkbox" id="pic-5" />
-            <label for="pic-5" class="lightbox"><img src="http://unsplash.it/800/600?image=48" /></label>
-            <input type="checkbox" id="pic-6" />
-            <label for="pic-6" class="lightbox"><img src="http://unsplash.it/800/600?image=60" /></label>
-            <input type="checkbox" id="pic-7" />
-            <label for="pic-7" class="lightbox"><img src="http://unsplash.it/800/600?image=201" /></label>
-            <input type="checkbox" id="pic-8" />
-            <label for="pic-8" class="lightbox"><img src="http://unsplash.it/800/600?image=7" /></label>
-            <input type="checkbox" id="pic-9" />
-            <label for="pic-9" class="lightbox"><img src="http://unsplash.it/800/600?image=119" /></label>
-            <input type="checkbox" id="pic-10" />
-            <label for="pic-10" class="lightbox"><img src="http://unsplash.it/800/600?image=180" /></label>
-            <input type="checkbox" id="pic-11" />
-            <label for="pic-11" class="lightbox"><img src="http://unsplash.it/800/600?image=96" /></label>
-            <input type="checkbox" id="pic-12" />
-            <label for="pic-12" class="lightbox"><img src="http://unsplash.it/800/600?image=24" /></label>
-            <div class="grid">
-                <label for="pic-1" class="grid-item"><img src="assets/images/GCF/IMG_8306.jpg" /></label>
-                <label for="pic-3" class="grid-item"><img src="assets/images/GCF/IMG_8309.jpg" /></label>
-                <label for="pic-4" class="grid-item"><img src="assets/images/GCF/IMG_8310.jpg" /></label>
-                <label for="pic-8" class="grid-item"><img src="assets/images/GCF/IMG_8311.jpg" /></label>
-                <label for="pic-9" class="grid-item"><img src="assets/images/GCF/IMG_8312.jpg" /></label>
-                <label for="pic-10" class="grid-item"><img src="assets/images/GCF/IMG_8313.jpg" /></label>
-                <label for="pic-11" class="grid-item"><img src="assets/images/GCF/IMG_8317.jpg" /></label>
-                <label for="pic-12" class="grid-item"><img src="assets/images/GCF/IMG_8318.jpg" /></label>
 
-                <label for="pic-1" class="grid-item"><img src="assets/images/GCF/IMG_8319.jpg" /></label>
-                <label for="pic-2" class="grid-item"><img src="assets/images/GCF/IMG_8321.jpg" /></label>
-                <label for="pic-7" class="grid-item"><img src="assets/images/GCF/IMG_8322.jpg " /></label>
-                <label for="pic-8" class="grid-item"><img src="assets/images/GCF/IMG_8324.jpg" /></label>
-                <label for="pic-10" class="grid-item"><img src="assets/images/GCF/IMG_8328.jpg" /></label>
-                <label for="pic-11" class="grid-item"><img src="assets/images/GCF/IMG_8331.jpg" /></label>
-                <label for="pic-12" class="grid-item"><img src="assets/images/GCF/IMG_8333.jpg" /></label>
-                <label for="pic-5" class="grid-item"><img src="assets/images/GCF/IMG_8334.jpg" /></label>
 
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8335.jpg" /></label>
-
-                <label for="pic-3" class="grid-item"><img src="assets/images/GCF/IMG_8336.jpg" /></label>
-                <label for="pic-4" class="grid-item"><img src="assets/images/GCF/IMG_8337.jpg" /></label>
-                <label for="pic-5" class="grid-item"><img src="assets/images/GCF/IMG_8339.jpg" /></label>
-                <label for="pic-7" class="grid-item"><img src="assets/images/GCF/IMG_8340.jpg " /></label>
-                <label for="pic-8" class="grid-item"><img src="assets/images/GCF/IMG_8341.jpg" /></label>
-                <label for="pic-9" class="grid-item"><img src="assets/images/GCF/IMG_8343.jpg" /></label>
-                <label for="pic-10" class="grid-item"><img src="assets/images/GCF/IMG_8344.jpg" /></label>
-                <label for="pic-11" class="grid-item"><img src="assets/images/GCF/IMG_8345.jpg" /></label>
-                <label for="pic-12" class="grid-item"><img src="assets/images/GCF/IMG_8347.jpg" /></label>
-
-                <label for="pic-1" class="grid-item"><img src="assets/images/GCF/IMG_8349.jpg" /></label>
-                <label for="pic-2" class="grid-item"><img src="assets/images/GCF/IMG_8350.jpg" /></label>
-                <label for="pic-3" class="grid-item"><img src="assets/images/GCF/IMG_8351.jpg" /></label>
-                <label for="pic-4" class="grid-item"><img src="assets/images/GCF/IMG_8352.jpg" /></label>
-                <label for="pic-5" class="grid-item"><img src="assets/images/GCF/IMG_8354.jpg" /></label>
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8355.jpg" /></label>
-                <label for="pic-7" class="grid-item"><img src="assets/images/GCF/IMG_8356.jpg " /></label>
-                <label for="pic-9" class="grid-item"><img src="assets/images/GCF/IMG_8358.jpg" /></label>
-                <label for="pic-10" class="grid-item"><img src="assets/images/GCF/IMG_8361.jpg" /></label>
-                <label for="pic-11" class="grid-item"><img src="assets/images/GCF/IMG_8363.jpg" /></label>
-                <label for="pic-12" class="grid-item"><img src="assets/images/GCF/IMG_8364.jpg" /></label>
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8365.jpg" /></label>
-
-                <label for="pic-1" class="grid-item"><img src="assets/images/GCF/IMG_8366.jpg" /></label>
-                <label for="pic-2" class="grid-item"><img src="assets/images/GCF/IMG_8367.jpg" /></label>
-                <label for="pic-3" class="grid-item"><img src="assets/images/GCF/IMG_8368.jpg" /></label>
-                <label for="pic-4" class="grid-item"><img src="assets/images/GCF/IMG_8369.jpg" /></label>
-                <label for="pic-5" class="grid-item"><img src="assets/images/GCF/IMG_8370.jpg" /></label>
-                <label for="pic-7" class="grid-item"><img src="assets/images/GCF/IMG_8371.jpg" /></label>
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8372.jpg" /></label>
-
-                <label for="pic-1" class="grid-item"><img src="assets/images/GCF/IMG_8375.jpg" /></label>
-                <label for="pic-2" class="grid-item"><img src="assets/images/GCF/IMG_8377.jpg" /></label>
-                <label for="pic-3" class="grid-item"><img src="assets/images/GCF/IMG_8378.jpg" /></label>
-                <label for="pic-4" class="grid-item"><img src="assets/images/GCF/IMG_8379.jpg" /></label>
-                <label for="pic-5" class="grid-item"><img src="assets/images/GCF/IMG_8381.jpg" /></label>
-                <label for="pic-7" class="grid-item"><img src="assets/images/GCF/IMG_8384.jpg" /></label>
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8387.jpg" /></label>
-                <label for="pic-6" class="grid-item"><img src="assets/images/GCF/IMG_8388.jpg" /></label>
-
-                <label for="pic-2" class="grid-item"><img src="assets/images/GCF/IMG_8308.jpg" /></label>
-                <label for="pic-9" class="grid-item"><img src="assets/images/GCF/IMG_8325.jpg" /></label>
-                <label for="pic-8" class="grid-item"><img src="assets/images/GCF/IMG_8357.jpg" /></label>
-
+        <!-- Project Overview -->
+        <section class="section-content">
+            <div class="project-details-grid">
+                <div class="detail-card">
+                    <h3>Funder</h3>
+                    <p>Green Climate Fund (GCF)</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Timeframe</h3>
+                    <p>May 2022 – May 2025</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Location</h3>
+                    <p>Ghana</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Beneficiaries</h3>
+                    <p><strong>Direct:</strong> 40 Ghanaian CSOs<br>
+                        <strong>Indirect:</strong> Over 200 CSOs in Ghana
+                    </p>
+                </div>
             </div>
         </section>
+
+        <!-- Context Section -->
+        <section class="section-content bg-light">
+            <div class="container">
+                <h2 class="section-title">Context</h2>
+                <div class="content-box">
+                    <p>For the past 15 years, the government of Ghana has received support from the Global Environment
+                        Facility (GEF), The Adaptation Fund, and other multilateral and bilateral agencies, as well as
+                        non-state
+                        actors, to implement several capacity-building and climate change coordination and policy
+                        development initiatives.</p>
+
+                    <h3>Key Gaps Identified:</h3>
+                    <ul class="content-list">
+                        <li>The absence of CSO-tailored projects/programmes that ensures technical capacity
+                            development for CSOs</li>
+                        <li>Low level of awareness of climate hazards and knowledge about how to manage them</li>
+                        <li>Lack of a long-term strategic and action plan for and by CSOs</li>
+                        <li>Inadequate technical capacity to develop and effectively implement climate-related projects
+                        </li>
+                        <li>Inconsistent and inadequate participation of CSOs in national climate change decision-making
+                            processes</li>
+                        <li>Lack of coordination mechanisms and clear consultative process among CSOs and NGOs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives Section -->
+        <section class="section-content">
+            <div class="container">
+                <h2 class="section-title">Project Objectives</h2>
+                <div class="content-box">
+                    <p>To strengthen the capacities of 10 Ghanaian CSO networks to contribute efficiently to the
+                        Nationally
+                        Determined Contributions planning and implementation processes by:</p>
+                    <ul class="objectives-list">
+                        <li>Engaging the National Designated Authority, Direct Access Entities, and GCF on project
+                            design,
+                            selection, budget preparation, implementation, monitoring and evaluation</li>
+                        <li>Developing a CSO-tailored training module on preparing funding proposals</li>
+                        <li>Developing a five-year Civil Society Climate Change Agenda and Action Plan</li>
+                        <li>Developing GCF Concept note proposing how this initiative could be up-scaled nationally</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="section-content bg-light">
+            <div class="container">
+                <h2 class="section-title">Project Activities</h2>
+                <div class="activities-timeline">
+                    <div class="activity-item">
+                        <h4>Project Launch and Inception Workshop</h4>
+                        <p>Successfully launched the project with stakeholders and conducted inception workshop</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Stakeholder Mapping and Need Assessment</h4>
+                        <p>Mapped and identified relevant stakeholders, assessed their capacity needs</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Capacity Building Workshops</h4>
+                        <p>Organized training sessions on climate change project development and implementation</p>
+                    </div>
+                    <!-- Add more activities as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="section-content">
+            <div class="container">
+                <h2 class="section-title">Project Impact</h2>
+                <div class="content-box">
+                    <ul class="impact-list">
+                        <li class="impact-item">Over 100 CSOs in Ghana engaged in the Rio Convention implementation</li>
+                        <li class="impact-item">Established the Ghana Environmental CSO Coordination Mechanism (EnVOG)
+                        </li>
+                        <li class="impact-item">40 CSOs trained on climate change project development</li>
+                        <li class="impact-item">Developed a five-year strategic Civil Society Climate Change Agenda</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section class="media-section">
+            <div class="container">
+                <h2 class="section-title">Project Resources</h2>
+
+                <div class="media-tabs">
+                    <button class="tab-btn active" data-tab="photos">Photos</button>
+                    <button class="tab-btn" data-tab="publications">Publications</button>
+                    <button class="tab-btn" data-tab="reports">Reports</button>
+                </div>
+
+                <div id="mediaGrid" class="media-grid">
+                    <div class="loading">Loading resources...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single clean implementation of GCFResourceManager -->
+        <script>
+            class GCFResourceManager {
+                constructor() {
+                    this.baseUrl = 'https://hatof.org/wp-json';
+                    this.container = document.getElementById('mediaGrid');
+                    this.currentTab = 'photos';
+
+                    if (this.container) {
+                        this.init();
+                    } else {
+                        console.error('Media grid container not found');
+                    }
+                }
+
+                init() {
+                    // Add event listeners to tab buttons
+                    const tabButtons = document.querySelectorAll('.media-tabs .tab-btn');
+
+                    if (tabButtons.length) {
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', (e) => {
+                                // Remove active class from all buttons
+                                tabButtons.forEach(btn => {
+                                    btn.classList.remove('active');
+                                });
+
+                                // Add active class to clicked button
+                                e.target.classList.add('active');
+
+                                // Set current tab and load content
+                                this.currentTab = e.target.dataset.tab;
+                                this.loadContent();
+                            });
+                        });
+
+                        this.loadContent();
+                    } else {
+                        console.error('Tab buttons not found');
+                    }
+                }
+
+                async loadContent() {
+                    try {
+                        this.container.innerHTML = '<div class="loading">Loading...</div>';
+                        console.log('Fetching content for tab:', this.currentTab);
+
+                        // Use the custom endpoint instead of standard WP API
+                        const url = `${this.baseUrl}/gcf-cso/v1/resources?type=${this.currentTab}`;
+                        console.log('Fetching resources from custom endpoint:', url);
+
+                        const response = await fetch(url);
+                        console.log('Response status:', response.status);
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+
+                        const items = await response.json();
+                        console.log('Fetched items:', items);
+
+                        this.renderContent(items);
+                    } catch (error) {
+                        console.error('Error loading content:', error);
+                        this.container.innerHTML = `
+                <div class="error">
+                    <p>Error loading content: ${error.message}</p>
+                    <p>Please check the browser console for more details.</p>
+                </div>
+            `;
+                    }
+                }
+
+                renderContent(items) {
+                    if (!items || items.length === 0) {
+                        this.container.innerHTML = '<div class="no-content">No content available for this category.</div>';
+                        return;
+                    }
+
+                    let html = '';
+
+                    if (this.currentTab === 'photos') {
+                        // Render photos
+                        items.forEach(item => {
+                            // Get image URL from featured media or content
+                            const imageUrl = item.featured_media_url || this.getImageFromContent(item.content);
+
+                            if (imageUrl) {
+                                html += `
+                    <div class="media-item">
+                        <img src="${imageUrl}" alt="${item.title.rendered || 'Gallery Image'}">
+                        <div class="media-item__overlay">
+                            <h3>${item.title.rendered || 'Gallery Image'}</h3>
+                            ${this.getPhotoCategories(item)}
+                            ${item.meta && item.meta._event_date ?
+                                        `<p>Date: ${item.meta._event_date}</p>` : ''}
+                        </div>
+                    </div>
+                    `;
+                            }
+                        });
+                    } else {
+                        // Render publications or reports
+                        items.forEach(item => {
+                            const fileUrl = item.meta && item.meta._file_url ? item.meta._file_url : '#';
+                            const fileSize = item.meta && item.meta._file_size ? this.formatFileSize(item.meta._file_size) : '';
+
+                            html += `
+                <div class="document-item">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="document-title">${item.title.rendered || 'Untitled'}</h3>
+                    ${fileSize ? `<p>File Size: ${fileSize}</p>` : ''}
+                    <div class="document-actions">
+                        <a href="${fileUrl}" class="document-btn download-btn" target="_blank">
+                            Download ${this.currentTab === 'publications' ? 'Publication' : 'Report'}
+                        </a>
+                    </div>
+                </div>
+                `;
+                        });
+                    }
+
+                    this.container.innerHTML = html || '<div class="no-content">No items found.</div>';
+                }
+
+                getImageFromContent(content) {
+                    if (!content || !content.rendered) return null;
+
+                    try {
+                        const div = document.createElement('div');
+                        div.innerHTML = content.rendered;
+                        const img = div.querySelector('img');
+                        return img ? img.src : null;
+                    } catch (error) {
+                        console.error('Error extracting image from content:', error);
+                        return null;
+                    }
+                }
+
+                getPhotoCategories(item) {
+                    if (!item.photo_categories || item.photo_categories.length === 0) return '';
+
+                    const categoryNames = item.photo_categories.map(cat => cat.name).join(', ');
+                    return `<p>Category: ${categoryNames}</p>`;
+                }
+
+                formatFileSize(bytes) {
+                    if (!bytes) return '';
+                    const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+                    if (bytes === 0) return '0 Byte';
+                    const i = Math.floor(Math.log(bytes) / Math.log(1024));
+                    return Math.round((bytes / Math.pow(1024, i)) * 100) / 100 + ' ' + sizes[i];
+                }
+            }
+
+            // Initialize when the document is ready
+            document.addEventListener('DOMContentLoaded', () => {
+                new GCFResourceManager();
+            });
+
+        </script>
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -543,12 +935,8 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </div>
-    </footer>
-    <!--Site Footer End-->
-
-
+        </footer>
+        <!--Site Footer End-->
     </div><!-- /.page-wrapper -->
 
 
@@ -584,9 +972,6 @@
                     <a href="#" class="fab fa-instagram"></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
-
-
-
         </div>
         <!-- /.mobile-nav__content -->
     </div>
@@ -610,7 +995,6 @@
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
@@ -633,9 +1017,6 @@
     <script src="assets/vendors/vegas/vegas.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
-
-
-
 
     <!-- template js -->
     <script src="assets/js/conult.js"></script>
