@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Global Policy | HATOF Foundation</title>
+    <title>Project Details || HATOF Foundation</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Conult HTML Template For Business" />
+    <meta name="description" content="HATOF Foundation Projects" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
@@ -45,6 +44,153 @@
     <link rel="stylesheet" href="assets/css/conult.css" />
     <link rel="stylesheet" href="assets/css/conult-responsive.css" />
     <link rel="stylesheet" href="assets/css/navbar.css" />
+
+    <style>
+        /* Project Details Styling */
+        .project-details {
+            padding: 100px 0;
+            background-color: #f7f7f9;
+        }
+
+        .project-details__img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-details__img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .project-status--active {
+            background-color: #31b465;
+        }
+
+        .project-status--completed {
+            background-color: #ff7e00;
+        }
+
+        .project-details__title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .project-details__text {
+            color: #717171;
+            line-height: 1.8;
+        }
+
+        .project-details__sidebar {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .project-details__info {
+            padding: 30px;
+        }
+
+        .project-details__info-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .project-details__info-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eaeaea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-details__info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .project-details__info-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .project-details__info-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project-details__info-status--active {
+            background-color: #31b465;
+        }
+
+        .project-details__info-status--completed {
+            background-color: #ff7e00;
+        }
+
+        .project-details__share {
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .project-details__share-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-details__share-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            color: #717171;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .project-details__share-icons a:hover {
+            background-color: #31b465;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .project-details {
+                padding: 60px 0;
+            }
+
+            .project-details__title {
+                font-size: 28px;
+            }
+
+            .project-details__sidebar {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -158,209 +304,103 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg"
-                style="background-image: url(assets/images/backgrounds/page-header-global-policy.png)">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>GLOBAL POLICY</h2>
+                    <h2 id="project-title">Project Details</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <!-- <li><a href="services.html">Service</a></li> -->
+                        <li><a href="hatof-projects.html">Projects</a></li>
+                        <li class="active" id="project-breadcrumb-title">Project Details</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Service Details Start-->
-        <section class="service-details">
+        <!-- Project Details Start -->
+        <section class="project-details">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="service-details__sidebar">
-                            <div class="service-details__sidebar-service">
-                                <ul class="service-details__sidebar-service-list list-unstyled">
-                                    <li><a href="climate-change.html">Climate Change <span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li><a href="biodiversity.html">Biodiversity <span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li><a href="energy.html">Energy<span class="icon-right-arrow"></span></a>
-                                    </li>
-                                    <li><a href="food-agriculture.html">Food & Agriculture <span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li class="current"><a href="global-policy.html">Global Policy<span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li><a href="finance.html">Climate Finance<span class="icon-right-arrow"></span></a>
-                                    </li>
-                                    <li><a href="blue-economy.html">Blue Economy<span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li><a href="chemicals-waste.html">Chemicals & Waste<span
-                                                class="icon-right-arrow"></span></a>
-                                    </li>
-                                </ul>
+                <div id="project-loading" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading project details...</span>
+                    </div>
+                    <p class="mt-2">Loading project details...</p>
+                </div>
+
+                <div id="project-error" class="alert alert-danger my-5" style="display: none;">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <span id="error-message">Unable to load project details. Please try again later.</span>
+                </div>
+
+                <div id="project-content" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12 mb-5">
+                            <div class="project-details__img">
+                                <img id="project-featured-image" src="" alt="" class="img-fluid">
+                                <div id="project-status-badge" class="project-status">Active</div>
                             </div>
-                            <div class="service-details__need-help">
-                                <div class="service-details__need-help-bg"
-                                    style="background-image: url(assets/images/backgrounds/main-slider-3-1.jpg)">
-                                </div>
-                                <h2 class="service-details__need-help-title">Want to contribute to our work?.</h2>
-                                <div class="service-details__need-help-icon">
-                                    <span class="icon-phone"></span>
-                                </div>
-                                <div class="service-details__need-help-contact">
-                                    <!-- <p>Call Anytime</p> -->
-                                    <a href="tel:+233 559065973 ">+233 559065973 </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="assets/images/themes/bio1.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/themes/bio2.png" alt="">
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="service-details__right">
-                            <div class="service-details__img">
-                                <img src="assets/images/services/global-policy.png" alt="Global Policy">
-                            </div>
-                            <div class="service-details__content">
-                                <h3 class="service-details__title">Global Policy</h3>
-                                <p class="service-details__text-1">The increasingly global interdependence calls for
-                                    collective actions to address global environmental challenges.</p>
-                                <p class="service-details__text-2">Collective and decisive actions are thus required to
-                                    address the increasing dangers of permanent environmental damage resulting from
-                                    greenhouse gases (especially C02) leading to global warming, the inexorable loss of
-                                    biodiversity resulting in part from the destruction of tropical rain forests, and
-                                    the worsening poverty and economic crisis.
-                                </p>
-                                <h3 class="service-details__sub-title">Our Work</h3>
-                                <p class="service-details__text-2">
-                                    HATOF actively participates in multilateral Environmental forums including the
-                                    Climate Change Convention, Convention on Biological Diversity, and Convention to
-                                    Combat Desertification, where it provides policy and technical support to key
-                                    stakeholders based on experience from on-ground actions and science.
-                                </p>
-                                <p class="service-details__text-2">
-                                    We particularly contributed to the framing and adoption of continental and global
-                                    policy frameworks– including the Paris Climate Agreement and NDCs, Post 2020 Global
-                                    Biodiversity Framework, land degradation neutrality, the Africa Union Agenda 2063,
-                                    and African Charter on Maritime security and safety and development in Africa.
-                                </p>
-                                <p class="service-details__text-2">
-                                    At the forums, HATOF collaborates with relevant stakeholders to organise side events
-                                    and exhibitions. The object is always to showcase deliberate actions of government,
-                                    civil society organisations, and private sector in addressing global environmental
-                                    challenges, and to leverage partnership for upscaling and out scaling actions. We
-                                    also support policy-makers to align national development objectives and policies
-                                    with global policy frameworks based on national priorities, needs and capabilities.
-                                </p>
-                            </div>
-                            <div class="service-details__bottom">
-                                <div class="service-details__bottom-icon">
-                                    <span class="icon-report"></span>
+
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="project-details__content">
+                                <h2 id="project-detail-title" class="project-details__title">Project Title</h2>
+
+                                <div id="project-detail-content" class="project-details__text">
+                                    <!-- Project content will be loaded here -->
                                 </div>
-                                <p class="service-details__bottom-text">Increasing global interdependence demands
-                                    collective and decisive actions to tackle environmental challenges like greenhouse
-                                    gas emissions causing global warming, biodiversity loss due to tropical rainforest
-                                    destruction, and worsening poverty and economic crises.</p>
                             </div>
-                            <!-- <div class="service-details__how-we-help">
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="service-details__how-we-help-img">
-                                            <img src="assets/images/services/service-details-how-we-help-img.jpg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="service-details__how-we-help-content">
-                                            <h3 class="service-details__how-we-help-title">How We Help</h3>
-                                            <p class="service-details__how-we-help-text">Duis aute irure dolor in
-                                                reprehenderit in voluptate velit esse cillum.</p>
-                                            <ul class="service-details__how-we-help-points list-unstyled">
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="fa fa-arrow-right"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>In id diam nec nisi congue tincidunt</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="fa fa-arrow-right"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Pn malesuada purus a ligula dapibus</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="fa fa-arrow-right"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Vestibulum tincidunt arcu vel nisl</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="fa fa-arrow-right"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Sed tristique lorem non tesque</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-5">
+                            <div class="project-details__sidebar">
+                                <div class="project-details__info">
+                                    <h3 class="project-details__info-title">Project Information</h3>
+                                    <ul class="project-details__info-list list-unstyled">
+                                        <li>
+                                            <span class="project-details__info-label">Status:</span>
+                                            <span id="project-detail-status"
+                                                class="project-details__info-status">Active</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Date Started:</span>
+                                            <span id="project-detail-date-started"
+                                                class="project-details__info-value">January 1, 2025</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Completion:</span>
+                                            <span id="project-detail-date-completed"
+                                                class="project-details__info-value">Ongoing</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Location:</span>
+                                            <span id="project-detail-location"
+                                                class="project-details__info-value">Accra, Ghana</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="project-details__share">
+                                    <h3 class="project-details__share-title">Share Project</h3>
+                                    <div class="project-details__share-icons">
+                                        <a href="#" id="share-facebook" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" id="share-twitter" target="_blank"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" id="share-linkedin" target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
-                            </div> -->
-                            <!-- <div class="service-details__faq">
-                                <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                    <div class="accrodion active">
-                                        <div class="accrodion-title">
-                                            <h4>Interdum et malesuada fames ac ante ipsum</h4>
-                                        </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo ligula, vit commodo nisl Sed luctus venenatis pellentesque.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accrodion">
-                                        <div class="accrodion-title">
-                                            <h4>Maecenas condimentum sollicitudin ligula,</h4>
-                                        </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo ligula, vit commodo nisl Sed luctus venenatis pellentesque.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accrodion last-chiled">
-                                        <div class="accrodion-title">
-                                            <h4>Duis rhoncus orci ut metus rhoncus</h4>
-                                        </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo ligula, vit commodo nisl Sed luctus venenatis pellentesque.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Service Details End-->
+        <!-- Project Details End -->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -550,11 +590,121 @@
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="assets/js/conult.js"></script>
+
+    <!-- Project Detail Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wordpressApiUrl = 'https://hatof.org/wp-json'; // Replace with your WordPress site URL
+
+            // Get project ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+
+            if (!projectId) {
+                document.getElementById('project-loading').style.display = 'none';
+                document.getElementById('project-error').style.display = 'block';
+                document.getElementById('error-message').textContent = 'No project specified.';
+                return;
+            }
+
+            // Fetch project details
+            fetch(`${wordpressApiUrl}/wp/v2/project/${projectId}?_embed`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Project not found');
+                    }
+                    return response.json();
+                })
+                .then(project => {
+                    // Set page title
+                    document.title = `${project.title.rendered} || HATOF Foundation`;
+
+                    // Update project details
+                    document.getElementById('project-title').textContent = project.title.rendered;
+                    document.getElementById('project-breadcrumb-title').textContent = project.title.rendered;
+                    document.getElementById('project-detail-title').textContent = project.title.rendered;
+                    document.getElementById('project-detail-content').innerHTML = project.content.rendered;
+
+                    // Set featured image
+                    if (project._embedded && project._embedded['wp:featuredmedia']) {
+                        document.getElementById('project-featured-image').src =
+                            project._embedded['wp:featuredmedia'][0].source_url;
+                        document.getElementById('project-featured-image').alt = project.title.rendered;
+                    } else {
+                        document.getElementById('project-featured-image').src = 'assets/images/resources/project-placeholder.jpg';
+                        document.getElementById('project-featured-image').alt = project.title.rendered;
+                    }
+
+                    // Get status and update badges
+                    let projectStatus = 'active';
+                    if (project._embedded && project._embedded['wp:term']) {
+                        // Find the status taxonomy terms
+                        const statusTerms = project._embedded['wp:term'].find(terms =>
+                            terms.length > 0 && terms[0].taxonomy === 'project_status'
+                        );
+
+                        if (statusTerms && statusTerms.length > 0) {
+                            projectStatus = statusTerms[0].slug.toLowerCase();
+                        }
+                    }
+
+                    // Update status badge
+                    const statusBadge = document.getElementById('project-status-badge');
+                    statusBadge.textContent = projectStatus === 'active' ? 'Active' : 'Completed';
+                    statusBadge.className = `project-status project-status--${projectStatus}`;
+
+                    // Update status in sidebar
+                    const statusInfo = document.getElementById('project-detail-status');
+                    statusInfo.textContent = projectStatus === 'active' ? 'Active' : 'Completed';
+                    statusInfo.className = `project-details__info-status project-details__info-status--${projectStatus}`;
+
+                    // Update dates and location
+                    const dateStarted = project.meta && project.meta._date_started ?
+                        formatDate(project.meta._date_started[0]) : 'Not specified';
+                    document.getElementById('project-detail-date-started').textContent = dateStarted;
+
+                    const dateCompleted = project.meta && project.meta._date_completed && project.meta._date_completed[0] ?
+                        formatDate(project.meta._date_completed[0]) : 'Ongoing';
+                    document.getElementById('project-detail-date-completed').textContent = dateCompleted;
+
+                    const location = project.meta && project.meta._location ?
+                        project.meta._location[0] : 'Not specified';
+                    document.getElementById('project-detail-location').textContent = location;
+
+                    // Set up sharing links
+                    const pageUrl = encodeURIComponent(window.location.href);
+                    const pageTitle = encodeURIComponent(project.title.rendered);
+
+                    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+                    document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+                    document.getElementById('share-linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}`;
+
+                    // Show content
+                    document.getElementById('project-loading').style.display = 'none';
+                    document.getElementById('project-content').style.display = 'block';
+                })
+                .catch(error => {
+                    document.getElementById('project-loading').style.display = 'none';
+                    document.getElementById('project-error').style.display = 'block';
+                    document.getElementById('error-message').textContent = 'Error loading project: ' + error.message;
+                    console.error('Error fetching project:', error);
+                });
+
+            // Helper function to format date
+            function formatDate(dateString) {
+                if (!dateString) return 'N/A';
+
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

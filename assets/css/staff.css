@@ -2,7 +2,7 @@
   display: flex;
   max-width: 1000px;
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(3, 9, 82, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -83,6 +83,7 @@
 
 .profile-info p {
   line-height: 1.6;
+  text-align: justify;
   color: rgba(255, 255, 255, 0.9);
 }
 
