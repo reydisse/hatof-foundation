@@ -45,6 +45,158 @@
     <link rel="stylesheet" href="assets/css/conult.css" />
     <link rel="stylesheet" href="assets/css/conult-responsive.css" />
     <link rel="stylesheet" href="assets/css/navbar.css" />
+
+    <!-- Project Card Styles -->
+    <style>
+        /* Project card styles for uniform sizing */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card__image {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            /* Fixed height for image container */
+            overflow: hidden;
+        }
+
+        .project-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-card__image img {
+            transform: scale(1.05);
+        }
+
+        .project-card__status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .project-card__status--active {
+            background-color: #15c8a0;
+        }
+
+        .project-card__status--completed {
+            background-color: #4a89dc;
+        }
+
+        .project-card__content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .project-card__title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+            max-height: 75px;
+            /* Approximately 3 lines of text */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        /* For equal height cards */
+        .col-lg-4,
+        .col-md-6 {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        /* For the empty state */
+        .project-empty {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .project-empty i {
+            font-size: 48px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* Project filter button styles */
+        .projects-filter-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0 40px;
+        }
+
+        .project-filter-btns {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-filter-btn {
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            background-color: #f5f5f5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .project-filter-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .project-filter-btn.active {
+            background-color: #15c8a0;
+            color: white;
+        }
+
+        /* Loading animation */
+        #projects-loading {
+            padding: 40px 0;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: #15c8a0 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -176,9 +328,6 @@
         </section>
         <!--Page Header End-->
 
-
-
-        <!-- Lets put our code here -->
         <!-- Projects Section Start -->
         <section class="projects-section">
             <div class="container">
@@ -216,9 +365,6 @@
             </div>
         </section>
         <!-- Projects Section End -->
-
-
-
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -268,7 +414,6 @@
                                         </div>
                                     </div>
 
-
                                     <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
                                         <div class="footer-widget__column footer-widget__explore clearfix">
                                             <h3 class="footer-widget__title">Address
@@ -280,7 +425,6 @@
                                                     href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
                                         </div>
                                     </div>
-
 
                                     <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
                                         <div class="footer-widget__column footer-widget__contact clearfix">
@@ -317,14 +461,9 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </div>
-    </footer>
-    <!--Site Footer End-->
-
-
+        </footer>
+        <!--Site Footer End-->
     </div><!-- /.page-wrapper -->
-
 
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
@@ -358,9 +497,6 @@
                     <a href="#" class="fab fa-instagram"></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
-
-
-
         </div>
         <!-- /.mobile-nav__content -->
     </div>
@@ -383,7 +519,6 @@
     <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -408,9 +543,6 @@
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="assets/js/conult.js"></script>
     <script>
@@ -424,6 +556,7 @@
             function fetchProjects(filter = 'all') {
                 document.getElementById('projects-loading').style.display = 'block';
                 document.getElementById('projects-error').style.display = 'none';
+                document.getElementById('projects-container').innerHTML = '';
 
                 // API URL based on filter
                 let apiUrl = `${wordpressApiUrl}/hatof/v1/projects/${filter}`;
@@ -449,7 +582,7 @@
                     });
             }
 
-            // Function to render projects
+            // Function to render projects with fixed-size cards
             function renderProjects(projects) {
                 const container = document.getElementById('projects-container');
                 container.innerHTML = '';
@@ -474,9 +607,6 @@
                     const projectCard = document.createElement('div');
                     projectCard.className = 'col-lg-4 col-md-6';
 
-                    // Format date
-                    const dateStarted = project.date_started ? formatDate(project.date_started) : 'Not specified';
-
                     // Create HTML for project card
                     projectCard.innerHTML = `
                         <div class="project-card">
@@ -485,11 +615,8 @@
                                 <div class="project-card__status project-card__status--${project.status}">${capitalizeFirstLetter(project.status)}</div>
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title">${project.title}</h3>
-                                <div class="project-card__meta">
-                                    <div><i class="fas fa-map-marker-alt"></i> ${project.location || 'Not specified'}</div>
-                                </div>
-                                <div class="mt-4">
+                                <h3 class="project-card__title" title="${project.title}">${project.title}</h3>
+                                <div class="mt-4 text-center">
                                     <a href="project-detail.html?id=${project.id}" class="thm-btn">View Details</a>
                                 </div>
                             </div>
@@ -537,7 +664,6 @@
             fetchProjects();
         });
     </script>
-
 </body>
 
 </html>
