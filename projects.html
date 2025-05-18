@@ -788,7 +788,7 @@
                             <li class="dropdown">
                                 <a href="#">Resources</a>
                                 <ul>
-                                    <li><a href="#">Policies</a></li>
+                                    <li><a href="policies.html">Policies</a></li>
                                     <li><a href="#">Events</a></li>
                                     <li class="dropdown">
                                         <a href="#">Reports</a>
@@ -911,8 +911,7 @@
                                         <i class="fas fa-calendar-alt"></i> Timeframe
                                     </h3>
                                     <p class="gcf-cso-detail-text">May 2022 – May 2025</p>
-                                    <img src="https://www.freeiconspng.com/uploads/clock-icon--icon-search-engine-9.png"
-                                        alt="Clock"
+                                    <img src="./assets/images/calendar.png" alt="Clock"
                                         style="max-width: 80px; height: auto; margin: 8px auto; display: block;">
                                 </div>
                                 <div class="gcf-cso-detail-card" style="flex: 1; min-width: 0;">
@@ -1417,9 +1416,21 @@
             </button>
         </div>
 
+        <!-- Network section as a separate element -->
         <section class="section-content" id="networkSection" style="display: none;">
             <div class="container">
-                <h2 class="section-title">Network Information</h2>
+                <!-- Hide button inside network section -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="section-title">Network Information</h2>
+                    <button id="hideNetworkButton" class="hide-btn">
+                        <span>Hide Network Information</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </button>
+                </div>
 
                 <div class="table-tabs">
                     <button class="table-tab active" onclick="showTable('convenors')">CSO Network Beneficiaries</button>
@@ -1466,6 +1477,41 @@
         </section>
 
         <style>
+            /* Your existing CSS remains unchanged */
+
+            /* Add styles for the hide button */
+            .hide-btn {
+                background-color: #dc4a4a;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 10px 25px;
+                font-size: 14px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(220, 74, 74, 0.3);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .hide-btn:hover {
+                background-color: #c93a3a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(220, 74, 74, 0.4);
+            }
+
+            .hide-btn svg {
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .hide-btn:hover svg {
+                transform: translateY(-3px);
+            }
+
+
             /* Show button styling */
             .show-btn {
                 background-color: #4a89dc;
@@ -1610,56 +1656,92 @@
                 /* Subtle shadow to define the white section */
             }
         </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const showButton = document.getElementById('showNetworkButton');
+                const networkSection = document.getElementById('networkSection');
+                const hideButton = document.getElementById('hideNetworkButton');
+
+                // Show button functionality
+                showButton.addEventListener('click', function () {
+                    networkSection.style.display = 'block';
+                });
+
+                // Hide button functionality
+                hideButton.addEventListener('click', function () {
+                    networkSection.style.display = 'none';
+                });
+            });
+        </script>
+
 
         <script>
-            document.getElementById('showNetworkButton').addEventListener('click', function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                const showButton = document.getElementById('showNetworkButton');
                 const networkSection = document.getElementById('networkSection');
-                networkSection.style.display = 'block';
+                const hideButton = document.getElementById('hideNetworkButton');
 
-                // Animate the section appearing
-                networkSection.animate([
-                    { opacity: 0, transform: 'translateY(20px)' },
-                    { opacity: 1, transform: 'translateY(0)' }
-                ], {
-                    duration: 500,
-                    easing: 'ease-out',
-                    fill: 'forwards'
+                // Show button functionality
+                showButton.addEventListener('click', function () {
+                    // Show network section with animation
+                    networkSection.style.display = 'block';
+                    networkSection.animate([
+                        { opacity: 0, transform: 'translateY(20px)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    // Hide show button with animation
+                    this.animate([
+                        { opacity: 1, transform: 'translateY(0)' },
+                        { opacity: 0, transform: 'translateY(-20px)' }
+                    ], {
+                        duration: 300,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    // Actually hide the show button after animation completes
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                    }, 300);
                 });
 
-                // Hide the button with animation
-                this.animate([
-                    { opacity: 1, transform: 'translateY(0)' },
-                    { opacity: 0, transform: 'translateY(-20px)' }
-                ], {
-                    duration: 300,
-                    easing: 'ease-out',
-                    fill: 'forwards'
-                });
+                // Hide button functionality
+                hideButton.addEventListener('click', function () {
+                    // Hide network section with animation
+                    networkSection.animate([
+                        { opacity: 1, transform: 'translateY(0)' },
+                        { opacity: 0, transform: 'translateY(20px)' }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
 
-                // Actually hide the button after animation completes
-                setTimeout(() => {
-                    this.style.display = 'none';
-                }, 300);
+                    // Actually hide the network section after animation completes
+                    setTimeout(() => {
+                        networkSection.style.display = 'none';
+                    }, 500);
+
+                    // Show the show button again with animation
+                    showButton.style.display = 'flex'; // Make it visible first
+                    showButton.style.opacity = '0'; // Start transparent
+
+                    showButton.animate([
+                        { opacity: 0, transform: 'translateY(-20px)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], {
+                        duration: 300,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+                });
             });
 
-            // Table tab functionality
-            function showTable(tableType) {
-                // Hide all tables
-                document.querySelectorAll('.table-content').forEach(function (table) {
-                    table.classList.remove('active');
-                });
-
-                // Remove active class from all tabs
-                document.querySelectorAll('.table-tab').forEach(function (tab) {
-                    tab.classList.remove('active');
-                });
-
-                // Show the selected table
-                document.getElementById(tableType + 'Table').classList.add('active');
-
-                // Add active class to clicked tab
-                event.target.classList.add('active');
-            }
         </script>
 
 
