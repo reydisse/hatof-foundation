@@ -7724,6 +7724,13 @@ html .njs-sticky-side.image_button_cover::after {
   z-index: -1;
 }
 
+.service-details__imagefile {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red ;
+}
+
 .service-details__need-help-icon {
   height: 57px;
   width: 57px;
