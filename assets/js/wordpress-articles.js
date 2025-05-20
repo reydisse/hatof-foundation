@@ -1,9 +1,13 @@
 class WordPressArticles {
   constructor(options = {}) {
-    this.baseUrl = options.baseUrl || "https://yourdomain.com/wp-json/wp/v2";
+    this.baseUrl = options.baseUrl || "https://hatof.org/wp-json/wp/v2";
     this.postsPerPage = options.postsPerPage || 3;
     this.container = options.container || ".latest-articles .row";
     this.debug = options.debug || false;
+
+    // Add the category ID for "News and Updates"
+    // Replace this number with your actual "News and Updates" category ID
+    this.newsUpdatesCategoryId = options.categoryId || 1; // Change this to your actual category ID
   }
 
   formatDate(dateString) {
@@ -16,7 +20,13 @@ class WordPressArticles {
 
   async fetchLatestPosts() {
     try {
-      const url = `${this.baseUrl}/posts?_embed&per_page=${this.postsPerPage}`;
+      // Modified URL to include category filter
+      const url = `${this.baseUrl}/posts?_embed&per_page=${this.postsPerPage}&categories=${this.newsUpdatesCategoryId}`;
+
+      if (this.debug) {
+        console.log("Fetching posts from:", url);
+      }
+
       const response = await fetch(url);
 
       if (!response.ok) {
@@ -40,7 +50,7 @@ class WordPressArticles {
         <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
             <div class="article-card">
                 <div class="article-card__image">
-                    <img src="${featuredImage}" alt="${post.title.rendered}">
+                    <img src="${featuredImage}" alt="${post.title.rendered}" style="width: 100%; height: 100%; object-fit: cover;">
                     <a href="post-details.html?id=${post.id}">
                         <span class="article-card__plus"></span>
                     </a>
@@ -95,7 +105,7 @@ class WordPressArticles {
           <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
               <div class="article-card">
                   <div class="article-card__image">
-                      <img src="assets/images/blog/wgdsi.jpg" alt="WGDSI-2">
+                      <img src="assets/images/blog/wgdsi.jpg" alt="WGDSI-2" style="width: 100%; height: 100%; object-fit: cover;">
                       <a href="Story-update-3.html">
                           <span class="article-card__plus"></span>
                       </a>

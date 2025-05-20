@@ -2,9 +2,9 @@
 
 class WordPressIntegration {
   constructor(options = {}) {
-    this.baseUrl = options.baseUrl || "https://yourdomain.com/wp-json/wp/v2";
+    this.baseUrl = options.baseUrl || "https://hatof.org/wp-json/wp/v2";
     this.postsPerPage = options.postsPerPage || 9; // Set to 9 posts (3 rows of 3)
-    this.categories = options.categories || "";
+    this.categories = options.categories || ""; // Will be set to "1" when initialized
     this.container = options.container || ".news-page .row";
     this.currentPage = 1;
     this.debug = options.debug || false;
