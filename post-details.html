@@ -534,10 +534,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const wpPostDetail = new WordPressPostDetail({
-                baseUrl: 'https://hatof.org/wp-json/wp/v2', // Replace with your WordPress site URL
+                baseUrl: 'https://hatof.org/wp-json/wp/v2',
                 postContainer: '.news-details__left',
                 relatedPostsContainer: '.sidebar__post-list',
                 titleContainer: '.page-header__inner h2',
+                categoryId: 1, // Filter by News and Update category
                 debug: true // Set to false in production
             });
 

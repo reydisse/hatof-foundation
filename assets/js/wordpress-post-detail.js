@@ -5,6 +5,7 @@ class WordPressPostDetail {
     this.relatedPostsContainer =
       options.relatedPostsContainer || ".sidebar__post-list";
     this.titleContainer = options.titleContainer || ".page-header__inner h2";
+    this.categoryId = options.categoryId || ""; // Added for category filtering
     this.debug = options.debug || false;
 
     // Get post ID from URL parameter
@@ -101,10 +102,16 @@ class WordPressPostDetail {
 
   async getRecentPosts(count = 3, excludeId = null) {
     try {
+      // Modified to include category filtering
       let url = `${this.baseUrl}/posts?_embed&per_page=${count}`;
 
       if (excludeId) {
         url += `&exclude=${excludeId}`;
+      }
+
+      // Add category filter if categoryId is specified
+      if (this.categoryId) {
+        url += `&categories=${this.categoryId}`;
       }
 
       if (this.debug) {
