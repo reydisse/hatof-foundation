@@ -1,6 +1,7 @@
 class WordPressArticles {
   constructor(options = {}) {
-    this.baseUrl = options.baseUrl || "https://hatof.org/wp-json/wp/v2";
+    this.baseUrl =
+      options.baseUrl || "https://wp.picturethisproduction.ca/wp-json/wp/v2";
     this.postsPerPage = options.postsPerPage || 3;
     this.container = options.container || ".latest-articles .row";
     this.debug = options.debug || false;
