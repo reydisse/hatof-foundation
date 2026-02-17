@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# macOS resource forks
+assets/__MACOSX/
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Thumbnails
+Thumbs.db
+
+# Archives / loose files that don't belong in the site
+*.rar
+*.zip
+IMG_8306.jpg
+
+# cPanel / server lock files
+.htaccess.lock-*
+.htaccess.phpupgrader.*
+.user.ini
+
+# WP proxy script (lives on WP server, not the static site)
+wp-og-proxy.php

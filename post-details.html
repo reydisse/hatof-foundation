@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details || HATOF Foundation</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <meta name="description" content="HATOF Foundation News">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HATOF Foundation" />
+    <meta property="og:title" id="og-title" content="News — HATOF Foundation" />
+    <meta property="og:description" id="og-description" content="Latest news and updates from HATOF Foundation." />
+    <meta property="og:image" id="og-image" content="https://hatof.org/assets/images/logo-light-hatof.png" />
+    <meta property="og:url" id="og-url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" id="tw-title" content="News — HATOF Foundation" />
+    <meta name="twitter:description" id="tw-description" content="Latest news and updates from HATOF Foundation." />
+    <meta name="twitter:image" id="tw-image" content="https://hatof.org/assets/images/logo-light-hatof.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="/assets/vendors/animate/custom-animate.css">
+    <link rel="stylesheet" href="/assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/vendors/jarallax/jarallax.css">
+    <link rel="stylesheet" href="/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css">
+    <link rel="stylesheet" href="/assets/vendors/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="/assets/vendors/nouislider/nouislider.pips.css">
+    <link rel="stylesheet" href="/assets/vendors/odometer/odometer.min.css">
+    <link rel="stylesheet" href="/assets/vendors/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/assets/vendors/conult-icons/style.css">
+    <link rel="stylesheet" href="/assets/vendors/tiny-slider/tiny-slider.min.css">
+    <link rel="stylesheet" href="/assets/vendors/reey-font/stylesheet.css">
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/vendors/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="/assets/vendors/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/assets/vendors/vegas/vegas.min.css">
+    <link rel="stylesheet" href="/assets/vendors/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/vendors/timepicker/timePicker.css">
+    <link rel="stylesheet" href="/assets/css/conult.css">
+    <link rel="stylesheet" href="/assets/css/conult-responsive.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/wordpress-blog.css">
+    <link rel="stylesheet" href="assets/css/hatof-responsive.css" />
+    <style>
+        .news-details__text img{max-width:100%;height:auto;margin:15px 0}
+        .news-details__text p{margin-bottom:15px}
+        .news-details__text h1,.news-details__text h2,.news-details__text h3,.news-details__text h4,.news-details__text h5,.news-details__text h6{margin-top:25px;margin-bottom:15px}
+        .news-details__text ul,.news-details__text ol{padding-left:25px;margin-bottom:15px}
+        .news-details__text blockquote{border-left:4px solid #15c8a0;padding-left:20px;margin-left:0;font-style:italic;color:#666}
+        .news-details__text iframe,.news-details__text embed,.news-details__text object{max-width:100%}
+        .news-details__tags{display:flex;flex-wrap:wrap;align-items:center;margin-top:30px;gap:10px}
+        .news-details__tag{display:inline-block;font-size:14px;color:#878e9b;padding:6px 20px;background-color:#f4f5f8;border-radius:4px;transition:all .5s ease;text-decoration:none}
+        .news-details__tag:hover{background-color:#15c8a0;color:#fff}
+        .spinner-border{width:3rem;height:3rem;color:#15c8a0}
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="/assets/images/loader.png" alt="">
+    </div>
+    <div class="njs-sticky-side body-append image_button_cover placement-right now-show">
+        <a href="/donate.html" target="_blank" rel="noopener noreferrer">Donate <i class="fa fa-heart"></i></a>
+    </div>
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+            <nav class="nav-main">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="/index.html">
+                            <img src="/assets/images/logo-light-hatof.png" alt="HATOF Foundation">
+                        </a>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="#" class="mobile-toggle"><i class="fa fa-bars"></i></a>
+                        <ul class="nav-list">
+                            <li><a href="/index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">About</a>
+                                <ul>
+                                    <li><a href="/about.html">About Us</a></li>
+                                    <li><a href="/staff.html">Our Staff</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Our Work</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Themes</a>
+                                        <ul>
+                                            <li><a href="/climate-change.html">Climate Change</a></li>
+                                            <li><a href="/biodiversity.html">Biodiversity</a></li>
+                                            <li><a href="/energy.html">Energy</a></li>
+                                            <li><a href="/food-agriculture.html">Food & Agriculture</a></li>
+                                            <li><a href="/global-policy.html">Global Policy</a></li>
+                                            <li><a href="/climate-change.html">Climate Finance</a></li>
+                                            <li><a href="/blue-economy.html">Blue Economy</a></li>
+                                            <li><a href="/chemicals-waste.html">Chemicals & Waste</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/hatof-projects.html">Projects</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Regions</a>
+                                        <ul>
+                                            <li><a href="#">Africa</a></li>
+                                            <li><a href="#">North America</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/consultancy-services.html">Consultancies</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <li><a href="/policies.html">Policies</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Reports</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">Annual Reports</a>
+                                                <ul>
+                                                    <li><a href="/assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf" target="_blank">2016</a></li>
+                                                    <li><a href="/assets/reports/2017-ANNUAL-REPORT_HATOF.pdf" target="_blank">2017</a></li>
+                                                    <li><a href="/assets/reports/2023 Annual Report.pdf" target="_blank">2023</a></li>
+                                                    <li><a href="/assets/reports/2024 Annual Report.pdf" target="_blank">2024</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/news.html">News & Updates</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact.html">Contact</a></li>
+                            <li><a href="#" class="gield-link">GIELD <i class="fas fa-graduation-cap"></i></a></li>
+                            <li><a href="/projects.html" class="cso-btn">GCF CSO</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(/assets/images/backgrounds/page-header-bg.jpg)"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Loading Post...</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li class="active">Post Details</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="news-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="news-details__left">
+                            <div class="text-center py-5">
+                                <div class="spinner-border" role="status"></div>
+                                <p class="mt-3">Loading article...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="sidebar">
+                            <div class="sidebar__single sidebar__search">
+                                <form action="/news.html" class="sidebar__search-form">
+                                    <input type="search" placeholder="Search News" name="search">
+                                    <button type="submit"><i class="icon-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                            <div class="sidebar__single sidebar__post">
+                                <h3 class="sidebar__title">Recent Posts</h3>
+                                <ul class="sidebar__post-list list-unstyled">
+                                    <li class="text-center"><p>Loading...</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__top">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="site-footer__top-left">
+                                <div class="site-footer__top-logo-content">
+                                    <p class="site-footer__top-text">Developing the skills of individuals and communities to effectively conserve, restore and utilize the natural resources available in the communities for sustainable livelihoods in Ghana and beyond.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="site-footer__top-newsletter">
+                                <h5 class="site-footer__top-newsletter-title">Subscribe for Latest Articles and Resources</h5>
+                                <form class="site-footer__top-newsletter-form">
+                                    <div class="site-footer__top-newsletter-input-box">
+                                        <input type="email" placeholder="Email Address" name="email">
+                                        <button type="submit" class="site-footer__top-newsletter-btn">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-footer__bottom">
+                        <div class="site-footer__top-widget-box">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="footer-widget__column footer-widget__explore clearfix">
+                                        <h3 class="footer-widget__title">Address <img src="/assets/images/icon/flag.png" alt="Ghana Flag" style="width:24px;height:24px;vertical-align:middle;margin-left:5px;object-fit:contain"></h3>
+                                        <p class="footer-widget__contact-text">P.O. Box 'SKM' DTD 6038,<br>Sakumono, Tema.<br>F-54 Service Plot DTD(801) C.19<br>Klagon-Lashibi, Tema<br><a href="mailto:ghanainfo@hatof.org">ghanainfo@hatof.org</a><br>+233-207 360 517<br>+233-246 346 698</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="footer-widget__column footer-widget__explore clearfix">
+                                        <h3 class="footer-widget__title">Address <img src="/assets/images/icon/canada.png" alt="Canada Flag" style="width:24px;height:24px;vertical-align:middle;margin-left:5px;object-fit:contain"></h3>
+                                        <p class="footer-widget__contact-text">139 Millwick Drive<br>C/O Living Word Assembly of God<br>Toronto ON M9L 1Y7<br><a href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="footer-widget__column footer-widget__contact clearfix">
+                                        <h3 class="footer-widget__title">Useful links</h3>
+                                        <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                            <li><a href="/about.html">About</a></li>
+                                            <li><a href="/staff.html">Meet our Team</a></li>
+                                            <li><a href="/projects.html">Case Stories</a></li>
+                                            <li><a href="/news.html">Latest News</a></li>
+                                            <li><a href="/contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="00ms">
+                                    <h3 class="footer-widget__title">We are social</h3>
+                                    <div class="site-footer__top-right-social">
+                                        <a href="https://www.facebook.com/HatofFoundation/"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://www.linkedin.com/company/hatof-foundation/"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.instagram.com/hatoffoundation"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.youtube.com/@HATOFFoundation"><i class="fab fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="/index.html" aria-label="logo image"><img src="/assets/images/resources/logo-1.png" width="155" alt=""></a></div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a href="mailto:ghanainfo@hatof.org">ghanainfo@hatof.org</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:+233207360517">+233 207 360 517</a></li>
+            </ul>
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="https://www.facebook.com/HatofFoundation/" class="fab fa-facebook"></a>
+                    <a href="https://www.linkedin.com/company/hatof-foundation/" class="fab fa-linkedin-in"></a>
+                    <a href="https://www.instagram.com/hatoffoundation" class="fab fa-instagram"></a>
+                    <a href="https://www.youtube.com/@HATOFFoundation" class="fab fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form action="/news.html">
+                <label for="search" class="sr-only">search here</label>
+                <input type="text" id="search" placeholder="Search Here...">
+                <button type="submit" aria-label="search submit" class="thm-btn"><i class="icon-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="/assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="/assets/vendors/odometer/odometer.min.js"></script>
+    <script src="/assets/vendors/swiper/swiper.min.js"></script>
+    <script src="/assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="/assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="/assets/vendors/wow/wow.js"></script>
+    <script src="/assets/vendors/isotope/isotope.js"></script>
+    <script src="/assets/vendors/countdown/countdown.min.js"></script>
+    <script src="/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/assets/vendors/vegas/vegas.min.js"></script>
+    <script src="/assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="/assets/vendors/timepicker/timePicker.js"></script>
+    <script src="/assets/js/wordpress-post-detail.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🔥 SUPER SAIYAN POST DETAIL INIT 🔥');
+        var wp = new WordPressPostDetail({
+            baseUrl: 'https://wp.picturethisproduction.ca/wp-json/wp/v2',
+            postContainer: '.news-details__left',
+            relatedPostsContainer: '.sidebar__post-list',
+            titleContainer: '.page-header__inner h2',
+            categoryId: 1,
+            debug: true
+        });
+        wp.loadPost();
+    });
+    </script>
+    <script src="/assets/js/conult.js"></script>
+</body>
+</html>

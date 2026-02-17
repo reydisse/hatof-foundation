@@ -1,0 +1,134 @@
+{
+  "convenors": [
+    {
+      "coalition": "Climate Action Network-Ghana",
+      "representative": "Kenneth Amoateng",
+      "gender": "Male",
+      "contact": "0244023651",
+      "email": ["kamoateng@gmail.com", "canghana@yahoo.com"]
+    },
+    {
+      "coalition": "Ghana Biodiversity Watch",
+      "representative": "Ken Kinney",
+      "gender": "Male",
+      "contact": "0208192239",
+      "email": ["di@thedevin.org"]
+    },
+    {
+      "coalition": "Green Climate Fund Admitted Observers",
+      "representative": "Kassim Gawusu",
+      "gender": "Male",
+      "contact": "0244967340",
+      "email": ["info@hatof.org"]
+    },
+    {
+      "coalition": "GEF CSO Network, Ghana",
+      "representative": "Eric Agbozo",
+      "gender": "Male",
+      "contact": "0244409930",
+      "email": ["erickwabenaagbozo@outlook.com", "daapu@yahoo.com"]
+    },
+    {
+      "coalition": "Coalition of CSOs on Environment & Climate Change",
+      "representatives": [
+        {
+          "name": "Vincent Awortwe-Pratt",
+          "gender": "Male",
+          "contact": "0243242859",
+          "email": ["vincent@biodiversityadvocates.org", "fewghana@yahoo.com"]
+        },
+        {
+          "name": "Kekesi Defoe",
+          "gender": "Male",
+          "contact": "0208878933",
+          "email": []
+        }
+      ]
+    },
+    {
+      "coalition": "KASA-Ghana/SDG 13 Platform",
+      "representatives": [
+        {
+          "name": "Jonathan Gokah",
+          "gender": "Male",
+          "contact": "0244936660",
+          "email": ["gokahjonathan@yahoo.com", "kasaghana@gmail.com"]
+        },
+        {
+          "name": "Portia Adu",
+          "gender": "Female",
+          "contact": "0262685618",
+          "email": ["poshbar@yahoo.com"]
+        }
+      ]
+    },
+    {
+      "coalition": "Ghana Alliance for clean stoves and fuels (GHACCO)",
+      "representatives": [
+        {
+          "name": "Mohammed Aminu Lukumann",
+          "gender": "Male",
+          "contact": "0240276198",
+          "email": [
+            "info@ghacco.org",
+            "lovanstakyi@gmail.com",
+            "Lukumann74@yahoo.com"
+          ]
+        },
+        {
+          "name": "Erasmus Osei-Essah",
+          "gender": "Male",
+          "contact": "0244267978",
+          "email": ["attakeras@yahoo.com"]
+        }
+      ]
+    },
+    {
+      "coalition": "Forest Watch Ghana",
+      "representative": "Elvis Oppong-Mensah",
+      "gender": "Male",
+      "contact": "0244172818",
+      "email": ["elvisoppongmensah@gmail.com"]
+    },
+    {
+      "coalition": "African Youth Initiative on Climate Change",
+      "representatives": [
+        {
+          "name": "Richard Matey",
+          "gender": "Male",
+          "contact": "0241582873",
+          "email": ["matey.richard@aiesec.net", "ccseghana@gmail.com"]
+        },
+        {
+          "name": "Oxley Dodoo",
+          "gender": "Female",
+          "contact": "0559131927",
+          "email": ["okleydodoo@gmail.com"]
+        },
+        {
+          "name": "Kassim Hussei",
+          "gender": "Male",
+          "contact": "0244182515",
+          "email": []
+        }
+      ]
+    },
+    {
+      "coalition": "Civil Society Coalition on Land",
+      "representatives": [
+        {
+          "name": "Lois A. Addo",
+          "gender": "Female",
+          "contact": "0204917521",
+          "email": ["loissaddo@yahoo.com"]
+        },
+        {
+          "name": "Dorcas Mawuena Gakpetor",
+          "gender": "Female",
+          "contact": ["0274123741", "0249159724"],
+          "email": ["dorcasmgakpetor@gmail.com"]
+        }
+      ]
+    }
+  ]
+}

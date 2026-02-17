@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details || HATOF Foundation</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="HATOF Foundation Projects" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HATOF Foundation" />
+    <meta property="og:title" id="og-title" content="Project Details — HATOF Foundation" />
+    <meta property="og:description" id="og-description" content="Learn about HATOF Foundation's projects in environmental conservation and sustainable development." />
+    <meta property="og:image" id="og-image" content="https://hatof.org/assets/images/logo-light-hatof.png" />
+    <meta property="og:url" id="og-url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" id="tw-title" content="Project Details — HATOF Foundation" />
+    <meta name="twitter:description" id="tw-description" content="Learn about HATOF Foundation's projects in environmental conservation and sustainable development." />
+    <meta name="twitter:image" id="tw-image" content="https://hatof.org/assets/images/logo-light-hatof.png" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/conult-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/conult.css" />
+    <link rel="stylesheet" href="assets/css/conult-responsive.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/hatof-responsive.css" />
+
+    <style>
+        /* Project Details Styling */
+        /* a {
+            color: #0d6efd !important;
+        } */
+
+        .project-details {
+            padding: 100px 0;
+            background-color: #f7f7f9;
+        }
+
+        .project-details__img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-details__img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .project-status--active {
+            background-color: #31b465;
+        }
+
+        .project-status--completed {
+            background-color: #ff7e00;
+        }
+
+        .project-details__title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .project-details__text {
+            color: #141313;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .project-details__text a {
+            color: #0d6efd !important;
+        }
+
+        .project-details__sidebar {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .project-details__info {
+            padding: 30px;
+        }
+
+        .project-details__info-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .project-details__info-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eaeaea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-details__info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .project-details__info-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .project-details__info-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project-details__info-status--active {
+            background-color: #31b465;
+        }
+
+        .project-details__info-status--completed {
+            background-color: #ff7e00;
+        }
+
+        .project-details__share {
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .project-details__share-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-details__share-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            color: #717171;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .project-details__share-icons a:hover {
+            background-color: #31b465;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .project-details {
+                padding: 60px 0;
+            }
+
+            .project-details__title {
+                font-size: 28px;
+            }
+
+            .project-details__sidebar {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="njs-sticky-side body-append image_button_cover placement-right now-show">
+        <a href="donate.html" target="blank_" rel="noopener noreferrer">Donate <i class="fa fa-heart"></i></a>
+    </div>
+    <div class="page-wrapper">
+        <header class="main-header main-header-three clearfix">
+            <nav class="nav-main">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo-light-hatof.png" alt="HATOF Foundation">
+                        </a>
+                    </div>
+
+                    <div class="nav-menu">
+                        <!-- Mobile Menu Button -->
+                        <a href="#" class="mobile-toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <ul class="nav-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">About</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="staff.html">Our Staff</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown active">
+                                <a href="#">Our Work</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Themes</a>
+                                        <ul>
+                                            <li><a href="climate-change.html">Climate Change</a></li>
+                                            <li><a href="biodiversity.html">Biodiversity</a></li>
+                                            <li><a href="energy.html">Energy</a></li>
+                                            <li><a href="food-agriculture.html">Food & Agriculture</a></li>
+                                            <li><a href="global-policy.html">Global Policy</a></li>
+                                            <li><a href="climate-change.html">Climate Finance</a></li>
+                                            <li><a href="blue-economy.html">Blue Economy</a></li>
+                                            <li><a href="chemicals-waste.html">Chemicals & Waste</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="hatof-projects.html">Projects</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Regions</a>
+                                        <ul>
+                                            <li><a href="#">Africa</a></li>
+                                            <li><a href="#">North America</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="consultancy-services.html">Consultancies</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <li><a href="policies.html">Policies</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Reports</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">Annual Reports</a>
+                                                <ul>
+                                                    <li><a href="assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf"
+                                                            target="_blank">2016</a></li>
+                                                    <li><a href="assets/reports/2017-ANNUAL-REPORT_HATOF.pdf"
+                                                            target="_blank">2017</a></li>
+                                                    <li><a href="assets/reports/2023 Annual Report.pdf"
+                                                            target="_blank">2023</a></li>
+                                                    <li><a href="assets/reports/2024 Annual Report.pdf"
+                                                            target="_blank">2024</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--<li class="dropdown"><a href="#">Financial Reports</a>-->
+                                            <!--    <ul>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2023 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2023-->
+                                            <!--                Report</a></li>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2024 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2024-->
+                                            <!--                Report</a></li>-->
+                                            <!--    </ul>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </li>
+                                    <li><a href="news.html">News & Updates</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="#" class="gield-link">
+                                    GIELD <i class="fas fa-graduation-cap"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projects.html" class="cso-btn">GCF CSO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2 id="project-title">Project Details</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hatof-projects.html">Projects</a></li>
+                        <li class="active" id="project-breadcrumb-title">Project Details</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!-- Project Details Start -->
+        <section class="project-details">
+            <div class="container">
+                <div id="project-loading" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading project details...</span>
+                    </div>
+                    <p class="mt-2">Loading project details...</p>
+                </div>
+
+                <div id="project-error" class="alert alert-danger my-5" style="display: none;">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <span id="error-message">Unable to load project details. Please try again later.</span>
+                </div>
+
+                <div id="project-content" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12 mb-5">
+                            <div class="project-details__img">
+                                <img id="project-featured-image" src="" alt="" class="img-fluid">
+                                <div id="project-status-badge" class="project-status">Active</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="project-details__content">
+                                <h2 id="project-detail-title" class="project-details__title">Project Title</h2>
+
+                                <div id="project-detail-content" class="project-details__text">
+                                    <!-- Project content will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-5">
+                            <div class="project-details__sidebar">
+                                <div class="project-details__info">
+                                    <h3 class="project-details__info-title">Project Information</h3>
+                                    <ul class="project-details__info-list list-unstyled">
+                                        <li>
+                                            <span class="project-details__info-label">Status:</span>
+                                            <span id="project-detail-status"
+                                                class="project-details__info-status">Active</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Date Started:</span>
+                                            <span id="project-detail-date-started"
+                                                class="project-details__info-value">January 1, 2025</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Completion:</span>
+                                            <span id="project-detail-date-completed"
+                                                class="project-details__info-value">Ongoing</span>
+                                        </li>
+                                        <li>
+                                            <span class="project-details__info-label">Location:</span>
+                                            <span id="project-detail-location"
+                                                class="project-details__info-value">Accra, Ghana</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="project-details__share">
+                                    <h3 class="project-details__share-title">Share Project</h3>
+                                    <div class="project-details__share-icons">
+                                        <a href="#" id="share-facebook" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" id="share-twitter" target="_blank"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" id="share-linkedin" target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Details End -->
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__top">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="site-footer__top-left">
+                                    <div class="site-footer__top-logo-content">
+                                        <p class="site-footer__top-text">Developing the skills of individuals and
+                                            communities to effectively conserve, restore and utilize the natural
+                                            resources available in the communities for sustainable livelihoods in Ghana
+                                            and beyond.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+
+                                <div class="site-footer__top-newsletter">
+                                    <h5 class="site-footer__top-newsletter-title">Subscribe for Latest Articles and
+                                        Resources</h5>
+                                    <form class="site-footer__top-newsletter-form">
+                                        <div class="site-footer__top-newsletter-input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                            <button type="submit"
+                                                class="site-footer__top-newsletter-btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-footer__bottom">
+                            <div class="site-footer__top-widget-box">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/flag.png" alt="Ghana Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">P.O. Box 'SKM' DTD 6038,<br>
+                                                Sakumono, Tema.<br>F-54 Service Plot DTD(801)
+                                                C.19<br>Klagon-Lashibi, Tema <br><a href="mailto:ghanainfo@hatof.org">
+                                                    ghanainfo@hatof.org</a> <br>+233-207 360 517 <br>+233-246 346 698
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/canada.png" alt="Canada Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">139 Millwick Drive<br>
+                                                C/O Living Word Assembly of God<br>Toronto ON M9L 1Y7<br><a
+                                                    href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
+                                        <div class="footer-widget__column footer-widget__contact clearfix">
+                                            <h3 class="footer-widget__title">Useful links</h3>
+
+                                            <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="about.html">Meet our Team</a></li>
+                                                <li><a href="projects.html">Case Stories</a></li>
+                                                <li><a href="news.html">Latest News</a></li>
+                                                <!-- <li><a href="gallery.html">Gallery</a></li> -->
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="00ms">
+                                        <h3 class="footer-widget__title">We are social</h3>
+
+                                        <div class="site-footer__top-right-social">
+                                            <a href="https://www.facebook.com/HatofFoundation/"><i
+                                                    class="fab fa-facebook"></i></a>
+                                            <a href="https://www.linkedin.com/company/hatof-foundation/"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a
+                                                href="https://www.instagram.com/hatoffoundation?igsh=cXd4cng0NXJ6d3l4&utm_source=qr"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="https://www.youtube.com/@HATOFFoundation"><i
+                                                    class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </footer>
+    <!--Site Footer End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@conult.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/conult.js"></script>
+
+    <!--
+        WordPress PHP: Add to your theme's functions.php to ensure project meta fields
+        are exposed in the REST API (single values, not arrays):
+
+        function hatof_register_project_meta() {
+            $fields = ['_date_started', '_date_completed', '_location', '_partners', '_budget'];
+            foreach ($fields as $field) {
+                register_post_meta('project', $field, [
+                    'show_in_rest' => true,
+                    'single'       => true,
+                    'type'         => 'string',
+                ]);
+            }
+        }
+        add_action('init', 'hatof_register_project_meta');
+    -->
+
+    <!-- Project Detail Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wordpressApiUrl = 'https://wp.picturethisproduction.ca/wp-json/wp/v2'; // Replace with your WordPress site URL
+
+            // Get project ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+
+            if (!projectId) {
+                document.getElementById('project-loading').style.display = 'none';
+                document.getElementById('project-error').style.display = 'block';
+                document.getElementById('error-message').textContent = 'No project specified.';
+                return;
+            }
+
+            // Fetch project details
+            fetch(`${wordpressApiUrl}/project/${projectId}?_embed`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Project not found');
+                    }
+                    return response.json();
+                })
+                .then(project => {
+                    // Set page title
+                    document.title = `${project.title.rendered} || HATOF Foundation`;
+
+                    // Update Open Graph meta tags for social sharing
+                    const ogTitle = project.title.rendered + ' — HATOF Foundation';
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = project.excerpt ? project.excerpt.rendered : project.content.rendered;
+                    const ogDesc = tempDiv.textContent.trim().substring(0, 200);
+                    const ogImage = (project._embedded && project._embedded['wp:featuredmedia'])
+                        ? project._embedded['wp:featuredmedia'][0].source_url
+                        : 'https://hatof.org/assets/images/logo-light-hatof.png';
+
+                    document.getElementById('og-title').setAttribute('content', ogTitle);
+                    document.getElementById('og-description').setAttribute('content', ogDesc);
+                    document.getElementById('og-image').setAttribute('content', ogImage);
+                    document.getElementById('og-url').setAttribute('content', window.location.href);
+                    document.getElementById('tw-title').setAttribute('content', ogTitle);
+                    document.getElementById('tw-description').setAttribute('content', ogDesc);
+                    document.getElementById('tw-image').setAttribute('content', ogImage);
+
+                    // Update project details
+                    document.getElementById('project-title').textContent = project.title.rendered;
+                    document.getElementById('project-breadcrumb-title').textContent = project.title.rendered;
+                    document.getElementById('project-detail-title').textContent = project.title.rendered;
+                    document.getElementById('project-detail-content').innerHTML = project.content.rendered;
+
+                    // Set featured image
+                    if (project._embedded && project._embedded['wp:featuredmedia']) {
+                        document.getElementById('project-featured-image').src =
+                            project._embedded['wp:featuredmedia'][0].source_url;
+                        document.getElementById('project-featured-image').alt = project.title.rendered;
+                    } else {
+                        document.getElementById('project-featured-image').src = 'assets/images/resources/project-placeholder.jpg';
+                        document.getElementById('project-featured-image').alt = project.title.rendered;
+                    }
+
+                    // Get status and update badges
+                    let projectStatus = 'active';
+                    if (project._embedded && project._embedded['wp:term']) {
+                        // Find the status taxonomy terms
+                        const statusTerms = project._embedded['wp:term'].find(terms =>
+                            terms.length > 0 && terms[0].taxonomy === 'project_status'
+                        );
+
+                        if (statusTerms && statusTerms.length > 0) {
+                            projectStatus = statusTerms[0].slug.toLowerCase();
+                        }
+                    }
+
+                    // Update status badge
+                    const statusBadge = document.getElementById('project-status-badge');
+                    statusBadge.textContent = projectStatus === 'active' ? 'Active' : 'Completed';
+                    statusBadge.className = `project-status project-status--${projectStatus}`;
+
+                    // Update status in sidebar
+                    const statusInfo = document.getElementById('project-detail-status');
+                    statusInfo.textContent = projectStatus === 'active' ? 'Active' : 'Completed';
+                    statusInfo.className = `project-details__info-status project-details__info-status--${projectStatus}`;
+
+                    // Update dates and location
+                    const dateStartedRaw = project.meta && project.meta._date_started
+                        ? (Array.isArray(project.meta._date_started) ? project.meta._date_started[0] : project.meta._date_started)
+                        : null;
+                    const dateStarted = dateStartedRaw ? formatDate(dateStartedRaw) : 'Not specified';
+                    document.getElementById('project-detail-date-started').textContent = dateStarted;
+
+                    const dateCompletedRaw = project.meta && project.meta._date_completed
+                        ? (Array.isArray(project.meta._date_completed) ? project.meta._date_completed[0] : project.meta._date_completed)
+                        : null;
+                    const dateCompleted = dateCompletedRaw ? formatDate(dateCompletedRaw) : 'Ongoing';
+                    document.getElementById('project-detail-date-completed').textContent = dateCompleted;
+
+                    const locationRaw = project.meta && project.meta._location
+                        ? (Array.isArray(project.meta._location) ? project.meta._location[0] : project.meta._location)
+                        : null;
+                    const location = locationRaw || 'Not specified';
+                    document.getElementById('project-detail-location').textContent = location;
+
+                    // Set up sharing links — use the OG proxy so crawlers see real titles
+                    const proxyBase = 'https://wp.picturethisproduction.ca/wp-og-proxy.php';
+                    const shareUrl = encodeURIComponent(`${proxyBase}?type=project&id=${projectId}`);
+                    const pageTitle = encodeURIComponent(project.title.rendered);
+
+                    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+                    document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${pageTitle}`;
+                    document.getElementById('share-linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${pageTitle}`;
+
+                    // Show content
+                    document.getElementById('project-loading').style.display = 'none';
+                    document.getElementById('project-content').style.display = 'block';
+                })
+                .catch(error => {
+                    document.getElementById('project-loading').style.display = 'none';
+                    document.getElementById('project-error').style.display = 'block';
+                    document.getElementById('error-message').textContent = 'Error loading project: ' + error.message;
+                    console.error('Error fetching project:', error);
+                });
+
+            // Helper function to format date
+            function formatDate(dateString) {
+                if (!dateString) return 'N/A';
+
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{
+  "institutions": [
+    {
+      "institution": "Giving Life Nature Volunteer",
+      "head": "Eric Komla Amedjakou",
+      "telephone": "0249468306",
+      "email": "info@gilinavoghana.org"
+    },
+    {
+      "institution": "School for Development Studies",
+      "head": "Dr. Richard Ametepe",
+      "telephone": "0244951918",
+      "email": "rametefe@ucc.edu.gh"
+    },
+    {
+      "institution": "Center for Environmental Impact Analysis",
+      "head": "Samuel Obiri",
+      "telephone": "0244708322",
+      "email": ["infoceia2005@gmail.com", "obirisamuel@gmail.com"]
+    },
+    {
+      "institution": "AbibiNsroma",
+      "head": "Kenneth Amoateng",
+      "telephone": "0506766466",
+      "email": "amoatengken@gmail.com"
+    },
+    {
+      "institution": "A Rocha Ghana",
+      "head": "Seth Appiah Kubi",
+      "telephone": "027 444 2278",
+      "email": "seth.appiah-kubi@arocha.org"
+    },
+    {
+      "institution": "Peasant Farmers Association of Ghana",
+      "head": "Bismark Owusu Nortey",
+      "telephone": "0243487643",
+      "email": "ttowusu@gmail.com"
+    },
+    {
+      "institution": "Save Ghana Frogs",
+      "head": "Sandra Owus-Gyamfi",
+      "telephone": "020 210 0198",
+      "email": "gilbert@saveghanafrogs.org"
+    },
+    {
+      "institution": "The Development Institute",
+      "head": "Clemence Sepenoo Kugbey",
+      "telephone": "0208192239",
+      "email": "kkinney@thedevin.org"
+    }
+  ]
+}

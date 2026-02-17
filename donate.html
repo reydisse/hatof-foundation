@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HATOF Foundation: Donation Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Video Background Styling */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* Overlay to make content more readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 119, 190, 0.7);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .donation-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            color: black;
+        }
+
+        .donation-box h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .payment-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .bank-info,
+        .mobile-money {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bank-info h3,
+        .mobile-money h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .bank-info p,
+        .mobile-money p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: large;
+        }
+
+        .donation-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            color: black;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .currency-select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .frequency-toggle {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .frequency-toggle button {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+        }
+
+        .frequency-toggle button.active {
+            background: #0077be;
+            color: white;
+        }
+
+        .amount-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .amount-button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .amount-button:hover {
+            background: #f5f5f5;
+        }
+
+        .custom-amount {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .donate-button {
+            width: 100%;
+            padding: 15px;
+            background: #ffd700;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .donate-button:hover {
+            background: #ffc700;
+        }
+
+        .share-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .donation-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Video Background -->
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="assets/images/backgrounds/donation-video.mp4" type="video/mp4">
+                <!-- Fallback if the browser doesn't support video -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Overlay to make content more readable -->
+        <div class="overlay"></div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="text-content">
+                    <h1>Support HATOF Foundation!</h1>
+                    <p>Our endeavors are brought to fruition through the invaluable support of individuals like
+                        yourself, along with our global community of advocates who are deeply committed to the
+                        principles of environmental sustainability and community advancement. Your engagement can take
+                        many forms, whether by following and amplifying our efforts on social media, offering your time
+                        and expertise as a volunteer, or contributing financially to our initiatives.
+                        Donations can be facilitated through our official bank account or by Mobile Money transfer, the
+                        details of which are listed below. Your interest in our work serves as a profound source of
+                        inspiration, spurring us to continue striving for greater impact. We warmly invite you to
+                        connect with us at ghanainfo@hatof.org for any further inquiries or to discuss potential
+                        collaboration.
+                    </p>
+                </div>
+
+                <div class="donation-box">
+                    <h2>Donation Details</h2>
+
+                    <div class="payment-info">
+                        <div class="bank-info">
+                            <h3>Bank(USD):</h3>
+                            <p>0006040721766</p>
+                            <p>HATOF FOUNDATION</p>
+                            <p>BANK: ZENITH BANK</p>
+                            <p>HNO 18/MKT/SM/BLK/B21 TDC BUILDING</p>
+                            <p>NR THE POLICE STATION TEMA</p>
+                            <p>P.O.BOX 8257 TEMA</p>
+                        </div>
+
+                        <!-- <div class="mobile-money">
+                            <h3>Mobile Money:</h3>
+                            <p>MTN - 0559065973</p>
+                            <p>Account Name:</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

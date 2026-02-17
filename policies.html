@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policies || HATOF Foundation</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Conult HTML Template For Business" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/conult-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/conult.css" />
+    <link rel="stylesheet" href="assets/css/conult-responsive.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/hatof-responsive.css" />
+    <style>
+        /* Document Library Styles */
+        .documents-hero {
+            position: relative;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/images/backgrounds/page-header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .documents-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+            color: #fff;
+        }
+
+        .documents-hero .subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .doc-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .doc-section-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .doc-section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #15c8a0;
+            margin: 20px auto 0;
+        }
+
+        .doc-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .doc-category-btn {
+            padding: 12px 25px;
+            background: #ffffff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #666;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .doc-category-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .doc-category-btn.active {
+            background: #15c8a0;
+            color: white;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .doc-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .doc-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .doc-icon {
+            font-size: 40px;
+            color: #15c8a0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .doc-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .doc-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .doc-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .doc-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .doc-download {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .doc-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #15c8a0;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .doc-download-btn:hover {
+            background: #0fa689;
+            transform: translateY(-2px);
+        }
+
+        .doc-filesize {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .doc-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .doc-tag {
+            font-size: 12px;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 15px;
+        }
+
+        .doc-search {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .doc-search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .doc-search-input {
+            flex-grow: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .doc-search-input:focus {
+            border-color: #15c8a0;
+            box-shadow: 0 0 0 3px rgba(21, 200, 160, 0.1);
+        }
+
+        .doc-search-btn {
+            padding: 12px 25px;
+            background: #15c8a0;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .doc-search-btn:hover {
+            background: #0fa689;
+        }
+
+        .no-docs {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .error {
+            background: #ffe0e0;
+            color: #d8000c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="njs-sticky-side body-append image_button_cover placement-right now-show">
+        <a href="donate.html" target="blank_" rel="noopener noreferrer">Donate <i class="fa fa-heart"></i></a>
+    </div>
+    <div class="page-wrapper">
+        <header class="main-header main-header-three clearfix">
+            <nav class="nav-main">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo-light-hatof.png" alt="HATOF Foundation">
+                        </a>
+                    </div>
+
+                    <div class="nav-menu">
+                        <!-- Mobile Menu Button -->
+                        <a href="#" class="mobile-toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <ul class="nav-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="dropdown active">
+                                <a href="about.html">About</a>
+                                <ul>
+                                    <li><a href="staff.html">Our Staff</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Our Work</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Themes</a>
+                                        <ul>
+                                            <li><a href="climate-change.html">Climate Change</a></li>
+                                            <li><a href="biodiversity.html">Biodiversity</a></li>
+                                            <li><a href="energy.html">Energy</a></li>
+                                            <li><a href="food-agriculture.html">Food & Agriculture</a></li>
+                                            <li><a href="global-policy.html">Global Policy</a></li>
+                                            <li><a href="climate-change.html">Climate Finance</a></li>
+                                            <li><a href="blue-economy.html">Blue Economy</a></li>
+                                            <li><a href="chemicals-waste.html">Chemicals & Waste</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="hatof-projects.html">Projects</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Regions</a>
+                                        <ul>
+                                            <li><a href="#">Africa</a></li>
+                                            <li><a href="#">North America</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="consultancy-services.html">Consultancies</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <li><a href="policies.html">Policies</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Reports</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">Annual Reports</a>
+                                                <ul>
+                                                    <li><a href="assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf"
+                                                            target="_blank">2016</a></li>
+                                                    <li><a href="assets/reports/2017-ANNUAL-REPORT_HATOF.pdf"
+                                                            target="_blank">2017</a></li>
+                                                    <li><a href="assets/reports/2023 Annual Report.pdf"
+                                                            target="_blank">2023</a></li>
+                                                    <li><a href="assets/reports/2024 Annual Report.pdf"
+                                                            target="_blank">2024</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--<li class="dropdown"><a href="#">Financial Reports</a>-->
+                                            <!--    <ul>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2023 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2023-->
+                                            <!--                Report</a></li>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2024 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2024-->
+                                            <!--                Report</a></li>-->
+                                            <!--    </ul>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </li>
+                                    <li><a href="news.html">News & Updates</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="#" class="gield-link">
+                                    GIELD <i class="fas fa-graduation-cap"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projects.html" class="cso-btn">GCF CSO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Policies</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Policies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!-- Documents Section -->
+        <section class="doc-section">
+            <div class="container">
+                <h2 class="doc-section-title">HATOF Policies</h2>
+
+                <!-- Search Box -->
+                <div class="doc-search">
+                    <form class="doc-search-form" id="docSearchForm">
+                        <input type="text" class="doc-search-input" id="docSearchInput"
+                            placeholder="Search documents...">
+                        <button type="submit" class="doc-search-btn">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Categories Tabs -->
+                <div class="doc-categories" id="docCategories">
+                    <button class="doc-category-btn active" data-category="all">All Documents</button>
+                    <button class="doc-category-btn" data-category="reports">Policies</button>
+                    <!-- <button class="doc-category-btn" data-category="publications">Publications</button>
+                    <button class="doc-category-btn" data-category="presentations">Presentations</button>
+                    <button class="doc-category-btn" data-category="toolkit">Toolkits</button> -->
+                </div>
+
+                <!-- Documents Grid -->
+                <div class="doc-grid" id="docGrid">
+                    <div class="loading">Loading documents...</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__top">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="site-footer__top-left">
+                                    <div class="site-footer__top-logo-content">
+                                        <p class="site-footer__top-text">Developing the skills of individuals and
+                                            communities to effectively conserve, restore and utilize the natural
+                                            resources available in the communities for sustainable livelihoods in Ghana
+                                            and beyond.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+
+                                <div class="site-footer__top-newsletter">
+                                    <h5 class="site-footer__top-newsletter-title">Subscribe for Latest Articles and
+                                        Resources</h5>
+                                    <form class="site-footer__top-newsletter-form">
+                                        <div class="site-footer__top-newsletter-input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                            <button type="submit"
+                                                class="site-footer__top-newsletter-btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-footer__bottom">
+                            <div class="site-footer__top-widget-box">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/flag.png" alt="Ghana Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">P.O. Box 'SKM' DTD 6038,<br>
+                                                Sakumono, Tema.<br>F-54 Service Plot DTD(801)
+                                                C.19<br>Klagon-Lashibi, Tema <br><a href="mailto:ghanainfo@hatof.org">
+                                                    ghanainfo@hatof.org</a> <br>+233-207 360 517 <br>+233-246 346 698
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/canada.png" alt="Canada Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">139 Millwick Drive<br>
+                                                C/O Living Word Assembly of God<br>Toronto ON M9L 1Y7<br><a
+                                                    href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
+                                        <div class="footer-widget__column footer-widget__contact clearfix">
+                                            <h3 class="footer-widget__title">Useful links</h3>
+
+                                            <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="about.html">Meet our Team</a></li>
+                                                <li><a href="projects.html">Case Stories</a></li>
+                                                <li><a href="news.html">Latest News</a></li>
+                                                <!-- <li><a href="gallery.html">Gallery</a></li> -->
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="00ms">
+                                        <h3 class="footer-widget__title">We are social</h3>
+
+                                        <div class="site-footer__top-right-social">
+                                            <a href="https://www.facebook.com/HatofFoundation/"><i
+                                                    class="fab fa-facebook"></i></a>
+                                            <a href="https://www.linkedin.com/company/hatof-foundation/"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a
+                                                href="https://www.instagram.com/hatoffoundation?igsh=cXd4cng0NXJ6d3l4&utm_source=qr"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="https://www.youtube.com/@HATOFFoundation"><i
+                                                    class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </footer>
+    <!--Site Footer End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@conult.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+
+
+
+
+    <!-- template js -->
+    <script src="assets/js/conult.js"></script>
+    <script>
+        class DocumentLibrary {
+            constructor() {
+                // Your WordPress site URL
+                this.wpBaseUrl = 'https://wp.picturethisproduction.ca/wp-json';
+                this.container = document.getElementById('docGrid');
+                this.searchForm = document.getElementById('docSearchForm');
+                this.searchInput = document.getElementById('docSearchInput');
+                this.categoryButtons = document.querySelectorAll('.doc-category-btn');
+                this.currentCategory = 'all';
+                this.searchQuery = '';
+
+                // The ID of your "policy" subcategory in WordPress
+                // You'll need to find this in your WordPress admin under Categories
+                this.policyCategoryId = 12; // Replace with your actual POLICY category ID (not the parent Resources ID)
+
+                this.init();
+            }
+
+            init() {
+                // Load documents
+                this.loadDocuments();
+
+                // Set up event listeners
+                this.setupEventListeners();
+            }
+
+            setupEventListeners() {
+                // Category filters (if you have further subcategories under Policy)
+                if (this.categoryButtons && this.categoryButtons.length) {
+                    this.categoryButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            // Remove active class from all buttons
+                            this.categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+                            // Add active class to clicked button
+                            button.classList.add('active');
+
+                            // Update current category and load documents
+                            this.currentCategory = button.dataset.category;
+                            this.loadDocuments();
+                        });
+                    });
+                }
+
+                // Search form
+                if (this.searchForm) {
+                    this.searchForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        this.searchQuery = this.searchInput.value.trim();
+                        this.loadDocuments();
+                    });
+                }
+            }
+
+            async loadDocuments() {
+                try {
+                    if (!this.container) {
+                        console.error('Document container not found');
+                        return;
+                    }
+
+                    this.container.innerHTML = '<div class="loading">Loading policy documents...</div>';
+
+                    // Build the URL to fetch posts from the policy subcategory
+                    // Using category ID directly targets that specific category regardless of hierarchy
+                    let url = `${this.wpBaseUrl}/wp/v2/posts?_embed&per_page=50&categories=${this.policyCategoryId}`;
+
+                    // Add search query if exists
+                    if (this.searchQuery) {
+                        url += `&search=${this.searchQuery}`;
+                    }
+
+                    console.log('Fetching from:', url);
+
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const documents = await response.json();
+                    this.renderDocuments(documents);
+
+                } catch (error) {
+                    console.error('Error loading documents:', error);
+                    this.container.innerHTML = `
+                <div class="error">
+                    <p>Error loading policy documents: ${error.message}</p>
+                    <p>Please try again later or contact the administrator.</p>
+                </div>
+            `;
+                }
+            }
+
+            renderDocuments(documents) {
+                if (!documents || documents.length === 0) {
+                    this.container.innerHTML = `
+                <div class="no-docs">
+                    <i class="fas fa-file-alt" style="font-size: 48px; color: #ddd; display: block; margin-bottom: 20px;"></i>
+                    <p>No policy documents found. Please try a different search.</p>
+                </div>
+            `;
+                    return;
+                }
+
+                let html = '';
+
+                documents.forEach(doc => {
+                    // Extract the document information from the WordPress post
+
+                    // Get title
+                    const title = doc.title.rendered;
+
+                    // Get description from excerpt or content
+                    const description = doc.excerpt ? doc.excerpt.rendered : '';
+
+                    // Find PDF link in the content (assuming PDFs are linked in the post content)
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = doc.content.rendered;
+
+                    // Look for links to PDFs
+                    const pdfLink = tempDiv.querySelector('a[href$=".pdf"]');
+                    let fileUrl = '';
+
+                    if (pdfLink) {
+                        // Found a PDF link in the content
+                        fileUrl = pdfLink.href || pdfLink.getAttribute('href');
+                    } else if (doc._embedded && doc._embedded['wp:featuredmedia'] && doc._embedded['wp:featuredmedia'][0]) {
+                        // Try to get from featured media if no PDF link in content
+                        fileUrl = doc._embedded['wp:featuredmedia'][0].source_url;
+                    }
+
+                    // Format date
+                    const date = new Date(doc.date);
+                    const formattedDate = date.toLocaleDateString('en-GH', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                    });
+
+                    html += `
+                <div class="doc-item">
+                    <div class="doc-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="doc-title">${title}</h3>
+                    <div class="doc-description">${description}</div>
+                    <div class="doc-meta">
+                        <div class="doc-meta-item">
+                            <i class="fas fa-calendar-alt"></i> ${formattedDate}
+                        </div>
+                    </div>
+                    <div class="doc-download">
+                        ${fileUrl ?
+                            `<a href="${fileUrl}" class="doc-download-btn" download target="_blank">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>` :
+                            `<span class="doc-download-btn" style="opacity: 0.5; cursor: not-allowed;">
+                                <i class="fas fa-download"></i> No PDF available
+                            </span>`
+                        }
+                    </div>
+                </div>
+            `;
+                });
+
+                this.container.innerHTML = html;
+            }
+        }
+
+        // Initialize when the document is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new DocumentLibrary();
+        });
+
+
+    </script>
+
+</body>
+
+</html>

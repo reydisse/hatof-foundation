@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------
+  HATOF Foundation — Site-Wide Responsive Overrides
+  Loaded AFTER conult-responsive.css and navbar.css
+--------------------------------------------------------------*/
+
+/* ==========================================================
+   Global (no media query) — prevent overflow on every screen
+   ========================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+}
+
+/* ==========================================================
+   Tablet  (768px – 991px)
+   ========================================================== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  /* Hero slider */
+  .main-slider .container {
+    padding-top: 220px;
+    padding-bottom: 160px;
+  }
+
+  .main-slider h2 {
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  /* Section titles */
+  .section-title__title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  /* Page header */
+  .page-header__inner h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  /* Footer columns — let them stack in pairs */
+  .site-footer__top-widget-box .row {
+    row-gap: 30px;
+  }
+
+  /* Project detail sidebar spacing when stacked */
+  .project-details__sidebar,
+  .project-details-sidebar {
+    margin-top: 40px;
+  }
+
+  /* Staff profile images */
+  .team-one__image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Contact map */
+  .contact-page-google-map__one {
+    height: 450px;
+  }
+}
+
+/* ==========================================================
+   Mobile  (max-width: 767px)
+   ========================================================== */
+@media only screen and (max-width: 767px) {
+
+  /* Navigation mobile menu scroll */
+  .nav-list.active {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* Hero slider */
+  .main-slider .container {
+    padding-top: 200px;
+    padding-bottom: 140px;
+  }
+
+  .main-slider h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 40px 0 30px;
+  }
+
+  .site-footer__top-widget-box .row {
+    row-gap: 25px;
+  }
+
+  .footer-widget__title {
+    font-size: 18px;
+  }
+
+  .footer-widget__contact-text {
+    font-size: 14px;
+  }
+
+  /* Contact map */
+  .contact-page-google-map__one {
+    height: 300px;
+  }
+
+  /* Project cards */
+  .project-card__image {
+    height: 200px;
+  }
+
+  .project-card__content {
+    padding: 18px;
+  }
+
+  .project-card__title {
+    font-size: 18px;
+  }
+
+  /* Project detail — info list stack vertically */
+  .project-details__info-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* Blog / news cards */
+  .news-one__content {
+    padding: 20px 15px;
+  }
+
+  .news-one__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* WordPress blog cards */
+  .wp-blog-card {
+    margin-bottom: 20px;
+  }
+
+  .wp-blog-card__content {
+    padding: 15px;
+  }
+}
+
+/* ==========================================================
+   Small mobile  (max-width: 480px)
+   ========================================================== */
+@media only screen and (max-width: 480px) {
+
+  /* Hero */
+  .main-slider .container {
+    padding-top: 150px;
+    padding-bottom: 120px;
+  }
+
+  .main-slider h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .main-slider p {
+    font-size: 16px;
+  }
+
+  /* Section titles */
+  .section-title__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Page header */
+  .page-header__inner h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Blog card titles */
+  .news-one__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .news-one__single {
+    height: auto;
+  }
+
+  /* Project filter tabs scroll */
+  .project-filter-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-filter-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}

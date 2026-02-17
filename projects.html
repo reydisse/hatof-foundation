@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GCF CSO READINESS PROJECT</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Conult HTML Template For Business" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/conult-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/conult.css" />
+    <link rel="stylesheet" href="assets/css/conult-responsive.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/hatof-responsive.css" />
+    <style>
+        /* GCF CSO Page Specific Styles */
+        .gcf-hero {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/images/backgrounds/page-header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .gcf-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+            color: #fff;
+        }
+
+        .gcf-hero .subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -50px auto 0;
+            padding: 0 20px;
+            max-width: 1200px;
+        }
+
+        .detail-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-card h3 {
+            color: #15c8a0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .detail-card p {
+            color: #333;
+            margin: 0;
+        }
+
+        .section-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-content.bg-light {
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #15c8a0;
+            margin: 20px auto 0;
+        }
+
+        .content-box {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .content-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content-list li::before {
+            content: '➢';
+            position: absolute;
+            left: 0;
+            color: #15c8a0;
+        }
+
+        .objectives-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .objectives-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .objectives-list li::before {
+            content: '❖';
+            position: absolute;
+            left: 0;
+            color: #15c8a0;
+        }
+
+        .activities-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .activity-item {
+            position: relative;
+            padding: 20px 0 20px 50px;
+            border-left: 2px solid #15c8a0;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .activity-item::before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background: #15c8a0;
+            border-radius: 50%;
+        }
+
+        .activity-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .impact-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .impact-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .media-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .media-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            background: #ffffff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: #15c8a0;
+            color: #ffffff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Document Item Styles */
+        .document-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .document-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .document-icon {
+            font-size: 40px;
+            color: #15c8a0;
+            margin-bottom: 15px;
+        }
+
+        .document-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .document-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #15c8a0;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .document-btn:hover {
+            background: #0fa689;
+        }
+
+        .media-item__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .media-item:hover .media-item__overlay {
+            opacity: 1;
+        }
+
+        .error {
+            background: #ffe0e0;
+            color: #d8000c;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .no-content {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        @media (max-width: 991px) {
+            .gcf-hero h1 {
+                font-size: 36px;
+            }
+
+            .gcf-hero .subtitle {
+                font-size: 18px;
+            }
+
+            .project-details-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .project-details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gcf-hero {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .media-tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                margin: 5px;
+            }
+        }
+
+        /* Add these styles to your existing style section */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .pagination-btn {
+            padding: 10px 20px;
+            background: #15c8a0;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pagination-btn:hover {
+            background: #0fa689;
+            transform: translateY(-2px);
+        }
+
+        .pagination-info {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-nav.prev {
+            left: 20px;
+        }
+
+        .lightbox-nav.next {
+            right: 20px;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .media-item__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .media-item:hover .media-item__overlay {
+            opacity: 1;
+        }
+
+        /* Network Tables Styles */
+        .table-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .table-tab {
+            padding: 12px 25px;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .table-tab:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        .table-tab.active {
+            background: #15c8a0;
+            color: white;
+        }
+
+        .table-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .table-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .network-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .network-table th {
+            background: #15c8a0;
+            color: white;
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+
+        .network-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .network-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .network-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .gender-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .gender-male {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .gender-female {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        /* Email and Contact Styles */
+        .network-table td a {
+            color: #15c8a0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .network-table td a:hover {
+            color: #0fa689;
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .table-tabs {
+                flex-wrap: wrap;
+            }
+
+            .table-tab {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .network-table {
+                font-size: 13px;
+            }
+
+            .network-table th,
+            .network-table td {
+                padding: 10px 15px;
+            }
+
+            .gender-badge {
+                min-width: 60px;
+                padding: 3px 8px;
+            }
+        }
+
+        /* Loading Animation */
+        .table-loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .table-loading:after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #15c8a0;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Empty State */
+        .table-empty {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="njs-sticky-side body-append image_button_cover placement-right now-show">
+        <a href="donate.html" target="blank_" rel="noopener noreferrer">Donate <i class="fa fa-heart"></i></a>
+    </div>
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+            <nav class="nav-main">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo-light-hatof.png" alt="HATOF Foundation">
+                        </a>
+                    </div>
+
+                    <div class="nav-menu">
+                        <!-- Mobile Menu Button -->
+                        <a href="#" class="mobile-toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <ul class="nav-list">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">About</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="staff.html">Our Staff</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Our Work</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Themes</a>
+                                        <ul>
+                                            <li><a href="climate-change.html">Climate Change</a></li>
+                                            <li><a href="biodiversity.html">Biodiversity</a></li>
+                                            <li><a href="energy.html">Energy</a></li>
+                                            <li><a href="food-agriculture.html">Food & Agriculture</a></li>
+                                            <li><a href="global-policy.html">Global Policy</a></li>
+                                            <li><a href="climate-change.html">Climate Finance</a></li>
+                                            <li><a href="blue-economy.html">Blue Economy</a></li>
+                                            <li><a href="chemicals-waste.html">Chemicals & Waste</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="hatof-projects.html">Projects</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Regions</a>
+                                        <ul>
+                                            <li><a href="#">Africa</a></li>
+                                            <li><a href="#">North America</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="consultancy-services.html">Consultancies</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <li><a href="policies.html">Policies</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Reports</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">Annual Reports</a>
+                                                <ul>
+                                                    <li><a href="assets/reports/2016-ANNUAL-REPORT-_HATOF.pdf"
+                                                            target="_blank">2016</a></li>
+                                                    <li><a href="assets/reports/2017-ANNUAL-REPORT_HATOF.pdf"
+                                                            target="_blank">2017</a></li>
+                                                    <li><a href="assets/reports/2023 Annual Report.pdf"
+                                                            target="_blank">2023</a></li>
+                                                    <li><a href="assets/reports/2024 Annual Report.pdf"
+                                                            target="_blank">2024</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--<li class="dropdown"><a href="#">Financial Reports</a>-->
+                                            <!--    <ul>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2023 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2023-->
+                                            <!--                Report</a></li>-->
+                                            <!--        <li><a href="assets/reports/HATOF FOUNDATION 2024 AUDITED FINANCIAL STATEMENT.pdf"-->
+                                            <!--                target="_blank">2024-->
+                                            <!--                Report</a></li>-->
+                                            <!--    </ul>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </li>
+                                    <li><a href="news.html">News & Updates</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="#" class="gield-link">
+                                    GIELD <i class="fas fa-graduation-cap"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projects.html" class="cso-btn">GCF CSO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <!-- <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h1>GCF CSO
+                        Readiness</h1>
+                    <p class="subtitle">Capacity Building and Knowledge Management on Climate Change for Civil Society
+                        Organizations (CSOs) in Ghana towards the implementation of the Nationally Determined
+                        Contributions.
+                    </p>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+        <section class="gcf-hero">
+            <div class="container">
+                <h1>GCF CSO Readiness Project, Ghana</h1>
+                <p class="subtitle">Capacity Building and Knowledge Management on Climate Change for Civil Society
+                    Organizations (CSOs) in Ghana towards the implementation of the Nationally Determined Contributions.
+                </p>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <section class="vid container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <video class="w-100" controls>
+                        <source src="assets/video/GCF_CSO_s.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Project Overview -->
+
+
+        <!-- Context Section -->
+        <!-- GCF CSO Project Section - Completely Unique Class Names -->
+        <section class="gcf-cso-section">
+            <div class="gcf-cso-container">
+                <div class="gcf-cso-document">
+                    <div class="gcf-cso-header">
+                        <h1 class="gcf-cso-title">GCF CSO Readiness Project, Ghana</h1>
+                        <p class="gcf-cso-subtitle">Capacity Building and Knowledge Management on Climate Change for
+                            Civil Society Organizations (CSOs) in Ghana towards the implementation of the Nationally
+                            Determined Contributions.</p>
+                    </div>
+
+                    <div class="gcf-cso-content">
+                        <!-- Project Details with Unique Classes -->
+                        <div class="gcf-cso-detail-card">
+                            <div class="gcf-cso-details-grid"
+                                style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
+                                <div class="gcf-cso-detail-card" style="flex: 1; min-width: 0;">
+                                    <h3 class="gcf-cso-detail-title">
+                                        <i class="fas fa-hand-holding-usd"></i> Funder
+                                    </h3>
+                                    <p class="gcf-cso-detail-text">Green Climate Fund (GCF)</p>
+                                    <img src="./assets/images/gcf.png" alt="Green Climate Fund Logo"
+                                        style="max-width: 80px; height: auto; margin: 8px auto; display: block;">
+                                </div>
+                                <div class="gcf-cso-detail-card" style="flex: 1; min-width: 0;">
+                                    <h3 class="gcf-cso-detail-title">
+                                        <i class="fas fa-calendar-alt"></i> Timeframe
+                                    </h3>
+                                    <p class="gcf-cso-detail-text">May 2022 – May 2025</p>
+                                    <img src="./assets/images/calendar.png" alt="Clock"
+                                        style="max-width: 80px; height: auto; margin: 8px auto; display: block;">
+                                </div>
+                                <div class="gcf-cso-detail-card" style="flex: 1; min-width: 0;">
+                                    <h3 class="gcf-cso-detail-title">
+                                        <i class="fas fa-map-marker-alt"></i> Project Location
+                                    </h3>
+                                    <p class="gcf-cso-detail-text">Ghana</p>
+                                    <img src="./assets/images/shapes/ghmap.png" alt="Ghana map"
+                                        style="max-width: 80px; height: auto; margin: 8px auto; display: block;">
+                                </div>
+                                <div class="gcf-cso-detail-card" style="flex: 1; min-width: 0;">
+                                    <h3 class="gcf-cso-detail-title">
+                                        <i class="fas fa-users"></i> Beneficiaries
+                                    </h3>
+                                    <p class="gcf-cso-detail-text">
+                                        <strong>Direct:</strong> 40 Ghanaian CSOs (4 from each of the 10 CSO Networks)
+                                        engaged in implementing the Rio conventions<br>
+                                        <strong>Indirect:</strong> Over 200 CSOs in Ghana
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+
+                            <!-- Context Section with Unique Classes -->
+                            <div class="gcf-cso-context-section">
+                                <h2 class="gcf-cso-section-title">
+                                    <i class="fas fa-align-left"></i> Context
+                                </h2>
+
+                                <div class="gcf-cso-image-text-row">
+                                    <div class="gcf-cso-text-col">
+                                        <p class="gcf-cso-paragraph">For the past 15 years, the government of Ghana has
+                                            received support from the Global Environment Facility (GEF), The Adaptation
+                                            Fund, and other multilateral and bilateral agencies, as well as non-state
+                                            actors, to implement several capacity-building and climate change
+                                            coordination
+                                            and policy development initiatives. About thirteen climate change-related
+                                            capacity-building projects have been implemented under the GEF country
+                                            allocation.</p>
+
+                                        <p class="gcf-cso-paragraph">Further to these supports, the country has received
+                                            four readiness support (GHA-RS-001, GHA-RS-002, GHA-RS-003, and GHA-RS-004)
+                                            from
+                                            the Green Climate Fund. Nonetheless, these readiness supports have engaged
+                                            mainly the government and state actors, almost neglecting other key
+                                            stakeholders, such as Civil Society Organizations (CSOs), in their planning,
+                                            design, and implementation.</p>
+                                    </div>
+                                    <div class="gcf-cso-image-col">
+                                        <!-- Image of collaboration or CSO meeting -->
+                                        <div class="gcf-cso-image-wrapper">
+                                            <img src="assets/images/projects/IMG_5272.jpg" alt="CSO stakeholder meeting"
+                                                class="gcf-cso-image">
+                                            <p class="gcf-cso-image-caption">CSO stakeholders discussing climate
+                                                initiatives
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="gcf-cso-paragraph">The government cannot address climate change issues alone;
+                                    cooperation with NGOs and civil society is paramount. Civil Society Organizations,
+                                    including NGOs, are important sources of information and technical expertise on
+                                    various
+                                    issues, including climate change.</p>
+
+                                <p class="gcf-cso-paragraph">However, there is a significant gap in knowledge and
+                                    capacity
+                                    constraints among CSOs for effectively carrying out the above potential roles to
+                                    contribute to the country's sustainable development. Capacity gap analysis among
+                                    CSOs
+                                    and CSO Networks in Ghana has revealed wide gaps in technical skills and
+                                    institutional
+                                    capacity to respond effectively, integrate climate change adaptation and mitigation
+                                    into
+                                    relevant existing and future programmes and projects, and catalyze climate change
+                                    solutions in Ghana.</p>
+
+                                <div class="gcf-cso-gap-container">
+                                    <h3 class="gcf-cso-gap-heading">Key Gaps Identified:</h3>
+                                    <ul class="gcf-cso-gap-list">
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">The absence of CSO-tailored
+                                                projects/programmes
+                                                that ensures technical capacity development for CSOs to support the
+                                                planning, programming, implementation, and monitoring of climate-related
+                                                activities</span>
+                                        </li>
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">Low level of awareness of climate hazards and
+                                                knowledge about how to manage them</span>
+                                        </li>
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">Lack of a long-term strategic and action plan
+                                                for
+                                                and by CSOs</span>
+                                        </li>
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">Inadequate technical capacity to develop and
+                                                effectively implement climate-related projects and programmes in line
+                                                with
+                                                national priorities</span>
+                                        </li>
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">Inconsistent and inadequate participation of
+                                                CSOs
+                                                in the national climate change decision-making processes</span>
+                                        </li>
+                                        <li class="gcf-cso-gap-item">
+                                            <span class="gcf-cso-gap-icon"><i class="fas fa-minus-circle"></i></span>
+                                            <span class="gcf-cso-gap-text">Lack of coordination mechanisms and a clear
+                                                consultative process among CSOs and NGOs to build a common position on
+                                                key
+                                                climate change and development issues</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Project Objectives Section with Unique Classes -->
+                            <div class="gcf-cso-objectives-section">
+                                <h2 class="gcf-cso-section-title">
+                                    <i class="fas fa-bullseye"></i> Project Objectives
+                                </h2>
+
+                                <div class="gcf-cso-objectives-container">
+                                    <p class="gcf-cso-objectives-intro">To strengthen the capacities of 10 Ghanaian CSO
+                                        networks to contribute efficiently to the Nationally Determined Contributions
+                                        planning and implementation processes by:</p>
+
+                                    <div class="gcf-cso-objectives-grid">
+                                        <div class="gcf-cso-objective-card">
+                                            <div class="gcf-cso-objective-icon">
+                                                <i class="fas fa-handshake"></i>
+                                            </div>
+                                            <p class="gcf-cso-objective-text">Engaging the National Designated
+                                                Authority,
+                                                Direct Access Entities, and GCF on project design, selection, budget
+                                                preparation, implementation, monitoring and evaluation</p>
+                                        </div>
+
+                                        <div class="gcf-cso-objective-card">
+                                            <div class="gcf-cso-objective-icon">
+                                                <i class="fas fa-file-alt"></i>
+                                            </div>
+                                            <p class="gcf-cso-objective-text">Developing a CSO-tailored training module
+                                                on
+                                                preparing funding proposals to leverage nonstate actors' engagement with
+                                                the
+                                                GCF</p>
+                                        </div>
+
+                                        <div class="gcf-cso-objective-card">
+                                            <div class="gcf-cso-objective-icon">
+                                                <i class="fas fa-tasks"></i>
+                                            </div>
+                                            <p class="gcf-cso-objective-text">Developing a five-year Civil Society
+                                                Climate
+                                                Change Agenda and Action Plan</p>
+                                        </div>
+
+                                        <div class="gcf-cso-objective-card">
+                                            <div class="gcf-cso-objective-icon">
+                                                <i class="fas fa-lightbulb"></i>
+                                            </div>
+                                            <p class="gcf-cso-objective-text">Developing GCF Concept note proposing how
+                                                this
+                                                initiative could be up-scaled nationally to facilitate agreement on
+                                                direction and access to financing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Activities Section with Unique Classes -->
+                            <div class="gcf-cso-activities-section">
+                                <h2 class="gcf-cso-section-title">
+                                    <i class="fas fa-clipboard-list"></i> Project Activities
+                                </h2>
+
+                                <div class="gcf-cso-activities-wrapper">
+                                    <div class="gcf-cso-activities-timeline">
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Project Launch and Inception Workshop
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Successfully launched the
+                                                    project
+                                                    and conducted inception workshop with key stakeholders.</p>
+                                                <a href="https://dailyguidenetwork.com/hatof-foundation-others-launch-csos-climate-financing-programme/"
+                                                    class="gcf-cso-activity-link" target="_blank">
+                                                    <i class="fas fa-external-link-alt"></i> Project Launch Report
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Stakeholder Mapping and Needs
+                                                    Assessment
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Mapped and identified relevant
+                                                    stakeholders, assessed their capacity needs, and clarified their
+                                                    roles
+                                                    and responsibilities in connection with GCF's related issues at the
+                                                    national level, including the Country Program.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Gap Assessment Validation</h4>
+                                                <p class="gcf-cso-activity-description">Validated the findings of the
+                                                    gap
+                                                    assessment performed with stakeholders.</p>
+                                                <a href="https://gna.org.gh/2024/05/csos-advised-to-remain-focused-on-their-set-up-objective-for-excellence/"
+                                                    class="gcf-cso-activity-link" target="_blank">
+                                                    <i class="fas fa-external-link-alt"></i> Validation Workshop Report
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-image-break">
+                                            <img src="assets/images/projects/IMG_0019.jpg" alt="CSO Workshop Training"
+                                                class="gcf-cso-break-image">
+                                            <p class="gcf-cso-image-caption">Capacity building workshop with CSO
+                                                representatives</p>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Capacity Building and Awareness
+                                                    Raising
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Conducted training for relevant
+                                                    stakeholders on findings of gap assessments and climate risks
+                                                    identified
+                                                    to complement ongoing national and sub-national level engagements.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">CSO Coordination Mechanism
+                                                    Development
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Designed a suitable coordination
+                                                    mechanism and consultative process for CSOs, linked with a national
+                                                    coordination mechanism for an enhanced CSO engagement.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Coordination Mechanism Validation
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Organized a workshop to validate
+                                                    the
+                                                    CSO's coordination mechanism and consultative process and build the
+                                                    capacity of the members of the coordination mechanism.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Funding Needs Assessment</h4>
+                                                <p class="gcf-cso-activity-description">Took stock of funding needs
+                                                    assessments, projected climate risks, vulnerabilities, and
+                                                    opportunities
+                                                    to processes streamline planning.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Climate Risks Workshop</h4>
+                                                <p class="gcf-cso-activity-description">Organized a two-day workshop for
+                                                    relevant stakeholders on climate risks and opportunities and
+                                                    mainstream
+                                                    them into climate action at the country level.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-image-break">
+                                            <img src="assets/images/projects/IMG_5168.jpg"
+                                                alt="Strategic Planning Session" class="gcf-cso-break-image">
+                                            <p class="gcf-cso-image-caption">Strategic planning session for the
+                                                five-year
+                                                Climate Change Agenda</p>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Climate Change Agenda and Action Plan
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Developed a Civil Society
+                                                    Climate
+                                                    Change Agenda and Action Plan to guide future CSO engagement.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Communication Strategy Development
+                                                </h4>
+                                                <p class="gcf-cso-activity-description">Developed communication tools,
+                                                    such
+                                                    as a communication plan, semester-based e-bulletin in local language
+                                                    and
+                                                    English, and semester-based newsletter in English, and disseminated
+                                                    through different communication channels.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="gcf-cso-activity-item">
+                                            <div class="gcf-cso-activity-marker"></div>
+                                            <div class="gcf-cso-activity-content">
+                                                <h4 class="gcf-cso-activity-title">Training Workshops</h4>
+                                                <p class="gcf-cso-activity-description">Organized eight-day residential
+                                                    training workshops on GCF and climate change-related issues,
+                                                    policies,
+                                                    project development, implementation, and monitoring.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Outputs Section with Unique Classes -->
+                            <div class="gcf-cso-outputs-section">
+                                <h2 class="gcf-cso-section-title">
+                                    <i class="fas fa-cubes"></i> Project Outputs
+                                </h2>
+
+                                <div class="gcf-cso-outputs-grid">
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-users-cog"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">CSOs and relevant stakeholders identified, and
+                                            their
+                                            needs assessed to streamline training.</p>
+                                    </div>
+
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-sitemap"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">Ghana Environmental CSO Coordination Mechanism
+                                            (EnVOG) established to ensure CSOs are engaged on climate-related issues,
+                                            including NDC and GCF-related matters at the country level.</p>
+                                    </div>
+
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">CSOs have improved their capacity to develop
+                                            high-quality concept notes and effectively implement GCF-funded activities.
+                                        </p>
+                                    </div>
+
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">Stakeholders used available information about the
+                                            climate risks and opportunities in their planning and climate actions.</p>
+                                    </div>
+
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">Developed communication strategy to enhance
+                                            awareness
+                                            of climate hazards and knowledge about how to manage them.</p>
+                                    </div>
+
+                                    <div class="gcf-cso-output-card">
+                                        <div class="gcf-cso-output-icon">
+                                            <i class="fas fa-file-contract"></i>
+                                        </div>
+                                        <p class="gcf-cso-output-text">One concept note guided by the CSO Agenda and
+                                            Action
+                                            Plan prepared and aligned with the country's NDC, climate change plans, and
+                                            strategies.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Impact Section with Unique Classes -->
+                            <div class="gcf-cso-impact-section">
+                                <h2 class="gcf-cso-section-title">
+                                    <i class="fas fa-rocket"></i> Project Impact
+                                </h2>
+
+                                <div class="gcf-cso-image-text-row">
+                                    <div class="gcf-cso-image-col">
+                                        <!-- Image of project impact -->
+                                        <div class="gcf-cso-image-wrapper">
+                                            <img src="assets/images/projects/IMG_5139.jpg" alt="Project Impact"
+                                                class="gcf-cso-image">
+                                            <p class="gcf-cso-image-caption">CSO members implementing climate action
+                                                strategies</p>
+                                        </div>
+                                    </div>
+                                    <div class="gcf-cso-text-col">
+                                        <div class="gcf-cso-impact-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <p>Over 100 CSOs in Ghana engaged in the Rio Convention implementation were
+                                                identified, and their capacity needs on climate change and climate
+                                                finance
+                                                were assessed.</p>
+                                        </div>
+
+                                        <div class="gcf-cso-impact-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <p>Established the Ghana Environmental CSO Coordination Mechanism (EnVOG) as
+                                                the
+                                                environmental voice of Ghana.</p>
+                                        </div>
+
+                                        <div class="gcf-cso-impact-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <p>40 CSOs trained on climate change project development, implementation,
+                                                monitoring, and evaluation in line with GCF's requirements.</p>
+                                        </div>
+
+                                        <div class="gcf-cso-impact-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <p>Prepared and disseminated a stocktaking report comprising impact and
+                                                projected climate risks, vulnerability, opportunities, funding needs,
+                                                and
+                                                funding sources for CSOs in Ghana.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="gcf-cso-impact-grid">
+                                    <div class="gcf-cso-impact-card">
+                                        <div class="gcf-cso-impact-number">40</div>
+                                        <p class="gcf-cso-impact-description">CSOs trained on GCF and climate
+                                            change-related
+                                            issues and policies</p>
+                                    </div>
+
+                                    <div class="gcf-cso-impact-card">
+                                        <div class="gcf-cso-impact-number">50+</div>
+                                        <p class="gcf-cso-impact-description">CSOs trained on climate risks and
+                                            opportunities</p>
+                                    </div>
+
+                                    <div class="gcf-cso-impact-card">
+                                        <div class="gcf-cso-impact-number">5</div>
+                                        <p class="gcf-cso-impact-description">Year strategic Civil Society Climate
+                                            Change
+                                            Agenda and Action Plan (2025-2030) developed</p>
+                                    </div>
+
+                                    <div class="gcf-cso-impact-card">
+                                        <div class="gcf-cso-impact-number">1</div>
+                                        <p class="gcf-cso-impact-description">High-quality concept note developed to
+                                            upscale
+                                            project implementation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <!-- Network Tables Section -->
+        <!-- Add show button before the section -->
+        <div class="container text-center my-5">
+            <button id="showNetworkButton" class="show-btn">
+                <span>View Network Information</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Network section as a separate element -->
+        <section class="section-content" id="networkSection" style="display: none;">
+            <div class="container">
+                <!-- Hide button inside network section -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="section-title">Network Information</h2>
+                    <button id="hideNetworkButton" class="hide-btn">
+                        <span>Hide Network Information</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="table-tabs">
+                    <button class="table-tab active" onclick="showTable('convenors')">CSO Network Beneficiaries</button>
+                    <button class="table-tab" onclick="showTable('institutions')">Training Institutions</button>
+                </div>
+
+                <div id="convenorsTable" class="table-content active">
+                    <div class="table-responsive">
+                        <table class="network-table">
+                            <thead>
+                                <tr>
+                                    <th>Coalition</th>
+                                    <th>Representative Name</th>
+                                    <th>Gender</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="convenorsTableBody">
+                                <!-- Data will be loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="institutionsTable" class="table-content">
+                    <div class="table-responsive">
+                        <table class="network-table">
+                            <thead>
+                                <tr>
+                                    <th>Nominated Institution</th>
+                                    <th>Head</th>
+                                    <th>Telephone</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="institutionsTableBody">
+                                <!-- Data will be loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Your existing CSS remains unchanged */
+
+            /* Add styles for the hide button */
+            .hide-btn {
+                background-color: #dc4a4a;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 10px 25px;
+                font-size: 14px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(220, 74, 74, 0.3);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .hide-btn:hover {
+                background-color: #c93a3a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(220, 74, 74, 0.4);
+            }
+
+            .hide-btn svg {
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .hide-btn:hover svg {
+                transform: translateY(-3px);
+            }
+
+
+            /* Show button styling */
+            .show-btn {
+                background-color: #4a89dc;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 12px 30px;
+                font-size: 16px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                box-shadow: 0 4px 15px rgba(74, 137, 220, 0.3);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .show-btn:hover {
+                background-color: #3a77c9;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(74, 137, 220, 0.4);
+            }
+
+            .show-btn svg {
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .show-btn:hover svg {
+                transform: translateY(3px);
+            }
+
+            /* Table tabs styling */
+            .table-tabs {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #e0e0e0;
+                padding-bottom: 10px;
+            }
+
+            .table-tab {
+                background: none;
+                border: none;
+                padding: 10px 20px;
+                font-size: 15px;
+                font-weight: 500;
+                color: #666;
+                cursor: pointer;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            .table-tab.active {
+                color: #4a89dc;
+                font-weight: 600;
+            }
+
+            .table-tab.active:after {
+                content: '';
+                position: absolute;
+                bottom: -11px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #4a89dc;
+                border-radius: 3px 3px 0 0;
+            }
+
+            /* Table styling */
+            .section-title {
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 30px;
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .table-content {
+                display: none;
+                animation: fadeIn 0.5s ease;
+            }
+
+            .table-content.active {
+                display: block;
+            }
+
+            .network-table {
+                width: 100%;
+                border-collapse: collapse;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            }
+
+            .network-table thead {
+                background-color: #4a89dc;
+                color: white;
+            }
+
+            .network-table th {
+                padding: 15px 20px;
+                text-align: left;
+                font-weight: 600;
+            }
+
+            .network-table td {
+                padding: 12px 20px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .network-table tbody tr:last-child td {
+                border-bottom: none;
+            }
+
+            .network-table tbody tr:hover {
+                background-color: #f9fbff;
+            }
+
+            /* Animation */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .section-content {
+                background-color: white;
+                /* Changed to white as requested */
+                padding: 40px 0;
+                border-radius: 10px;
+                margin: 20px 0;
+                animation: fadeIn 0.5s ease;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
+                /* Subtle shadow to define the white section */
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const showButton = document.getElementById('showNetworkButton');
+                const networkSection = document.getElementById('networkSection');
+                const hideButton = document.getElementById('hideNetworkButton');
+
+                // Show button functionality
+                showButton.addEventListener('click', function () {
+                    networkSection.style.display = 'block';
+                });
+
+                // Hide button functionality
+                hideButton.addEventListener('click', function () {
+                    networkSection.style.display = 'none';
+                });
+            });
+        </script>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const showButton = document.getElementById('showNetworkButton');
+                const networkSection = document.getElementById('networkSection');
+                const hideButton = document.getElementById('hideNetworkButton');
+
+                // Show button functionality
+                showButton.addEventListener('click', function () {
+                    // Show network section with animation
+                    networkSection.style.display = 'block';
+                    networkSection.animate([
+                        { opacity: 0, transform: 'translateY(20px)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    // Hide show button with animation
+                    this.animate([
+                        { opacity: 1, transform: 'translateY(0)' },
+                        { opacity: 0, transform: 'translateY(-20px)' }
+                    ], {
+                        duration: 300,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    // Actually hide the show button after animation completes
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                    }, 300);
+                });
+
+                // Hide button functionality
+                hideButton.addEventListener('click', function () {
+                    // Hide network section with animation
+                    networkSection.animate([
+                        { opacity: 1, transform: 'translateY(0)' },
+                        { opacity: 0, transform: 'translateY(20px)' }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    // Actually hide the network section after animation completes
+                    setTimeout(() => {
+                        networkSection.style.display = 'none';
+                    }, 500);
+
+                    // Show the show button again with animation
+                    showButton.style.display = 'flex'; // Make it visible first
+                    showButton.style.opacity = '0'; // Start transparent
+
+                    showButton.animate([
+                        { opacity: 0, transform: 'translateY(-20px)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], {
+                        duration: 300,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+                });
+            });
+
+        </script>
+
+
+
+
+        <!-- Media Section -->
+        <section class="media-section">
+            <div class="container">
+                <h2 class="section-title">Project Resources</h2>
+
+                <div class="media-tabs">
+                    <button class="tab-btn active" data-tab="photos">Photos</button>
+                    <button class="tab-btn" data-tab="publications">Publications</button>
+                    <button class="tab-btn" data-tab="reports">Reports</button>
+                </div>
+
+                <div id="mediaGrid" class="media-grid">
+                    <div class="loading">Loading resources...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single clean implementation of GCFResourceManager -->
+
+        <script>
+            function showTable(tableId) {
+                window.tableManager.showTable(tableId);
+            }
+
+            class GCFResourceManager {
+                constructor() {
+                    this.baseUrl = 'https://wp.picturethisproduction.ca/wp-json';
+                    this.container = document.getElementById('mediaGrid');
+                    this.currentTab = 'photos';
+
+                    if (this.container) {
+                        this.init();
+                    } else {
+                        console.error('Media grid container not found');
+                    }
+                }
+
+                init() {
+                    // Add event listeners to tab buttons
+                    const tabButtons = document.querySelectorAll('.media-tabs .tab-btn');
+
+                    if (tabButtons.length) {
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', (e) => {
+                                // Remove active class from all buttons
+                                tabButtons.forEach(btn => {
+                                    btn.classList.remove('active');
+                                });
+
+                                // Add active class to clicked button
+                                e.target.classList.add('active');
+
+                                // Set current tab and load content
+                                this.currentTab = e.target.dataset.tab;
+                                this.loadContent();
+                            });
+                        });
+
+                        this.loadContent();
+                    } else {
+                        console.error('Tab buttons not found');
+                    }
+                }
+
+                async loadContent() {
+                    try {
+                        this.container.innerHTML = '<div class="loading">Loading...</div>';
+                        console.log('Fetching content for tab:', this.currentTab);
+
+                        // Use the custom endpoint instead of standard WP API
+                        const url = `${this.baseUrl}/gcf-cso/v1/resources?type=${this.currentTab}`;
+                        console.log('API URL being called:', url);
+
+                        const response = await fetch(url);
+                        console.log('API Response:', response);
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+
+                        const items = await response.json();
+                        console.log('API Data:', items);
+
+                        this.renderContent(items);
+                    } catch (error) {
+                        console.error('Error loading content:', error);
+                        this.container.innerHTML = `
+                <div class="error">
+                    <p>Error loading content: ${error.message}</p>
+                    <p>Please check the browser console for more details.</p>
+                </div>
+            `;
+                    }
+                }
+
+                renderContent(items) {
+                    console.log('Rendering content for tab:', this.currentTab);
+
+                    items.forEach(item => {
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = item.content.rendered;
+
+                        const pdfEmbed = tempDiv.querySelector('.wp-block-tropicalista-pdfembed');
+                        if (pdfEmbed) {
+                            const fileUrl = pdfEmbed.getAttribute('data-media-url');
+                            console.log('Found PDF URL:', fileUrl);
+                        } else {
+                            console.log('No PDF embed found for item:', item.title.rendered);
+                        }
+                    });
+                    if (!items || items.length === 0) {
+                        this.container.innerHTML = '<div class="no-content">No content available for this category.</div>';
+                        return;
+                    }
+
+                    let html = '';
+
+                    if (this.currentTab === 'photos') {
+                        // Render photos
+                        items.forEach(item => {
+                            console.log('Item metadata:', item.meta);
+                            // Get image URL from featured media or content
+                            const imageUrl = item.featured_media_url || this.getImageFromContent(item.content);
+
+                            if (imageUrl) {
+                                html += `
+                    <div class="media-item">
+                        <img src="${imageUrl}" alt="${item.title.rendered || 'Gallery Image'}">
+                        <div class="media-item__overlay">
+                            <h3>${item.title.rendered || 'Gallery Image'}</h3>
+                            ${this.getPhotoCategories(item)}
+                            ${item.meta && item.meta._event_date ?
+                                        `<p>Date: ${item.meta._event_date}</p>` : ''}
+                        </div>
+                    </div>
+                    `;
+                            }
+                        });
+                    } else {
+                        // Render publications or reports
+                        items.forEach(item => {
+                            console.log(`Processing ${this.currentTab} item:`, item);
+
+                            // Create a temporary element to parse the content
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = item.content.rendered;
+
+                            let fileUrl = '';
+                            let fileName = '';
+
+                            // Check multiple possible locations for the file URL
+                            if (this.currentTab === 'publications') {
+                                // Handle publications (PDF embed block)
+                                const pdfEmbed = tempDiv.querySelector('.wp-block-tropicalista-pdfembed');
+                                if (pdfEmbed) {
+                                    fileUrl = pdfEmbed.getAttribute('data-media-url');
+                                    fileName = pdfEmbed.getAttribute('data-file-name');
+                                }
+                            } else {
+                                // Handle reports
+                                // Try to find any links in the content
+                                const links = Array.from(tempDiv.querySelectorAll('a'));
+                                const pdfLink = links.find(link => {
+                                    const href = link.href || link.getAttribute('href');
+                                    return href && (
+                                        href.toLowerCase().endsWith('.pdf') ||
+                                        href.toLowerCase().includes('download') ||
+                                        link.textContent.toLowerCase().includes('download')
+                                    );
+                                });
+
+                                if (pdfLink) {
+                                    fileUrl = pdfLink.href || pdfLink.getAttribute('href');
+                                    fileName = pdfLink.textContent;
+                                }
+
+                                // Check for wp-block-file
+                                if (!fileUrl) {
+                                    const fileBlock = tempDiv.querySelector('.wp-block-file');
+                                    if (fileBlock) {
+                                        const fileLink = fileBlock.querySelector('a');
+                                        if (fileLink) {
+                                            fileUrl = fileLink.href || fileLink.getAttribute('href');
+                                            fileName = fileLink.textContent;
+                                        }
+                                    }
+                                }
+
+                                // Check meta fields if no URL found yet
+                                if (!fileUrl && item.meta) {
+                                    fileUrl = item.meta._file_url || item.meta.file_url || '';
+                                }
+
+                                // Check for featured media
+                                if (!fileUrl && item.featured_media_url) {
+                                    fileUrl = item.featured_media_url;
+                                }
+                            }
+
+                            const title = item.title.rendered || fileName || 'Untitled';
+
+                            html += `
+                <div class="document-item">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="document-title">${title}</h3>
+                    <div class="document-actions">
+                        ${fileUrl ?
+                                    `<a href="${fileUrl}" 
+                                class="document-btn download-btn" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                download="${fileName || title}.pdf">
+                                Download ${this.currentTab === 'publications' ? 'Publication' : 'Report'}
+                            </a>` :
+                                    `<span class="document-btn disabled">File Not Available</span>`
+                                }
+                    </div>
+                </div>
+            `;
+                        });
+                    }
+
+                    this.container.innerHTML = html || '<div class="no-content">No items found.</div>';
+                }
+
+
+
+                getImageFromContent(content) {
+                    if (!content || !content.rendered) return null;
+
+                    try {
+                        const div = document.createElement('div');
+                        div.innerHTML = content.rendered;
+                        const img = div.querySelector('img');
+                        return img ? img.src : null;
+                    } catch (error) {
+                        console.error('Error extracting image from content:', error);
+                        return null;
+                    }
+                }
+
+                getPhotoCategories(item) {
+                    if (!item.photo_categories || item.photo_categories.length === 0) return '';
+
+                    const categoryNames = item.photo_categories.map(cat => cat.name).join(', ');
+                    return `<p>Category: ${categoryNames}</p>`;
+                }
+
+                formatFileSize(bytes) {
+                    if (!bytes) return '';
+                    const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+                    if (bytes === 0) return '0 Byte';
+                    const i = Math.floor(Math.log(bytes) / Math.log(1024));
+                    return Math.round((bytes / Math.pow(1024, i)) * 100) / 100 + ' ' + sizes[i];
+                }
+            }
+
+            // Initialize when the document is ready
+            document.addEventListener('DOMContentLoaded', () => {
+                new GCFResourceManager();
+            });
+
+            // Table Management System
+            class TableManager {
+                constructor() {
+                    this.init();
+                    this.currentTable = 'convenors';
+                }
+
+                init() {
+                    this.loadTableData('convenors');
+                    this.setupEventListeners();
+                }
+
+                setupEventListeners() {
+                    const tabButtons = document.querySelectorAll('.table-tab');
+                    tabButtons.forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            this.handleTabClick(e);
+                        });
+                    });
+                }
+
+                handleTabClick(e) {
+                    const tableId = e.target.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    this.showTable(tableId);
+                }
+
+                async loadTableData(tableType) {
+                    try {
+                        const response = await fetch(`assets/data/${tableType}.json`);
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        const data = await response.json();
+                        this.renderTable(tableType, data);
+                    } catch (error) {
+                        console.error('Error loading table data:', error);
+                        document.getElementById(`${tableType}TableBody`).innerHTML = `
+                <tr>
+                    <td colspan="5" class="table-empty">
+                        Error loading data. Please try again later.
+                    </td>
+                </tr>
+            `;
+                    }
+                }
+
+                renderTable(tableType, data) {
+                    const tableBody = document.getElementById(`${tableType}TableBody`);
+                    if (!tableBody) return;
+
+                    let html = '';
+
+                    if (tableType === 'convenors') {
+                        data.convenors.forEach(item => {
+                            if (item.representatives) {
+                                // Handle multiple representatives
+                                item.representatives.forEach(rep => {
+                                    html += this.createConvenorRow(item.coalition, rep);
+                                });
+                            } else {
+                                // Handle single representative
+                                html += this.createConvenorRow(item.coalition, {
+                                    name: item.representative,
+                                    gender: item.gender,
+                                    contact: item.contact,
+                                    email: Array.isArray(item.email) ? item.email : [item.email]
+                                });
+                            }
+                        });
+                    } else {
+                        // Handle institutions
+                        data.institutions.forEach(item => {
+                            html += `
+                    <tr>
+                        <td>${item.institution}</td>
+                        <td>${item.head}</td>
+                        <td>${item.telephone}</td>
+                        <td>
+                            ${Array.isArray(item.email)
+                                    ? item.email.map(email => `<a href="mailto:${email}">${email}</a>`).join('<br>')
+                                    : `<a href="mailto:${item.email}">${item.email}</a>`}
+                        </td>
+                    </tr>
+                `;
+                        });
+                    }
+
+                    tableBody.innerHTML = html;
+                }
+
+                createConvenorRow(coalition, rep) {
+                    return `
+            <tr>
+                <td>${coalition}</td>
+                <td>${rep.name}</td>
+                <td>
+                    <span class="gender-badge gender-${rep.gender.toLowerCase()}">
+                        ${rep.gender}
+                    </span>
+                </td>
+                <td>${Array.isArray(rep.contact) ? rep.contact.join(', ') : rep.contact}</td>
+                <td>
+                    ${Array.isArray(rep.email)
+                            ? rep.email.map(email => `<a href="mailto:${email}">${email}</a>`).join('<br>')
+                            : rep.email ? `<a href="mailto:${rep.email}">${rep.email}</a>` : ''}
+                </td>
+            </tr>
+        `;
+                }
+
+                showTable(tableId) {
+                    // Hide all tables
+                    document.querySelectorAll('.table-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Remove active class from all tabs
+                    document.querySelectorAll('.table-tab').forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+
+                    // Show selected table
+                    const selectedTable = document.getElementById(`${tableId}Table`);
+                    selectedTable.classList.add('active');
+
+                    // Add active class to clicked tab
+                    event.target.classList.add('active');
+
+                    // Load data if needed
+                    if (this.currentTable !== tableId) {
+                        this.currentTable = tableId;
+                        this.loadTableData(tableId);
+                    }
+                }
+            }
+
+            // Initialize TableManager after DOM is loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                window.tableManager = new TableManager();
+            });
+
+
+        </script>
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__top">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="site-footer__top-left">
+                                    <div class="site-footer__top-logo-content">
+                                        <p class="site-footer__top-text">Developing the skills of individuals and
+                                            communities to effectively conserve, restore and utilize the natural
+                                            resources available in the communities for sustainable livelihoods in Ghana
+                                            and beyond.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+
+                                <div class="site-footer__top-newsletter">
+                                    <h5 class="site-footer__top-newsletter-title">Subscribe for Latest Articles and
+                                        Resources</h5>
+                                    <form class="site-footer__top-newsletter-form">
+                                        <div class="site-footer__top-newsletter-input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                            <button type="submit"
+                                                class="site-footer__top-newsletter-btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-footer__bottom">
+                            <div class="site-footer__top-widget-box">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/flag.png" alt="Ghana Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">P.O. Box 'SKM' DTD 6038,<br>
+                                                Sakumono, Tema.<br>F-54 Service Plot DTD(801)
+                                                C.19<br>Klagon-Lashibi, Tema <br><a href="mailto:ghanainfo@hatof.org">
+                                                    ghanainfo@hatof.org</a> <br>+233-207 360 517 <br>+233-246 346 698
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="footer-widget__column footer-widget__explore clearfix">
+                                            <h3 class="footer-widget__title">Address
+                                                <img src="/assets/images/icon/canada.png" alt="Canada Flag"
+                                                    style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px; object-fit: contain;">
+                                            </h3>
+                                            <p class="footer-widget__contact-text">139 Millwick Drive<br>
+                                                C/O Living Word Assembly of God<br>Toronto ON M9L 1Y7<br><a
+                                                    href="mailto:canadainfo@hatof.org">canadainfo@hatof.org</a></p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="300ms">
+                                        <div class="footer-widget__column footer-widget__contact clearfix">
+                                            <h3 class="footer-widget__title">Useful links</h3>
+
+                                            <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="about.html">Meet our Team</a></li>
+                                                <li><a href="projects.html">Case Stories</a></li>
+                                                <li><a href="news.html">Latest News</a></li>
+                                                <!-- <li><a href="gallery.html">Gallery</a></li> -->
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="00ms">
+                                        <h3 class="footer-widget__title">We are social</h3>
+
+                                        <div class="site-footer__top-right-social">
+                                            <a href="https://www.facebook.com/HatofFoundation/"><i
+                                                    class="fab fa-facebook"></i></a>
+                                            <a href="https://www.linkedin.com/company/hatof-foundation/"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a
+                                                href="https://www.instagram.com/hatoffoundation?igsh=cXd4cng0NXJ6d3l4&utm_source=qr"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="https://www.youtube.com/@HATOFFoundation"><i
+                                                    class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@conult.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/conult.js"></script>
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">×</button>
+        <button class="lightbox-nav prev">‹</button>
+        <button class="lightbox-nav next">›</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
+</body>
+
+</html>
