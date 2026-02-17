@@ -10,6 +10,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^news/([a-zA-Z0-9-_]+)/?$ post-details.html [NC,L]
 
 # ============================================
+# Clean URLs for Projects
+# ============================================
+# Rewrite /projects/project-slug/ or /projects/project-slug to project-detail.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^projects/([a-zA-Z0-9-_]+)/?$ project-detail.html [NC,L]
+
+# ============================================
 # Remove .html extension (your existing rule)
 # ============================================
 RewriteCond %{REQUEST_FILENAME} !-d

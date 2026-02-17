@@ -651,26 +651,48 @@
         document.addEventListener('DOMContentLoaded', function () {
             const wordpressApiUrl = 'https://wp.picturethisproduction.ca/wp-json/wp/v2'; // Replace with your WordPress site URL
 
-            // Get project ID from URL
+            // Get project identifier from URL (supports clean URLs and query params)
             const urlParams = new URLSearchParams(window.location.search);
-            const projectId = urlParams.get('id');
+            const path = window.location.pathname;
+            let projectId = urlParams.get('id');
+            let projectSlug = urlParams.get('slug');
 
-            if (!projectId) {
+            // Try clean URL: /projects/slug/ or /projects/slug
+            const slugMatch = path.match(/\/projects\/([a-zA-Z0-9-_]+)\/?$/);
+            if (slugMatch && slugMatch[1]) {
+                projectSlug = slugMatch[1];
+            }
+
+            if (!projectId && !projectSlug) {
                 document.getElementById('project-loading').style.display = 'none';
                 document.getElementById('project-error').style.display = 'block';
                 document.getElementById('error-message').textContent = 'No project specified.';
                 return;
             }
 
-            // Fetch project details
-            fetch(`${wordpressApiUrl}/project/${projectId}?_embed`)
+            // Fetch project details — by ID or by slug
+            const fetchUrl = projectId
+                ? `${wordpressApiUrl}/project/${projectId}?_embed`
+                : `${wordpressApiUrl}/project?slug=${projectSlug}&_embed`;
+
+            fetch(fetchUrl)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Project not found');
                     }
                     return response.json();
                 })
-                .then(project => {
+                .then(data => {
+                    // Slug search returns an array; ID search returns an object
+                    const project = Array.isArray(data) ? data[0] : data;
+                    if (!project) throw new Error('Project not found');
+
+                    // Rewrite URL to clean format
+                    const cleanUrl = '/projects/' + project.slug + '/';
+                    if (window.location.pathname !== cleanUrl) {
+                        window.history.replaceState({}, '', cleanUrl);
+                    }
+
                     // Set page title
                     document.title = `${project.title.rendered} || HATOF Foundation`;
 
