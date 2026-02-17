@@ -51,7 +51,7 @@ class WordPressArticles {
             <div class="article-card">
                 <div class="article-card__image">
                     <img src="${featuredImage}" alt="${post.title.rendered}" style="width: 100%; height: 100%; object-fit: cover;">
-                    <a href="post-details.html?id=${post.id}">
+                    <a href="/news/${post.slug}/">
                         <span class="article-card__plus"></span>
                     </a>
                     <div class="article-card__date">
@@ -60,11 +60,11 @@ class WordPressArticles {
                 </div>
                 <div class="article-card__content">
                     <h3 class="article-card__title">
-                        <a href="post-details.html?id=${post.id}">${post.title.rendered}</a>
+                        <a href="/news/${post.slug}/">${post.title.rendered}</a>
                     </h3>
                     <div class="article-card__footer">
-                        <a href="post-details.html?id=${post.id}" class="article-card__btn">Read More</a>
-                        <a href="post-details.html?id=${post.id}" class="article-card__arrow">
+                        <a href="/news/${post.slug}/" class="article-card__btn">Read More</a>
+                        <a href="/news/${post.slug}/" class="article-card__arrow">
                             <span class="icon-right-arrow"></span>
                         </a>
                     </div>
