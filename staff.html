@@ -181,6 +181,15 @@
 
         <section class="real-world vision-mission">
             <div class="bg-img">
+                <!-- Dynamic staff content loaded from WordPress -->
+                <div id="staff-dynamic-container">
+                    <div class="text-center" style="padding:60px 0;">
+                        <p style="color:#fff;font-size:18px;">Loading staff...</p>
+                    </div>
+                </div>
+
+                <!-- Fallback: hardcoded staff (hidden when JS loads successfully) -->
+                <div id="staff-fallback">
                 <div class="container">
                     <div class="row align-items-justify">
                         <div class="staff_section-title text-center">
@@ -466,6 +475,7 @@
 
                     </div>
                 </div>
+                </div><!-- /#staff-fallback -->
             </div>
         </section>
 
@@ -656,36 +666,59 @@
     <script src="assets/vendors/vegas/vegas.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="assets/js/wordpress-staff.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const profileContainers = document.querySelectorAll('.profile-container');
+            var staffWidget = new WordPressStaff({
+                baseUrl: 'https://wp.picturethisproduction.ca/wp-json/wp/v2',
+                container: '#staff-dynamic-container',
+                debug: true
+            });
 
-            profileContainers.forEach(container => {
-                const showMoreBtn = container.querySelector('.show-more-btn');
-                const hiddenText = container.querySelectorAll('.profile-text.hidden');
+            staffWidget.render().then(function () {
+                // Hide the hardcoded fallback if dynamic content loaded
+                var fallback = document.getElementById('staff-fallback');
+                var dynamic = document.getElementById('staff-dynamic-container');
+                if (dynamic && dynamic.querySelectorAll('.profile-container').length > 0) {
+                    if (fallback) fallback.style.display = 'none';
+                } else {
+                    // Dynamic load failed — show fallback and init its show-more buttons
+                    if (dynamic) dynamic.style.display = 'none';
+                    if (fallback) fallback.style.display = '';
+                    initFallbackShowMore();
+                }
+            }).catch(function () {
+                var fallback = document.getElementById('staff-fallback');
+                var dynamic = document.getElementById('staff-dynamic-container');
+                if (dynamic) dynamic.style.display = 'none';
+                if (fallback) fallback.style.display = '';
+                initFallbackShowMore();
+            });
 
-                hiddenText.forEach(text => {
-                    text.style.height = '0';
-                });
-
-                showMoreBtn.addEventListener('click', function () {
-                    hiddenText.forEach(text => {
-                        if (text.style.height === '0px' || text.style.height === '') {
-                            // Calculate the full height
-                            const fullHeight = text.scrollHeight + 'px';
-                            text.style.height = fullHeight;
-                            text.style.padding = '';  // Reset padding when expanding
-                            text.style.margin = '';   // Reset margin when expanding
-                            showMoreBtn.textContent = 'Show Less';
-                        } else {
-                            text.style.height = '0';
-                            text.style.padding = '0';  // Remove padding when collapsing
-                            text.style.margin = '0';   // Remove margin when collapsing
-                            showMoreBtn.textContent = 'Show More';
-                        }
+            function initFallbackShowMore() {
+                var containers = document.querySelectorAll('#staff-fallback .profile-container');
+                containers.forEach(function (container) {
+                    var showMoreBtn = container.querySelector('.show-more-btn');
+                    if (!showMoreBtn) return;
+                    var hiddenText = container.querySelectorAll('.profile-text.hidden');
+                    hiddenText.forEach(function (text) { text.style.height = '0'; });
+                    showMoreBtn.addEventListener('click', function () {
+                        hiddenText.forEach(function (text) {
+                            if (text.style.height === '0px' || text.style.height === '') {
+                                text.style.height = text.scrollHeight + 'px';
+                                text.style.padding = '';
+                                text.style.margin = '';
+                                showMoreBtn.textContent = 'Show Less';
+                            } else {
+                                text.style.height = '0';
+                                text.style.padding = '0';
+                                text.style.margin = '0';
+                                showMoreBtn.textContent = 'Show More';
+                            }
+                        });
                     });
                 });
-            });
+            }
         });
     </script>
 
