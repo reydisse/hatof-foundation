@@ -773,7 +773,7 @@
 
                     // Set up sharing links — use the OG proxy so crawlers see real titles
                     const proxyBase = 'https://wp.picturethisproduction.ca/wp-og-proxy.php';
-                    const shareUrl = encodeURIComponent(`${proxyBase}?type=project&id=${projectId}`);
+                    const shareUrl = encodeURIComponent(`${proxyBase}?type=project&id=${project.id}`);
                     const pageTitle = encodeURIComponent(project.title.rendered);
 
                     document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
