@@ -47,8 +47,10 @@ class WordPressStaff {
             'Management': 1,
             'National Service Personnel': 2,
             'National Service': 2,
+            'Current Interns': 3,
             'Intern': 3,
-            'Volunteer': 4
+            'Past Interns': 4,
+            'Volunteer': 5
         };
         return order[category] || 99;
     }

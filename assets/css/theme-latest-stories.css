@@ -1,0 +1,43 @@
+.theme-story-slot {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.theme-story-link {
+    position: relative;
+    display: block;
+    min-height: 190px;
+    overflow: hidden;
+    background: #173f35;
+}
+
+.theme-story-link img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.theme-story-link::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.82));
+}
+
+.theme-story-link:hover img {
+    transform: scale(1.04);
+}
+
+.theme-story-caption {
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    bottom: 14px;
+    left: 16px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+}

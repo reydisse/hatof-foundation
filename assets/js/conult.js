@@ -654,7 +654,7 @@
 
   function thmSwiperInit() {
     // swiper slider
-    const swiperElm = document.querySelectorAll(".thm-swiper__slider");
+    const swiperElm = document.querySelectorAll(".thm-swiper__slider:not(.homepage-swiper)");
     swiperElm.forEach(function (swiperelm) {
       const swiperOptions = JSON.parse(swiperelm.dataset.swiperOptions);
       let thmSwiperSlider = new Swiper(swiperelm, swiperOptions);
