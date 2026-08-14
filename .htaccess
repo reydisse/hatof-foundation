@@ -16,6 +16,13 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^projects/([a-zA-Z0-9-_]+)/?$ project-detail.html [NC,L]
 
 # ============================================
+# Clean URLs for Events
+# ============================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^events/([a-zA-Z0-9-_]+)/?$ event-details.html [NC,L]
+
+# ============================================
 # Remove .html extension
 # ============================================
 RewriteCond %{REQUEST_FILENAME} !-d

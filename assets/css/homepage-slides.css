@@ -1,0 +1,3 @@
+.homepage-swiper .swiper-slide { position:relative; overflow:hidden; }
+.homepage-slide-video { position:absolute; inset:0; z-index:1; width:100%; height:100%; object-fit:cover; }
+@media (prefers-reduced-motion:reduce) { .homepage-slide-video { display:none; } }

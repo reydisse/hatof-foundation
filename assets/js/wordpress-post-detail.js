@@ -49,6 +49,10 @@ class WordPressPostDetail {
     }
 
     getPostUrl(post) {
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            return '/post-details.html?slug=' + encodeURIComponent(post.slug);
+        }
+
         return '/news/' + post.slug + '/';
     }
 
@@ -85,11 +89,14 @@ class WordPressPostDetail {
             this.renderPost(post);
             this.loadRelatedPosts(post.id);
 
-            // Update URL to clean format
-            var cleanUrl = '/news/' + post.slug + '/';
-            if (window.location.pathname !== cleanUrl) {
-                window.history.replaceState({}, '', cleanUrl);
-                console.log('URL updated to:', cleanUrl);
+            // Apache handles clean URLs in production. Keep the query URL locally,
+            // where simple development servers do not process .htaccess rewrites.
+            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                var cleanUrl = '/news/' + post.slug + '/';
+                if (window.location.pathname !== cleanUrl) {
+                    window.history.replaceState({}, '', cleanUrl);
+                    console.log('URL updated to:', cleanUrl);
+                }
             }
 
             document.title = post.title.rendered + ' | HATOF Foundation';
@@ -175,8 +182,7 @@ class WordPressPostDetail {
                 var d = new Date(p.date);
                 var ds = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 
-                // 🔥 CLEAN URL 🔥
-                var pUrl = '/news/' + p.slug + '/';
+                var pUrl = this.getPostUrl(p);
 
                 html += '<li>';
                 html += '<div class="sidebar__post-image"><img src="' + thumb + '" alt=""></div>';

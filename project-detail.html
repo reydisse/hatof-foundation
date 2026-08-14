@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Details || HATOF Foundation</title>
@@ -284,7 +285,7 @@
                                 <a href="#">Resources</a>
                                 <ul>
                                     <li><a href="policies.html">Policies</a></li>
-                                    <li><a href="#">Events</a></li>
+                                    <li><a href="events.html">Events</a></li>
                                     <li class="dropdown">
                                         <a href="#">Reports</a>
                                         <ul>
@@ -687,10 +688,13 @@
                     const project = Array.isArray(data) ? data[0] : data;
                     if (!project) throw new Error('Project not found');
 
-                    // Rewrite URL to clean format
-                    const cleanUrl = '/projects/' + project.slug + '/';
-                    if (window.location.pathname !== cleanUrl) {
-                        window.history.replaceState({}, '', cleanUrl);
+                    // Apache handles clean URLs in production. Keep query URLs on
+                    // localhost, where simple development servers do not use .htaccess.
+                    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                        const cleanUrl = '/projects/' + project.slug + '/';
+                        if (window.location.pathname !== cleanUrl) {
+                            window.history.replaceState({}, '', cleanUrl);
+                        }
                     }
 
                     // Set page title

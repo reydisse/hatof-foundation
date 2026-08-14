@@ -18,10 +18,29 @@ class WordPressIntegration {
     }
 
     getPostUrl(post) {
-        // HARDCODED CLEAN URL - NO OPTIONS, NO EXCUSES
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            return '/post-details.html?slug=' + encodeURIComponent(post.slug);
+        }
+
         var url = '/news/' + post.slug + '/';
         console.log('URL Generated:', url);
         return url;
+    }
+
+    getPostTheme(post) {
+        var embeddedTerms = post._embedded && post._embedded['wp:term'];
+        if (!embeddedTerms) return 'General';
+
+        for (var i = 0; i < embeddedTerms.length; i++) {
+            for (var j = 0; j < embeddedTerms[i].length; j++) {
+                var term = embeddedTerms[i][j];
+                if (term.taxonomy === 'post_tag' && term.name) {
+                    return term.name;
+                }
+            }
+        }
+
+        return 'General';
     }
 
     async fetchPosts(page) {
@@ -52,10 +71,7 @@ class WordPressIntegration {
             featuredImage = post._embedded['wp:featuredmedia'][0].source_url;
         }
 
-        var authorName = 'HATOF Foundation';
-        if (post._embedded && post._embedded.author && post._embedded.author[0]) {
-            authorName = post._embedded.author[0].name;
-        }
+        var themeName = this.getPostTheme(post);
 
         var date = new Date(post.date);
         var day = date.getDate();
@@ -79,7 +95,7 @@ class WordPressIntegration {
         html += '</div>';
         html += '<div class="news-one__content">';
         html += '<ul class="list-unstyled news-one__meta">';
-        html += '<li><a href="' + postUrl + '"><i class="far fa-user-circle"></i> ' + authorName + '</a></li>';
+        html += '<li><a href="' + postUrl + '"><i class="fas fa-tag"></i> ' + themeName + '</a></li>';
         html += '</ul>';
         html += '<h3 class="news-one__title"><a href="' + postUrl + '">' + post.title.rendered + '</a></h3>';
         html += '<p class="news-one__text">' + excerpt + '</p>';
