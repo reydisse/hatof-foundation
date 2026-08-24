@@ -88,6 +88,7 @@ class WordPressPostDetail {
 
             this.renderPost(post);
             this.loadRelatedPosts(post.id);
+            this.loadPostNavigation(post.id);
 
             // Apache handles clean URLs in production. Keep the query URL locally,
             // where simple development servers do not process .htaccess rewrites.
@@ -198,6 +199,35 @@ class WordPressPostDetail {
         } catch (error) {
             console.error('Related posts error:', error);
         }
+    }
+
+    async loadPostNavigation(currentId) {
+        var navigation = document.getElementById('post-content-navigation');
+        if (!navigation) return;
+
+        try {
+            var url = this.baseUrl + '/posts?per_page=100&orderby=date&order=desc&_fields=id,slug,title';
+            if (this.categoryId) url += '&categories=' + this.categoryId;
+            var response = await fetch(url);
+            if (!response.ok) throw new Error('Unable to load article navigation');
+            var posts = await response.json();
+            var index = posts.findIndex(function (post) { return post.id === currentId; });
+            if (index === -1 || posts.length < 2) return;
+
+            this.setNavigationLink('post-previous', posts[index + 1]);
+            this.setNavigationLink('post-next', posts[index - 1]);
+            navigation.hidden = false;
+        } catch (error) {
+            console.error('Post navigation error:', error);
+        }
+    }
+
+    setNavigationLink(id, post) {
+        var link = document.getElementById(id);
+        if (!link || !post) return;
+        link.href = this.getPostUrl(post);
+        link.querySelector('.content-navigation__title').textContent = post.title.rendered.replace(/<[^>]*>/g, '');
+        link.classList.remove('is-disabled');
     }
 
     showError(message) {

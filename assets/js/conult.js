@@ -886,10 +886,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".dropdown > a");
   const navbar = document.querySelector(".nav-main");
 
-  mobileToggle.addEventListener("click", function (e) {
-    e.preventDefault();
-    navList.classList.toggle("active");
+  // Pages using HATOF's custom navbar do not need the template's second,
+  // white sticky header. Leaving both active causes the white layer to cover
+  // the real navbar after a down/up scroll cycle.
+  if (!navbar) return;
+  document.querySelectorAll(".stricky-header").forEach(function (header) {
+    header.remove();
   });
+
+  if (mobileToggle && navList) {
+    mobileToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      navList.classList.toggle("active");
+    });
+  }
 
   // Mobile dropdown toggle
   dropdowns.forEach((dropdown) => {
@@ -902,11 +912,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Scroll effect
+  function updateNavbar() {
+    navbar.classList.toggle("scrolled", window.scrollY > 0);
+    navbar.style.backgroundColor = "";
+  }
+
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
-      navbar.style.backgroundColor = "#00294b";
-    } else {
-      navbar.style.backgroundColor = "transparent";
-    }
+    updateNavbar();
   });
+  updateNavbar();
 });

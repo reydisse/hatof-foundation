@@ -1,6 +1,7 @@
 :root { --events-green:#063f31; --events-gold:#c99a1a; --events-ink:#17342d; --events-muted:#64716c; --events-line:#dfe5e2; }
 .nav-main,
-.nav-main.scrolled { background-color:#00294b; }
+.events-site .nav-main,
+.events-site .nav-main.scrolled { background-color:#00294b !important; }
 .events-page { padding:175px 0 110px; background:#fff; }
 .events-intro { display:flex; align-items:flex-start; justify-content:space-between; gap:40px; padding-bottom:36px; border-bottom:1px solid var(--events-line); }
 .events-intro h1 { margin:0; color:var(--events-green); font-size:48px; line-height:1.1; }

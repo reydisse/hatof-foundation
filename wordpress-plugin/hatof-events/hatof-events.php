@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HATOF Events
  * Description: Adds WordPress-managed events, homepage slides, and staff for the HATOF Foundation website.
- * Version: 1.4.0
+ * Version: 1.5.0
  * Author: HATOF Foundation
  */
 
@@ -269,6 +269,51 @@ function hatof_slides_save_details($post_id) {
     update_post_meta($post_id, 'slide_video_url', isset($_POST['slide_video_url']) ? esc_url_raw(wp_unslash($_POST['slide_video_url'])) : '');
 }
 add_action('save_post_home_slide', 'hatof_slides_save_details');
+
+function hatof_projects_register_funders_meta() {
+    register_post_meta('project', '_funders', array(
+        'type' => 'string',
+        'single' => true,
+        'show_in_rest' => true,
+        'sanitize_callback' => 'sanitize_textarea_field',
+        'auth_callback' => '__return_true',
+    ));
+}
+add_action('init', 'hatof_projects_register_funders_meta', 20);
+
+function hatof_projects_add_funders_box() {
+    add_meta_box(
+        'hatof-project-funders',
+        'Project Funder(s)',
+        'hatof_projects_render_funders_box',
+        'project',
+        'side',
+        'default'
+    );
+}
+add_action('add_meta_boxes_project', 'hatof_projects_add_funders_box');
+
+function hatof_projects_render_funders_box($post) {
+    wp_nonce_field('hatof_projects_save_funders', 'hatof_project_funders_nonce');
+    $funders = (string) get_post_meta($post->ID, '_funders', true);
+    ?>
+    <p><label for="hatof_project_funders">Enter the funding organization(s):</label></p>
+    <textarea id="hatof_project_funders" name="hatof_project_funders" rows="5" style="width:100%;" placeholder="Green Climate Fund, UNDP"><?php echo esc_textarea($funders); ?></textarea>
+    <p class="description">Separate multiple funders with commas or place each one on a new line.</p>
+    <?php
+}
+
+function hatof_projects_save_funders($post_id) {
+    if (!isset($_POST['hatof_project_funders_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['hatof_project_funders_nonce'])), 'hatof_projects_save_funders')) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    $funders = isset($_POST['hatof_project_funders'])
+        ? sanitize_textarea_field(wp_unslash($_POST['hatof_project_funders']))
+        : '';
+    update_post_meta($post_id, '_funders', $funders);
+}
+add_action('save_post_project', 'hatof_projects_save_funders');
 
 function hatof_staff_register_content_types() {
     register_post_type('staff', array(

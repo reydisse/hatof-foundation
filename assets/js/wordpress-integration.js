@@ -35,12 +35,31 @@ class WordPressIntegration {
             for (var j = 0; j < embeddedTerms[i].length; j++) {
                 var term = embeddedTerms[i][j];
                 if (term.taxonomy === 'post_tag' && term.name) {
-                    return term.name;
+                    return this.formatThemeName(term.name);
                 }
             }
         }
 
         return 'General';
+    }
+
+    formatThemeName(name) {
+        var normalized = String(name || '').trim().toLowerCase();
+        var themes = {
+            'climate change': 'Climate Change',
+            'biodiversity': 'Biodiversity',
+            'energy': 'Energy',
+            'food & agriculture': 'Food & Agriculture',
+            'food and agriculture': 'Food & Agriculture',
+            'global policy': 'Global Policy',
+            'climate finance': 'Climate Finance',
+            'blue economy': 'Blue Economy',
+            'chemicals & waste': 'Chemicals & Waste',
+            'chemicals and waste': 'Chemicals & Waste'
+        };
+
+        if (themes[normalized]) return themes[normalized];
+        return normalized.replace(/\b\w/g, function (letter) { return letter.toUpperCase(); });
     }
 
     async fetchPosts(page) {
